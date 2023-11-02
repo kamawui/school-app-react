@@ -1,34 +1,25 @@
-import React from "react";
-import "./testOptions.css"
+import React, {useState} from "react";
+import "./testOptions.css";
+import Skeleton from "../skeleton/Skeleton";
+import Form from "../../svg/Form";
 
 const TestOptions = () => {
+    const [skeleton, setSkeleton] = useState(true);
     return (
         <div className="test-options-wrapper">
-            <div className="test-opt-slider">
-                <div className="slide active-slide">
-                    <div className="slider-bar">
-                        <span className="choose-form">Оберіть клас</span>
-                        <span className="counter">Крок 1</span>
-                    </div>
-                    <div className="slider-content">
-                        <div className="slider-field">
-                            <div className="test-link">
-                                <span>9</span>
-                            </div>
-                            <div className="test-link">
-                                <span>10</span>
-                            </div>
-                            <div className="test-link">
-                                <span>11</span>
-                            </div>
-                        </div>
-                        <div className="slider-buttons call-to-action">
-                            <button>Далі</button>
-                        </div>
-                    </div>
-
-                </div>
+            <div className="settings-title">
+                Щоб перейти до тесту, введіть ваше прізвище та ім'я, оберіть клас і предмет
             </div>
+            <form className="settings-form">
+                <div className="name-input-group">
+                    <input type="text" className="name-input" placeholder="Введіть ім'я"/>
+                    <Form />
+                </div>
+                <div className="surname-input-group">
+                    <input type="text" placeholder="Введіть прізвище (опціонально)"/>
+                </div>
+
+            </form>
         </div>
     )
 }

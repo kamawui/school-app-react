@@ -25,7 +25,7 @@ const Header = ({links, error, loading}) => {
                     </div>
                 </Link>
                 <div className="nav-group">
-                    <span className="nav-point active-nav">Налаштування</span>
+                    <span className="nav-point active-nav">Тести</span>
                     <span className="nav-point">Про проект</span>
                 </div>
 

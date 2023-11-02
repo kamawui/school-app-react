@@ -4,15 +4,19 @@
     --second-selected: #289977;
     --second-dark: #4ca184;
     --second-light: #e3fdf9;
-    --neutral: #ffffff;
+    --neutral: #e5e5e5;
     --main: #222222;
     --main-border: #787878;
     --main-dark: #1a1a1a;
     --main-selected: #2a2a2a;
-    --main-light: #242424;
+    --main-light: #424749;
+    --main-medium: #34393b;
+    --main-options: #52585a;
+    --main-options-light: #52585a;
 }
 body {
     margin: 0;
+    background-color: var(--main-medium);
 }
 .app-wrapper {
     width: 100%;

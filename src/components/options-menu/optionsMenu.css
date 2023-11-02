@@ -8,6 +8,7 @@
     border-top: 2px solid var(--main-border);
     background-color: var(--main);
     color: var(--neutral);
+    box-shadow: 0 -1px 5px #5c5c5c;
 
 }
 .fixed-options-menu-panel {

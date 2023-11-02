@@ -1,48 +1,36 @@
 .test-options-wrapper {
     font-family: "Roboto Thin", sans-serif;
     padding: 40px 0;
-}
-.test-opt-slider {
-    width: 100%;
-    margin: 0 auto;
-}
-.slider-bar {
     width: 60%;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    color: white;
 }
-.choose-form {
-    width: 350px;
-    height: 50px;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    text-transform: uppercase;
-    font-size: 18px;
-    font-weight: bold;
-}
-.test-link {
-    width: 350px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    font-size: 14px;
-    cursor: pointer;
-}
-.slider-content {
+.settings-title {
     width: 100%;
-    background-color: var(--second-light);
-    padding: 20px 0;
+    display: block;
+    margin: 0 auto;
+    font-size: 31px;
+    border-bottom: 3px solid var(--second);
+    padding: 10px 0;
 }
-.slider-field {
-    background-color: var(--neutral);
-    width: 80%;
-    margin: 20px auto;
-    border: 1px solid #ccc;
+.settings-form {
+    width: 100%;
 }
-.slider-buttons {
-    margin-left: 10%;
+.settings-form input {
+    width: 100%;
+    background-color: var(--main-medium);
+    padding: 12px 0;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: var(--neutral);
 }
+.settings-form input::placeholder {
+    font-size: 14px;
+}
+.name-input-group, .surname-input-group {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid var(--main-border);
+}
+
