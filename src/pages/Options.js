@@ -6,16 +6,16 @@ import Intro from "../components/intro/Intro";
 import TestOptions from "../components/test-options/TestOptions";
 import Footer from "../components/footer/Footer";
 
-function Options({links, linksError, linksLoading, subjects, subjectsError, subjectsLoading}) {
+function Options({links, subjects, forms,}) {
 
     return (
         <div className="options-wrapper">
-            <Header links={links} error={linksError} loading={linksLoading}/>
+            <Header links={links} />
             <div className="home-components-group">
-                <OptionsMenu subjects={subjects} error={subjectsError} loading={subjectsLoading}/>
+                <OptionsMenu subjects={subjects}/>
                 <div className="home-components">
                     <Intro />
-                    <TestOptions />
+                    <TestOptions forms={forms} subjects={subjects}/>
                     {/*<Footer links={links} error={linksError} loading={linksLoading}/>*/}
                 </div>
             </div>

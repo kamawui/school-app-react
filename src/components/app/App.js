@@ -10,28 +10,51 @@ import useTestService from "../../services/TestService";
 
 const App = () => {
     const linkService = useLinkService();
-    const testService = useTestService();
-    const [links, setLinks] = useState([]);
-    const [subjects, setSubjects] = useState([]);
+    const subjectService = useTestService();
+    const formService = useTestService();
+    const [links, setLinks] = useState({value: [], loading: true, error: false});
+    const [subjects, setSubjects] = useState({value: [], loading: true, error: false});
+    const [forms, setForms] = useState({value: [], loading: true, error: false});
 
-    useEffect(() => {
+    useEffect( () => {
         async function fetchData() {
             return await linkService.getLinks();
         }
 
-        fetchData().then(setLinks);
+        fetchData().then(res => setLinks({
+            value: res,
+            loading: false,
+            error: false,
+        }));
     }, []);
 
     useEffect(() => {
         async function fetchData() {
-            return await testService.getTestInfo();
+            return await subjectService.getTestInfo();
         }
 
-        fetchData().then(res => setSubjects(res.tests));
+        fetchData().then(res => setSubjects({
+            value: res.tests,
+            loading: false,
+            error: false,
+        }));
+    }, []);
+
+    useEffect(() => {
+        async function fetchData() {
+            return await formService.getTestInfo();
+        }
+
+        fetchData().then(res => setForms({
+            value: res.forms,
+            loading: false,
+            error: false,
+        }));
     }, []);
 
     const memoizedLinks = useMemo(() => links, [links]);
     const memoizedSubjects = useMemo(() => subjects, [subjects]);
+    const memoizedForms = useMemo(() => forms, [forms]);
 
     return (
         <div className="app-wrapper">
@@ -39,11 +62,8 @@ const App = () => {
                 <Routes>
                     <Route index path="/" element={
                         <Options links={memoizedLinks}
-                                 linksError={linkService.error}
-                                 linksLoading={linkService.loading}
                                  subjects={memoizedSubjects}
-                                 subjectsError={testService.error}
-                                 subjectsLoading={testService.loading}
+                                 forms={memoizedForms}
                         />
                     }/>
                     <Route path="/test" element={

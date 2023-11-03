@@ -1,9 +1,9 @@
 import React from "react";
 import "./optionsMenu.css";
 
-const OptionsMenu = ({subjects, error, loading}) => {
+const OptionsMenu = ({subjects}) => {
 
-    const subjectsElements = !loading ? subjects.map((item, key) => {
+    const subjectsElements = !subjects.loading ? subjects.value.map((item, key) => {
         return (
             <div className="option" key={key}><span>{item}</span></div>
         )
@@ -16,7 +16,7 @@ const OptionsMenu = ({subjects, error, loading}) => {
                 <span className="options-menu-message">Оберіть предмет, щоб перейти до вибору класу</span>
             </div>
             <div className="options">
-                {!error ? subjectsElements : null}
+                {!subjects.error ? subjectsElements : null}
             </div>
         </div>
     )

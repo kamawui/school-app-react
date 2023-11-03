@@ -4,9 +4,8 @@ import Gear from "../../svg/Gear";
 import useLinkService from "../../services/LinkService";
 import {Link} from "react-router-dom";
 
-const Header = ({links, error, loading}) => {
-
-    const linkElements = !loading ? links.map((item, key) => {
+const Header = ({links}) => {
+    const linkElements = !links.loading ? links.value.map((item, key) => {
         return (
             <a key={key} href={item.url} target="_blank"><div className="header-link-logo"><img src={item.logo} alt={item.title}/></div></a>
         )
@@ -15,7 +14,7 @@ const Header = ({links, error, loading}) => {
     return (
         <div className="header-wrapper">
             <div className="header-links">
-                {!error ? linkElements : null}
+                {!links.error ? linkElements : null}
             </div>
             <div className="navigation">
                 <Link className="link" to="/">
