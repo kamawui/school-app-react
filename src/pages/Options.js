@@ -6,15 +6,16 @@ import Intro from "../components/intro/Intro";
 import TestOptions from "../components/test-options/TestOptions";
 import Footer from "../components/footer/Footer";
 
-function Options({links, subjects, forms,}) {
+function Options({links, subjects, forms, burgerActive, setBurgerActive}) {
+    const homeComponentsClasses = burgerActive ? "" : "full-width";
 
     return (
         <div className="options-wrapper">
             <Header links={links} />
             <div className="home-components-group">
-                <OptionsMenu subjects={subjects}/>
-                <div className="home-components">
-                    <Intro />
+                <OptionsMenu subjects={subjects} burgerActive={burgerActive} setBurgerActive={setBurgerActive}/>
+                <div className={`home-components ${homeComponentsClasses}`}>
+                    <Intro burgerActive={burgerActive}/>
                     <TestOptions forms={forms} subjects={subjects}/>
                     {/*<Footer links={links} error={linksError} loading={linksLoading}/>*/}
                 </div>

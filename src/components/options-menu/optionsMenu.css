@@ -1,18 +1,49 @@
 .options-menu-wrapper {
-    width: 25%;
+    width: 400px;
     height: calc(100vh - 84px);
     position: fixed;
     top: 84px;
     left: 0;
     font-family: "Roboto Light", sans-serif;
+    color: var(--neutral);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.burger-menu {
+    width: 400px;
+    height: 100%;
     border-top: 2px solid var(--main-border);
     background-color: var(--main);
-    color: var(--neutral);
     box-shadow: 0 -1px 5px #5c5c5c;
-
+    transition: 0.2s;
+}
+.burger-button {
+    position: fixed;
+    left: 0;
+    top: 70%;
+    transition: 0.2s;
+}
+.active-burger {
+    left: 400px;
+}
+.burgerbtn {
+    height: 80px;
+    width: 25px;
+    border: none;
+    outline: none;
+    padding: 0;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: var(--main);
+}
+.burger-hidden div {
+    display: none;
+}
+.burger-hidden {
+    width: 0;
 }
 .fixed-options-menu-panel {
-    position: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,7 +64,7 @@
     height: 400px;
     font-size: 14px;
     border-left: 6px solid var(--second);
-    margin: calc(75px * 1.6) 0;
+    margin: 20px 0;
     overflow: auto;
 }
 .options::-webkit-scrollbar {

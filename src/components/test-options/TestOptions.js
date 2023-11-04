@@ -6,19 +6,21 @@ import Ellipsis from "../../svg/Ellipsis";
 import useTestService from "../../services/TestService";
 
 const TestOptions = ({forms, subjects}) => {
-    const [formDropdownClasses, setFormDropdownClasses] = useState("dropdown-content dropdown-hidden");
-    const [subjectDropdownClasses, setSubjectDropdownClasses] = useState("dropdown-content dropdown-hidden");
+    const [formDropdownClasses, setFormDropdownClasses] = useState("dropdown-hidden");
+    const [subjectDropdownClasses, setSubjectDropdownClasses] = useState("dropdown-hidden");
+    const [nameOption, setNameOption] = useState("");
+    const [surnameOption, setSurnameOption] = useState("");
     const [formOption, setFormOption] = useState("");
     const [subjectOption, setSubjectOption] = useState("");
 
     const toggleDropdown = (dropdownType) => {
         if (dropdownType === "form") {
             setFormDropdownClasses(
-                formDropdownClasses === "dropdown-content" ? "dropdown-content dropdown-hidden" : "dropdown-content"
+                formDropdownClasses ? "" : "dropdown-hidden"
             );
         } else if (dropdownType === "subject") {
             setSubjectDropdownClasses(
-                subjectDropdownClasses === "dropdown-content" ? "dropdown-content dropdown-hidden" : "dropdown-content"
+                subjectDropdownClasses ? "" : "dropdown-hidden"
             );
         }
     }
@@ -31,6 +33,13 @@ const TestOptions = ({forms, subjects}) => {
         }
 
         toggleDropdown(type);
+    }
+
+    const clearForm = () => {
+        setNameOption("");
+        setSurnameOption("");
+        setFormOption("");
+        setSubjectOption("");
     }
 
     const formDropdownElements = !forms.loading ? forms.value.map((item, id) => {
@@ -52,11 +61,13 @@ const TestOptions = ({forms, subjects}) => {
             </div>
             <form className="settings-form">
                 <div className="name-input-group">
-                    <input type="text" className="name-input" placeholder="Введіть ім'я"/>
+                    <input type="text" className="name-input" value={nameOption}
+                           placeholder="Введіть ім'я" onChange={(e) => setNameOption(e.target.value)}/>
                     <Form/>
                 </div>
                 <div className="surname-input-group">
-                    <input type="text" placeholder="Введіть прізвище (опціонально)"/>
+                    <input type="text"  value={surnameOption}
+                           placeholder="Введіть прізвище (опціонально)" onChange={(e) => setSurnameOption(e.target.value)}/>
                     <Form/>
                 </div>
             </form>
@@ -64,13 +75,16 @@ const TestOptions = ({forms, subjects}) => {
                 <div className="form-input-group">
                     <div className="form-title">Оберіть клас</div>
                     <div className="dropdown">
-                        <button className="dropbtn" onClick={() => toggleDropdown("form")}><Arrow/></button>
+                        <button className="dropbtn" onClick={() => toggleDropdown("form")}>
+                            <Arrow angle={formDropdownClasses ? 180 : 0}/>
+                        </button>
                         <div className="dropdown-area">
                             <div className="dropdown-items-group">
-                                <input type="text" placeholder="Клас" value={formOption} readOnly/>
+                                <input type="text" placeholder="Клас" onClick={() => toggleDropdown("form")}
+                                       value={formOption} readOnly/>
                                 <Ellipsis />
                             </div>
-                            <div className={formDropdownClasses}>
+                            <div className={`dropdown-content ${formDropdownClasses}`}>
                                 {formDropdownElements}
                             </div>
                         </div>
@@ -79,13 +93,18 @@ const TestOptions = ({forms, subjects}) => {
                 <div className="subject-input-group">
                     <div className="form-title">Оберіть предмет</div>
                     <div className="dropdown">
-                        <button className="dropbtn" onClick={() => toggleDropdown("subject")}><Arrow/></button>
+                        <button className="dropbtn"
+                                onClick={() => formOption ? toggleDropdown("subject")
+                                    : alert("Перш ніж перейти до вибору, предмета оберіть клас")}>
+                            <Arrow angle={subjectDropdownClasses ? 180 : 0}/>
+                        </button>
                         <div className="dropdown-area">
                             <div className="dropdown-items-group">
-                                <input type="text" placeholder="Предмет" value={subjectOption} readOnly/>
+                                <input type="text" placeholder="Предмет" onClick={() => toggleDropdown("subject")}
+                                       value={subjectOption} readOnly/>
                                 <Ellipsis />
                             </div>
-                            <div className={subjectDropdownClasses}>
+                            <div className={`dropdown-content ${subjectDropdownClasses}`}>
                                 {subjectsDropdownElements}
                             </div>
                         </div>
@@ -94,7 +113,7 @@ const TestOptions = ({forms, subjects}) => {
                 </div>
             </div>
             <div className="options-buttons">
-                <button className="clear-form-btn">Очистити</button>
+                <button className="clear-form-btn" onClick={() => clearForm()}>Очистити</button>
                 <button className="start-test-btn">Розпочати</button>
             </div>
         </div>

@@ -20,14 +20,14 @@
 .settings-form input {
     width: 100%;
     background-color: transparent;
-    padding: 12px 0;
+    padding: 18px 0;
     border: none;
     outline: none;
-    font-size: 14px;
+    font-size: 16px;
     color: var(--neutral);
 }
 .settings-form input::placeholder {
-    font-size: 14px;
+    font-size: 16px;
 }
 .name-input-group, .surname-input-group {
     display: flex;
@@ -80,10 +80,10 @@
 .dropdown input {
     width: 100%;
     background-color: transparent;
-    padding: 12px 0;
+    padding: 18px 0;
     border: none;
     outline: none;
-    font-size: 14px;
+    font-size: 16px;
     color: var(--neutral);
 }
 .dropbtn {
@@ -101,18 +101,18 @@
 .dropbtn:hover {
     background-color: var(--main-selected);
 }
-.dropdown-hidden {
-    display: none;
-}
 .dropdown-content {
     position: absolute;
     width: 100%;
-    height: 100px;
+    height: 120px;
     z-index: 1000;
     overflow: auto;
+    transition: 0.3s;
+}
+.dropdown-hidden {
+    height: 0;
 }
 .dropdown-content::-webkit-scrollbar {
-    display: none;
     width: 5px;
 }
 
@@ -122,7 +122,7 @@
 }
 
 .dropdown-content::-webkit-scrollbar-track {
-    background-color: transparent;
+    background-color: var(--main-selected);
 }
 .dropdown-element {
     width: 100%;
