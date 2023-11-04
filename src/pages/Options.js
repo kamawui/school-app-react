@@ -6,17 +6,25 @@ import Intro from "../components/intro/Intro";
 import TestOptions from "../components/test-options/TestOptions";
 import Footer from "../components/footer/Footer";
 
-function Options({links, subjects, forms, burgerActive, setBurgerActive}) {
+function Options({links, subjects, forms, subjectList, activeTab, setActiveTab,
+                     burgerActive, setBurgerActive, setFormOption, formOption, subjectOption, setSubjectOption}) {
     const homeComponentsClasses = burgerActive ? "" : "full-width";
 
     return (
         <div className="options-wrapper">
-            <Header links={links} />
+            <Header links={links} activeTab={activeTab} setActiveTab={setActiveTab}/>
             <div className="home-components-group">
-                <OptionsMenu subjects={subjects} burgerActive={burgerActive} setBurgerActive={setBurgerActive}/>
+                <OptionsMenu subjects={subjectList}
+                             subjectOption={subjectOption}
+                             setSubjectOption={setSubjectOption}
+                             burgerActive={burgerActive}
+                             setBurgerActive={setBurgerActive}/>
                 <div className={`home-components ${homeComponentsClasses}`}>
                     <Intro burgerActive={burgerActive}/>
-                    <TestOptions forms={forms} subjects={subjects}/>
+                    <TestOptions forms={forms} subjects={subjects}
+                                 formOption={formOption} setFormOption={setFormOption}
+                                 subjectOption={subjectOption} setSubjectOption={setSubjectOption}
+                    />
                     {/*<Footer links={links} error={linksError} loading={linksLoading}/>*/}
                 </div>
             </div>

@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import "./optionsMenu.css";
 import Arrow from "../../svg/Arrow";
+import {Link} from "react-router-dom";
 
 const OptionsMenu = ({subjects, burgerActive, setBurgerActive}) => {
     const [burgerMenuClasses, setBurgerMenuClasses] = useState(burgerActive ? "" : "burger-hidden");
@@ -18,7 +19,10 @@ const OptionsMenu = ({subjects, burgerActive, setBurgerActive}) => {
 
     const subjectsElements = !subjects.loading ? subjects.value.map((item, key) => {
         return (
-            <div className="option" key={key}><span>{item}</span></div>
+            <Link to="/forms">
+                <div className="option" key={key}><span>{item}</span></div>
+            </Link>
+
         )
     }) : null;
 

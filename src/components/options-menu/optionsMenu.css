@@ -67,6 +67,10 @@
     margin: 20px 0;
     overflow: auto;
 }
+.options a{
+    color: var(--neutral);
+    text-decoration: none;
+}
 .options::-webkit-scrollbar {
     width: 5px;
 }

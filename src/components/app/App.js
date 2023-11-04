@@ -5,17 +5,26 @@ import Options from "../../pages/Options";
 import Test from "../../pages/Test";
 import Result from "../../pages/Result";
 import NoPage from "../../pages/NoPage";
+import About from "../../pages/About";
+import FormOptions from "../../pages/FormOptions";
 import "./app.css";
 import useTestService from "../../services/TestService";
 
 const App = () => {
     const linkService = useLinkService();
-    const subjectService = useTestService();
-    const formService = useTestService();
     const [links, setLinks] = useState({value: [], loading: true, error: false});
-    const [subjects, setSubjects] = useState({value: [], loading: true, error: false});
+    const subjectService = useTestService();
+    const [optionSubjects, setOptionSubjects] = useState({value: [], loading: true, error: false});
+    const formService = useTestService();
     const [forms, setForms] = useState({value: [], loading: true, error: false});
+    const subjectListService = useTestService();
+    const [subjectList, setSubjectList] = useState({value: [], loading: true, error: false});
+
+    const [subjectOption, setSubjectOption] = useState("")
+    const [formOption, setFormOption] = useState("");
+
     const [burgerActive, setBurgerActive] = useState(true);
+    const [activeTab, setActiveTab] = useState("options");
 
     useEffect( () => {
         async function fetchData() {
@@ -30,12 +39,26 @@ const App = () => {
     }, []);
 
     useEffect(() => {
+        if (formOption) {
+            async function fetchData() {
+                return await subjectService.getSubjects();
+            }
+
+            fetchData().then(res => setOptionSubjects({
+                value: res[formOption],
+                loading: false,
+                error: false,
+            }));
+        }
+    }, [formOption]);
+
+    useEffect(() => {
         async function fetchData() {
-            return await subjectService.getTestInfo();
+            return await subjectListService.getSubjects();
         }
 
-        fetchData().then(res => setSubjects({
-            value: res.tests,
+        fetchData().then(res => setSubjectList({
+            value: res.all,
             loading: false,
             error: false,
         }));
@@ -43,7 +66,7 @@ const App = () => {
 
     useEffect(() => {
         async function fetchData() {
-            return await formService.getTestInfo();
+            return await formService.getForms();
         }
 
         fetchData().then(res => setForms({
@@ -54,24 +77,48 @@ const App = () => {
     }, []);
 
     const memoizedLinks = useMemo(() => links, [links]);
-    const memoizedSubjects = useMemo(() => subjects, [subjects]);
+    const memoizedSubjects = useMemo(() => optionSubjects, [optionSubjects]);
     const memoizedForms = useMemo(() => forms, [forms]);
+    const memoizedSubjectList = useMemo(() => subjectList, [subjectList]);
 
+    console.log(memoizedSubjectList);
 
     return (
         <div className="app-wrapper">
             <BrowserRouter>
                 <Routes>
-                    <Route index path="/" element={
+                    <Route index path="/options" element={
                         <Options links={memoizedLinks}
+                                 subjectList={memoizedSubjectList}
                                  subjects={memoizedSubjects}
                                  forms={memoizedForms}
                                  burgerActive={burgerActive}
                                  setBurgerActive={setBurgerActive}
+                                 formOption={formOption}
+                                 setFormOption={setFormOption}
+                                 subjectOption={subjectOption}
+                                 setSubjectOption={setSubjectOption}
+                                 activeTab={activeTab}
+                                 setActiveTab={setActiveTab}
                         />
                     }/>
                     <Route path="/test" element={
-                        <Test />
+                        <Test links={memoizedLinks}
+                              activeTab={activeTab}
+                              setActiveTab={setActiveTab}
+                        />
+                    }/>
+                    <Route path="/about" element={
+                        <About links={memoizedLinks}
+                               activeTab={activeTab}
+                               setActiveTab={setActiveTab}
+                        />
+                    }/>
+                    <Route path="/forms" element={
+                        <FormOptions links={memoizedLinks}
+                                     activeTab={activeTab}
+                                     setActiveTab={setActiveTab}
+                        />
                     }/>
                     <Route path="/result" element={
                         <Result />

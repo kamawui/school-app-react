@@ -4,7 +4,7 @@ import Gear from "../../svg/Gear";
 import useLinkService from "../../services/LinkService";
 import {Link} from "react-router-dom";
 
-const Header = ({links}) => {
+const Header = ({links, activeTab, setActiveTab,}) => {
     const linkElements = !links.loading ? links.value.map((item, key) => {
         return (
             <a key={key} href={item.url} target="_blank"><div className="header-link-logo"><img src={item.logo} alt={item.title}/></div></a>
@@ -24,8 +24,12 @@ const Header = ({links}) => {
                     </div>
                 </Link>
                 <div className="nav-group">
-                    <span className="nav-point active-nav">Тести</span>
-                    <span className="nav-point">Про проект</span>
+                    <Link onClick={() => setActiveTab("options")} to="/options">
+                        <span className={`nav-point ${activeTab === "options" ? "active-nav" : ""}`}>Тести</span>
+                    </Link>
+                    <Link onClick={() => setActiveTab("about")} to="/about">
+                        <span className={`nav-point ${activeTab === "about" ? "active-nav" : ""}`}>Про проект</span>
+                    </Link>
                 </div>
 
             </div>

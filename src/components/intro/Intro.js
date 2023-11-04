@@ -4,8 +4,6 @@ import "./intro.css"
 const Intro = ({burgerActive}) => {
     const introClasses =burgerActive ? "" : "intro-full-width";
 
-    console.log(introClasses);
-
     return (
         <div className="intro-wrapper">
             <div className={`intro-info ${introClasses}`}>

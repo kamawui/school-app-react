@@ -49,12 +49,19 @@
     height: 100%;
     padding-right: 250px;
 }
-.nav-point {
-    padding: 0 30px;
+.nav-group a {
     height: 100%;
+    color: var(--neutral);
+    font-family: "Roboto Thin", sans-serif;
+    text-decoration: none;
+}
+.nav-point {
+    height: 100%;
+    padding: 0 30px;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.2s;
 }
 .nav-point:hover {
     background-color: var(--main-selected);

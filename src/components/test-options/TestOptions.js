@@ -4,14 +4,13 @@ import Form from "../../svg/Form";
 import Arrow from "../../svg/Arrow";
 import Ellipsis from "../../svg/Ellipsis";
 import useTestService from "../../services/TestService";
+import {Link} from "react-router-dom";
 
-const TestOptions = ({forms, subjects}) => {
+const TestOptions = ({forms, subjects, setFormOption, formOption, subjectOption, setSubjectOption}) => {
     const [formDropdownClasses, setFormDropdownClasses] = useState("dropdown-hidden");
     const [subjectDropdownClasses, setSubjectDropdownClasses] = useState("dropdown-hidden");
     const [nameOption, setNameOption] = useState("");
     const [surnameOption, setSurnameOption] = useState("");
-    const [formOption, setFormOption] = useState("");
-    const [subjectOption, setSubjectOption] = useState("");
 
     const toggleDropdown = (dropdownType) => {
         if (dropdownType === "form") {
@@ -114,7 +113,7 @@ const TestOptions = ({forms, subjects}) => {
             </div>
             <div className="options-buttons">
                 <button className="clear-form-btn" onClick={() => clearForm()}>Очистити</button>
-                <button className="start-test-btn">Розпочати</button>
+                <Link to="/test"><button className="start-test-btn">Розпочати</button></Link>
             </div>
         </div>
     )

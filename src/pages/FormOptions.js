@@ -2,9 +2,9 @@ import React from "react";
 import Header from "../components/header/Header";
 import {Link} from "react-router-dom";
 
-function Test({links, activeTab, setActiveTab}) {
+function FormOptions({links, activeTab, setActiveTab}) {
     return (
-        <div className="test-wrapper">
+        <div className="form-options-wrapper">
             <Header links={links} activeTab={activeTab} setActiveTab={setActiveTab}/>
             <div className="home-components">
                 <h1>There is still nothing on this page</h1>
@@ -18,4 +18,4 @@ function Test({links, activeTab, setActiveTab}) {
     )
 }
 
-export default Test;
+export default FormOptions;
