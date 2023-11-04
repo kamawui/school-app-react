@@ -5,14 +5,18 @@ import OptionsMenu from "../components/options-menu/OptionsMenu";
 import Intro from "../components/intro/Intro";
 import TestOptions from "../components/test-options/TestOptions";
 import Footer from "../components/footer/Footer";
+import {useLocation} from "react-router-dom";
 
 function Options({links, subjects, forms, subjectList, activeTab, setActiveTab,
                      burgerActive, setBurgerActive, setFormOption, formOption, subjectOption, setSubjectOption}) {
+
     const homeComponentsClasses = burgerActive ? "" : "full-width";
+
+    const location = useLocation();
 
     return (
         <div className="options-wrapper">
-            <Header links={links} activeTab={activeTab} setActiveTab={setActiveTab}/>
+            <Header links={links} activeTab={activeTab} setActiveTab={setActiveTab} location={location.pathname}/>
             <div className="home-components-group">
                 <OptionsMenu subjects={subjectList}
                              subjectOption={subjectOption}

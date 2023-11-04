@@ -1,5 +1,5 @@
 import React, {useEffect, useMemo, useRef, useState} from "react";
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {BrowserRouter, Route, Routes, useLocation} from "react-router-dom";
 import useLinkService from "../../services/LinkService";
 import Options from "../../pages/Options";
 import Test from "../../pages/Test";
@@ -24,7 +24,7 @@ const App = () => {
     const [formOption, setFormOption] = useState("");
 
     const [burgerActive, setBurgerActive] = useState(true);
-    const [activeTab, setActiveTab] = useState("options");
+    const [activeTab, setActiveTab] = useState(window.location.pathname);
 
     useEffect( () => {
         async function fetchData() {
@@ -81,13 +81,11 @@ const App = () => {
     const memoizedForms = useMemo(() => forms, [forms]);
     const memoizedSubjectList = useMemo(() => subjectList, [subjectList]);
 
-    console.log(memoizedSubjectList);
-
     return (
         <div className="app-wrapper">
             <BrowserRouter>
                 <Routes>
-                    <Route index path="/options" element={
+                    <Route index path="/" element={
                         <Options links={memoizedLinks}
                                  subjectList={memoizedSubjectList}
                                  subjects={memoizedSubjects}

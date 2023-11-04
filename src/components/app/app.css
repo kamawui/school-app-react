@@ -37,6 +37,10 @@ body {
     width: 75%;
     transition: 0.2s;
 }
+.about-components {
+    padding: 84px 0 0;
+    width: 100%;
+}
 .full-width {
     padding: 84px 0 0 0;
     width: 100%;

@@ -1,19 +1,16 @@
 import React from "react";
 import Header from "../components/header/Header";
-import {Link} from "react-router-dom";
+import Information from "../components/information/Information";
+import {Link, useLocation} from "react-router-dom";
 
-function About({links, activeTab, setActiveTab}) {
+function About({links}) {
+    const location = useLocation();
     return (
         <div className="about-wrapper">
-            <Header links={links} activeTab={activeTab} setActiveTab={setActiveTab}/>
-            <div className="home-components">
-                <h1>There is still nothing on this page</h1>
+            <Header links={links} location={location.pathname}/>
+            <div className="about-components">
+                <Information />
             </div>
-            <Link to="/options">
-                <button className="back">
-                    GO HOME
-                </button>
-            </Link>
         </div>
     )
 }

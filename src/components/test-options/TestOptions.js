@@ -94,7 +94,7 @@ const TestOptions = ({forms, subjects, setFormOption, formOption, subjectOption,
                     <div className="dropdown">
                         <button className="dropbtn"
                                 onClick={() => formOption ? toggleDropdown("subject")
-                                    : alert("Перш ніж перейти до вибору, предмета оберіть клас")}>
+                                    : alert("Перш ніж перейти до вибору предмета, оберіть клас")}>
                             <Arrow angle={subjectDropdownClasses ? 180 : 0}/>
                         </button>
                         <div className="dropdown-area">
