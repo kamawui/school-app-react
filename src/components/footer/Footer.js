@@ -1,23 +1,23 @@
 import "./footer.css";
 import React, {Component} from "react";
 
-const Footer = ({links, error, loading}) => {
-    const footerLinks = links.map((item, key) => {
+const Footer = ({links}) => {
+    const footerLinks = !links.loading ? links.value.map((item, key) => {
         return (
             <a key={key} href={item.url} className="footer-link-item" target="_blank">
                 Me on {item.title}
             </a>
         )
-    })
+    }) : null;
 
     return (
-        <div className={"footer-wrapper"}>
+        <div className="footer-wrapper">
             <div className="footer-content">
-                <span>2023 «Quiz»</span>
-                <span>Created using <a href="https://opentdb.com/" target="_blank">Trivia Database</a></span>
+                <span>2023 TestHub</span>
+                <span>Created using <a href="https://react.dev/" target="_blank">React</a></span>
                 <span className="footer-links-span">Links: </span>
                 <div className="footer-links">
-                    {footerLinks}
+                    {!links.error ? footerLinks : null}
                 </div>
             </div>
         </div>

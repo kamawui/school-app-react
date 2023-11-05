@@ -1,0 +1,88 @@
+.information-wrapper {
+    width: 100%;
+    color: var(--neutral);
+    font-family: "Roboto Light", sans-serif;
+}
+.info-intro {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px 20%;
+    background-color: var(--main-light);
+}
+.information-header {
+    margin: 0;
+    padding: 10px 0;
+    font-size: 28px;
+    font-weight: 400;
+}
+.information-header span {
+    font-weight: bold;
+}
+.info-paragraph {
+    margin: 0;
+    font-size: 17px;
+    line-height: 26px;
+    font-weight: 400;
+}
+.info-description, .info-contacts {
+    width: 60%;
+    padding: 40px 0;
+    margin: 0 auto;
+}
+.info-contacts {
+    padding: 20px 0;
+}
+.info, .contacts {
+    width: 100%;
+    display: block;
+    margin: 0 auto 20px;
+    font-size: 31px;
+    border-bottom: 3px solid var(--second);
+    padding: 10px 0;
+    font-weight: bold;
+}
+.contacts {
+    display: flex;
+    justify-content: end;
+}
+.info-item {
+    width: 100%;
+    padding: 22px 0;
+    font-size: 16px;
+    border-bottom: 2px solid var(--main-border);
+}
+.info-item-right {
+    display: flex;
+    justify-content: end;
+}
+.info-item span {
+    font-weight: bold;
+}
+.contacts-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.contacts-left, .contacts-right {
+    padding: 40px 0;
+}
+.info-competition, .info-links-span, .info-links, .info-project-title {
+    padding: 10px 0;
+}
+.info-links-span {
+    display: flex;
+    justify-content: end;
+}
+.info-links {
+    display: flex;
+    align-items: center;
+}
+.info-link {
+    margin-left: 10px;
+}
+.info-link a {
+    color: var(--second);
+    text-decoration: none;
+}
+
+

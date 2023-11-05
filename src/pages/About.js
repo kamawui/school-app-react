@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../components/header/Header";
 import Information from "../components/information/Information";
+import Footer from "../components/footer/Footer";
 import {Link, useLocation} from "react-router-dom";
 
 function About({links}) {
@@ -9,7 +10,7 @@ function About({links}) {
         <div className="about-wrapper">
             <Header links={links} location={location.pathname}/>
             <div className="about-components">
-                <Information />
+                <Information links={links}/>
             </div>
         </div>
     )
