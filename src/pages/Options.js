@@ -1,18 +1,19 @@
 import React, {useEffect, useMemo, useState} from "react";
-import useTestService from "../services/TestService";
 import Header from "../components/header/Header";
 import OptionsMenu from "../components/options-menu/OptionsMenu";
 import Intro from "../components/intro/Intro";
 import TestOptions from "../components/test-options/TestOptions";
-import Footer from "../components/footer/Footer";
 import {useLocation} from "react-router-dom";
 
 function Options({links, subjects, forms, subjectList, activeTab, setActiveTab,
-                     burgerActive, setBurgerActive, setFormOption, formOption, subjectOption, setSubjectOption}) {
+                     nameOption, setNameOption, surnameOption, setSurnameOption,
+                     burgerActive, setBurgerActive, setFormOption, formOption,
+                     subjectOption, setSubjectOption, fetchTest}) {
 
     const homeComponentsClasses = burgerActive ? "" : "full-width";
 
     const location = useLocation();
+
 
     return (
         <div className="options-wrapper">
@@ -28,8 +29,10 @@ function Options({links, subjects, forms, subjectList, activeTab, setActiveTab,
                     <TestOptions forms={forms} subjects={subjects}
                                  formOption={formOption} setFormOption={setFormOption}
                                  subjectOption={subjectOption} setSubjectOption={setSubjectOption}
+                                 nameOption={nameOption} setNameOption={setNameOption}
+                                 surnameOption={surnameOption} setSurnameOption={setSurnameOption}
+                                 fetchTest={fetchTest}
                     />
-                    {/*<Footer links={links} error={linksError} loading={linksLoading}/>*/}
                 </div>
             </div>
         </div>

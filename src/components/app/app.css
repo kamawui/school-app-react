@@ -18,6 +18,16 @@ body {
     margin: 0;
     background-color: var(--main-medium);
 }
+body::-webkit-scrollbar {
+    width: 5px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    border-radius: 5px;
+}
+body::-webkit-scrollbar-track {
+    background-color: transparent;
+}
 .app-wrapper {
     width: 100%;
     margin: 0 auto;
@@ -27,6 +37,10 @@ body {
 }
 .about-wrapper {
     width: 100%;
+}
+.test-wrapper {
+    width: 100%;
+    border-top: 1px solid var(--second);
 }
 .home-components-group {
     width: 100%;

@@ -6,11 +6,10 @@ import Ellipsis from "../../svg/Ellipsis";
 import useTestService from "../../services/TestService";
 import {Link} from "react-router-dom";
 
-const TestOptions = ({forms, subjects, setFormOption, formOption, subjectOption, setSubjectOption}) => {
+const TestOptions = ({forms, subjects, nameOption, setNameOption, surnameOption, setSurnameOption,
+                         setFormOption, formOption, subjectOption, setSubjectOption, fetchTest}) => {
     const [formDropdownClasses, setFormDropdownClasses] = useState("dropdown-hidden");
     const [subjectDropdownClasses, setSubjectDropdownClasses] = useState("dropdown-hidden");
-    const [nameOption, setNameOption] = useState("");
-    const [surnameOption, setSurnameOption] = useState("");
 
     const toggleDropdown = (dropdownType) => {
         if (dropdownType === "form") {
@@ -38,18 +37,18 @@ const TestOptions = ({forms, subjects, setFormOption, formOption, subjectOption,
         setNameOption("");
         setSurnameOption("");
         setFormOption("");
-        setSubjectOption("");
+        setSubjectOption({});
     }
 
-    const formDropdownElements = !forms.loading ? forms.value.map((item, id) => {
+    const formDropdownElements = !forms.loading ? forms.value.map((item, key) => {
         return (
-            <div className="dropdown-element" onClick={() => setActiveOption("form", item)} id={id}>{item}</div>
+            <div className="dropdown-element" onClick={() => setActiveOption("form", item)} key={key}>{item}</div>
         )
     }) : null;
 
-    const subjectsDropdownElements = !subjects.loading ? subjects.value.map((item, id) => {
+    const subjectsDropdownElements = !subjects.loading ? subjects.value.map((item, key) => {
         return (
-            <div className="dropdown-element" onClick={() => setActiveOption("subject", item)} id={id}>{item}</div>
+            <div className="dropdown-element" onClick={() => setActiveOption("subject", item)} key={key}>{item.title}</div>
         )
     }) : null;
 
@@ -66,7 +65,7 @@ const TestOptions = ({forms, subjects, setFormOption, formOption, subjectOption,
                 </div>
                 <div className="surname-input-group">
                     <input type="text"  value={surnameOption}
-                           placeholder="Введіть прізвище (опціонально)" onChange={(e) => setSurnameOption(e.target.value)}/>
+                           placeholder="Введіть прізвище (не обов'язково)" onChange={(e) => setSurnameOption(e.target.value)}/>
                     <Form/>
                 </div>
             </form>
@@ -99,8 +98,10 @@ const TestOptions = ({forms, subjects, setFormOption, formOption, subjectOption,
                         </button>
                         <div className="dropdown-area">
                             <div className="dropdown-items-group">
-                                <input type="text" placeholder="Предмет" onClick={() => toggleDropdown("subject")}
-                                       value={subjectOption} readOnly/>
+                                <input type="text" placeholder="Предмет"
+                                       onClick={() => formOption ? toggleDropdown("subject")
+                                           : alert("Перш ніж перейти до вибору предмета, оберіть клас")}
+                                       value={subjectOption.title ? subjectOption.title : ""} readOnly/>
                                 <Ellipsis />
                             </div>
                             <div className={`dropdown-content ${subjectDropdownClasses}`}>
@@ -113,7 +114,15 @@ const TestOptions = ({forms, subjects, setFormOption, formOption, subjectOption,
             </div>
             <div className="options-buttons">
                 <button className="clear-form-btn" onClick={() => clearForm()}>Очистити</button>
-                <Link to="/test"><button className="start-test-btn">Розпочати</button></Link>
+                {nameOption && formOption && subjectOption ? (
+                    <Link to="/test">
+                        <button className="start-test-btn" onClick={() => fetchTest()}>Розпочати</button>
+                    </Link>
+                ) : (
+                    <button className="start-test-btn" onClick={() => alert("Заповніть всі дані перед тим, як почати тест")}>
+                        Розпочати
+                    </button>
+                )}
             </div>
         </div>
     )

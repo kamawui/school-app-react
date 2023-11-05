@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "../components/header/Header";
 import Information from "../components/information/Information";
-import Footer from "../components/footer/Footer";
 import {Link, useLocation} from "react-router-dom";
 
 function About({links}) {

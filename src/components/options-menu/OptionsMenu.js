@@ -6,6 +6,7 @@ import {Link} from "react-router-dom";
 const OptionsMenu = ({subjects, burgerActive, setBurgerActive}) => {
     const [burgerMenuClasses, setBurgerMenuClasses] = useState(burgerActive ? "" : "burger-hidden");
     const [burgerButtonClasses, setBurgerButtonClasses] = useState(burgerActive ? "active-burger" : "");
+
     const toggleBurger = () => {
         setBurgerActive(!burgerActive);
         setBurgerMenuClasses(
@@ -20,7 +21,7 @@ const OptionsMenu = ({subjects, burgerActive, setBurgerActive}) => {
     const subjectsElements = !subjects.loading ? subjects.value.map((item, key) => {
         return (
             <Link to="/forms">
-                <div className="option" key={key}><span>{item}</span></div>
+                <div className="option" key={key}><span>{item.title}</span></div>
             </Link>
 
         )

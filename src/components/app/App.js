@@ -20,11 +20,16 @@ const App = () => {
     const subjectListService = useTestService();
     const [subjectList, setSubjectList] = useState({value: [], loading: true, error: false});
 
-    const [subjectOption, setSubjectOption] = useState("")
+    const [subjectOption, setSubjectOption] = useState({})
     const [formOption, setFormOption] = useState("");
+    const [nameOption, setNameOption] = useState("");
+    const [surnameOption, setSurnameOption] = useState("");
 
     const [burgerActive, setBurgerActive] = useState(true);
     const [activeTab, setActiveTab] = useState(window.location.pathname);
+
+    const testService = useTestService();
+    const [test, setTest] = useState({value: {}, loading: testService.loading, error: testService.error});
 
     useEffect( () => {
         async function fetchData() {
@@ -37,20 +42,6 @@ const App = () => {
             error: false,
         }));
     }, []);
-
-    useEffect(() => {
-        if (formOption) {
-            async function fetchData() {
-                return await subjectService.getSubjects();
-            }
-
-            fetchData().then(res => setOptionSubjects({
-                value: res[formOption],
-                loading: false,
-                error: false,
-            }));
-        }
-    }, [formOption]);
 
     useEffect(() => {
         async function fetchData() {
@@ -76,12 +67,45 @@ const App = () => {
         }));
     }, []);
 
+    useEffect(() => {
+        if (formOption) {
+            async function fetchData() {
+                return await subjectService.getSubjects();
+            }
+
+            fetchData().then(res => setOptionSubjects({
+                value: res[formOption],
+                loading: false,
+                error: false,
+            }));
+        }
+    }, [formOption]);
+
     const memoizedLinks = useMemo(() => links, [links]);
-    const memoizedSubjects = useMemo(() => optionSubjects, [optionSubjects]);
-    const memoizedForms = useMemo(() => forms, [forms]);
     const memoizedSubjectList = useMemo(() => subjectList, [subjectList]);
+    const memoizedForms = useMemo(() => forms, [forms]);
+    const memoizedSubjects = useMemo(() => optionSubjects, [optionSubjects]);
+
+    const fetchTest = async () => {
+        setTest({
+            value: [],
+            loading: true,
+            error: false,
+        })
+
+        await testService.getTest(formOption, subjectOption).then(res => {
+            setTest({
+                value: res,
+                loading: false,
+                error: false,
+            })
+        });
+    }
+
+    const memoizedTest = useMemo(() => test, [test]);
 
     return (
+
         <div className="app-wrapper">
             <BrowserRouter>
                 <Routes>
@@ -90,21 +114,17 @@ const App = () => {
                                  subjectList={memoizedSubjectList}
                                  subjects={memoizedSubjects}
                                  forms={memoizedForms}
-                                 burgerActive={burgerActive}
-                                 setBurgerActive={setBurgerActive}
-                                 formOption={formOption}
-                                 setFormOption={setFormOption}
-                                 subjectOption={subjectOption}
-                                 setSubjectOption={setSubjectOption}
-                                 activeTab={activeTab}
-                                 setActiveTab={setActiveTab}
+                                 burgerActive={burgerActive} setBurgerActive={setBurgerActive}
+                                 formOption={formOption} setFormOption={setFormOption}
+                                 subjectOption={subjectOption} setSubjectOption={setSubjectOption}
+                                 activeTab={activeTab} setActiveTab={setActiveTab}
+                                 nameOption={nameOption} setNameOption={setNameOption}
+                                 surnameOption={surnameOption} setSurnameOption={setSurnameOption}
+                                 fetchTest={fetchTest}
                         />
                     }/>
                     <Route path="/test" element={
-                        <Test links={memoizedLinks}
-                              activeTab={activeTab}
-                              setActiveTab={setActiveTab}
-                        />
+                        <Test test={memoizedTest}/>
                     }/>
                     <Route path="/about" element={
                         <About links={memoizedLinks}

@@ -4,9 +4,15 @@ const useTestService = () => {
     const {loading, error, request, clearError} = useHttp();
 
     const getTest = async (testForm, testSubject) => {
-        const path = `/data/tests/form${testForm}/${testSubject}.json`;
+        const path = `/data/tests/form${testForm}/${testSubject.tag}.json`;
 
-        return await request(path);
+        const response = await request(path);
+        const { questions } = response;
+
+        return {
+            title: testSubject.title,
+            questions: getRandomQuestions(questions)
+        };
     }
 
     const getForms = async () => {
@@ -19,6 +25,22 @@ const useTestService = () => {
         const path = `/data/info/subjects.json`;
 
         return await request(path);
+    }
+
+    const getRandomNum = (min, max) => {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    const getRandomQuestions = (questions) => {
+        const randomQuestions = [];
+
+        for (let i = 0; i < 12 && questions.length > 0; i++) {
+            let randomQuestion = questions.splice(getRandomNum(0, questions.length - 1), 1)[0];
+
+            randomQuestions.push(randomQuestion);
+        }
+
+        return randomQuestions;
     }
 
     return {loading, error, getTest, clearError, getForms, getSubjects};

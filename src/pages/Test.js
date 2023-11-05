@@ -1,20 +1,18 @@
-import React from "react";
-import Header from "../components/header/Header";
-import {Link, useLocation} from "react-router-dom";
+import React, {useEffect, useState} from "react";
+import QuestionsMenu from "../components/questions-menu/QuestionsMenu";
 
-function Test({links, activeTab, setActiveTab}) {
-    const location = useLocation();
+function Test({test}) {
+    const [activeQuestion, setActiveQuestion] = useState({});
+
+    useEffect(() => {
+        if (test.value?.questions?.length > 0) {
+            setActiveQuestion(test.value.questions[0])
+        }
+    }, [test])
+
     return (
         <div className="test-wrapper">
-            <Header links={links} location={location.pathname}/>
-            <div className="home-components">
-                <h1>There is still nothing on this page</h1>
-            </div>
-            <Link to="/">
-                <button className="back">
-                    GO HOME
-                </button>
-            </Link>
+            <QuestionsMenu test={test} activeQuestion={activeQuestion} setActiveQuestion={setActiveQuestion}/>
         </div>
     )
 }
