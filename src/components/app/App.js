@@ -12,13 +12,13 @@ import useTestService from "../../services/TestService";
 
 const App = () => {
     const linkService = useLinkService();
-    const [links, setLinks] = useState({value: [], loading: true, error: false});
+    const [links, setLinks] = useState({value: [], loading: linkService.loading, error: linkService.error});
     const subjectService = useTestService();
-    const [optionSubjects, setOptionSubjects] = useState({value: [], loading: true, error: false});
+    const [optionSubjects, setOptionSubjects] = useState({value: [], loading: subjectService.loading, error: subjectService.error});
     const formService = useTestService();
-    const [forms, setForms] = useState({value: [], loading: true, error: false});
+    const [forms, setForms] = useState({value: [], loading: formService.loading, error: formService.error});
     const subjectListService = useTestService();
-    const [subjectList, setSubjectList] = useState({value: [], loading: true, error: false});
+    const [subjectList, setSubjectList] = useState({value: [], loading: subjectListService.loading, error: subjectListService.error});
 
     const [subjectOption, setSubjectOption] = useState({})
     const [formOption, setFormOption] = useState("");
@@ -32,53 +32,71 @@ const App = () => {
     const [test, setTest] = useState({value: {}, loading: testService.loading, error: testService.error});
 
     useEffect( () => {
-        async function fetchData() {
-            return await linkService.getLinks();
-        }
-
-        fetchData().then(res => setLinks({
-            value: res,
-            loading: false,
-            error: false,
-        }));
-    }, []);
-
-    useEffect(() => {
-        async function fetchData() {
-            return await subjectListService.getSubjects();
-        }
-
-        fetchData().then(res => setSubjectList({
-            value: res.all,
-            loading: false,
-            error: false,
-        }));
-    }, []);
-
-    useEffect(() => {
-        async function fetchData() {
-            return await formService.getForms();
-        }
-
-        fetchData().then(res => setForms({
-            value: res.forms,
-            loading: false,
-            error: false,
-        }));
-    }, []);
-
-    useEffect(() => {
-        if (formOption) {
+        try {
             async function fetchData() {
-                return await subjectService.getSubjects();
+                return await linkService.getLinks();
             }
 
-            fetchData().then(res => setOptionSubjects({
-                value: res[formOption],
+            fetchData().then(res => setLinks({
+                value: res,
                 loading: false,
                 error: false,
             }));
+        } catch(err) {
+            throw "Links list error occurred: " + err;
         }
+
+    }, []);
+
+    useEffect(() => {
+        try {
+            async function fetchData() {
+                return await subjectListService.getSubjects();
+            }
+
+            fetchData().then(res => setSubjectList({
+                value: res.all,
+                loading: false,
+                error: false,
+            }));
+        } catch (err) {
+            throw "Option menu error occurred: " + err;
+        }
+    }, []);
+
+    useEffect(() => {
+        try {
+            async function fetchData() {
+                return await formService.getForms();
+            }
+
+            fetchData().then(res => setForms({
+                value: res.forms,
+                loading: false,
+                error: false,
+            }));
+        } catch (err) {
+            throw "Forms list error occurred: " + err;
+        }
+    }, []);
+
+    useEffect(() => {
+        try {
+            if (formOption) {
+                async function fetchData() {
+                    return await subjectService.getSubjects();
+                }
+
+                fetchData().then(res => setOptionSubjects({
+                    value: res[formOption],
+                    loading: false,
+                    error: false,
+                }));
+            }
+        } catch (err) {
+            throw "Subject list error occurred: " + err;
+        }
+
     }, [formOption]);
 
     const memoizedLinks = useMemo(() => links, [links]);

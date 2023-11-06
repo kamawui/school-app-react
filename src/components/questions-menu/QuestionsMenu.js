@@ -7,11 +7,11 @@ import Spinner from "../spinner/Spinner";
 function QuestionsMenu({test, activeQuestion, setActiveQuestion}) {
     const questionsList = !test.loading ? test.value.questions.map((item, key) => {
         return (
-            <div onClick={() => setActiveQuestion(item)}
+            <div onClick={() => setActiveQuestion(item)} key={key}
                 className={`question-group ${activeQuestion === item ? "active-question" : ""}`}>
                 <div className="question-index">{key + 1}</div>
                 <div className="question-list-border-group">
-                    <div className="question" key={key}><span>{item.question}</span></div>
+                    <div className="question"><span>{item.question}</span></div>
                     <div className="question-logo"><Ellipsis /></div>
                 </div>
             </div>

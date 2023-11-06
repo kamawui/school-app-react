@@ -1,8 +1,7 @@
 :root {
     --second: #40e5a8;
     --second-sup: #62f3c1;
-    --second-selected: #5fe7bc;
-    --second-dark: #4ca184;
+    --second-selected: #4eb18d;
     --second-light: #e3fdf9;
     --neutral: #e5e5e5;
     --main: #222222;
@@ -41,6 +40,8 @@ body::-webkit-scrollbar-track {
 .test-wrapper {
     width: 100%;
     border-top: 1px solid var(--second);
+    display: flex;
+    justify-content: end;
 }
 .home-components-group {
     width: 100%;

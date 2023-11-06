@@ -34,8 +34,10 @@ const useTestService = () => {
     const getRandomQuestions = (questions) => {
         const randomQuestions = [];
 
-        for (let i = 0; i < 12 && questions.length > 0; i++) {
+        for (let i = 1; i <= 12 && questions.length > 0; i++) {
             let randomQuestion = questions.splice(getRandomNum(0, questions.length - 1), 1)[0];
+
+            randomQuestion.index = i;
 
             randomQuestions.push(randomQuestion);
         }

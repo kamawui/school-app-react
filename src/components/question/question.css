@@ -1,0 +1,101 @@
+.question-wrapper {
+    width: calc(100% - 400px);
+    color: var(--neutral);
+    font-family: "Rubik", sans-serif;
+}
+.question-content {
+    width: 60%;
+    padding: 140px 0;
+    margin: 0 auto;
+}
+.question-title {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    font-size: 31px;
+    border-bottom: 3px solid var(--second);
+    padding: 10px 0;
+    font-weight: bold;
+}
+.variants-title {
+    width: 100%;
+    padding: 16px 0;
+    font-size: 18px;
+    border-bottom: 2px solid var(--main-border);
+    color: var(--main-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.choose-one-message {
+    padding: 16px 0;
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--second-dark);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.variants {
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+}
+.variant {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.radio-btn {
+    padding: 0 80px;
+    display: flex;
+    align-items: center;
+}
+.radio-btn input {
+    margin: 0;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    appearance: none;
+    border-radius: 2px;
+    outline: 2px solid var(--neutral);
+    border: 4px solid var(--main-medium);
+}
+.radio-btn input:checked {
+    background-color: var(--second);
+}
+.variant-content {
+    width: 60%;
+    border-bottom: 2px solid var(--main-border);
+    padding: 15px 0;
+    font-weight: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.variant-content span {
+    width: 90%;
+}
+.quiz-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    padding: 30px 0;
+}
+.quiz-btn {
+    outline: none;
+    padding: 10px 40px;
+    background-color: transparent;
+    border: 4px solid var(--second);
+    border-radius: 50px;
+    font-size: 18px;
+    color: var(--second);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.2s;
+}
+.quiz-btn:hover {
+    border: 4px solid var(--second-selected);
+    color: var(--second-selected);
+    background-color: var(--main-selected);
+}

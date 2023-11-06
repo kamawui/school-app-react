@@ -20,8 +20,8 @@ const OptionsMenu = ({subjects, burgerActive, setBurgerActive}) => {
 
     const subjectsElements = !subjects.loading ? subjects.value.map((item, key) => {
         return (
-            <Link to="/forms">
-                <div className="option" key={key}><span>{item.title}</span></div>
+            <Link to="/forms" key={key}>
+                <div className="option"><span>{item.title}</span></div>
             </Link>
 
         )
