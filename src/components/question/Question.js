@@ -4,33 +4,45 @@ import Spinner from "../spinner/Spinner";
 import QuestionSign from "../../svg/QuestionSign";
 import Answer from "../../svg/Answer";
 
-const Question = ({loading, error, activeQuestion, setActiveQuestion, setAnswer}) => {
+const Question = ({test, activeQuestionIndex, setActiveQuestionIndex, setAnswer, answerList}) => {
+    const questions = !test.loading ? test.value.questions.map((item, key) => {
+        const questionClasses = activeQuestionIndex === item.index ? "question-item active-question-item " : "question-item"
 
-    const questionVariants = (!loading && activeQuestion.answers) ? activeQuestion.answers.map((item, key) => {
+        const variants = item.answers.map((answer, key) => {
+            const variantsClasses = answerList[item.index]?.userAnswer === answer ? "variant active-variant" : "variant"
+
+            return (
+                <li className={variantsClasses} key={key}>
+                    <div className="radio-btn" onClick={() => setAnswer(item.index, answer)}>
+                        <div> </div>
+                    </div>
+                    <div className="variant-content"><span>{answer}</span>
+                        <Answer />
+                    </div>
+                </li>
+            )
+        })
+
         return (
-            <li className="variant" key={key}>
-                <div className="radio-btn" onClick={() => setAnswer(activeQuestion.index, item)}>
-                    <input type="radio" name="answer"/>
-                </div>
-                <div className="variant-content"><span>{item}</span>
-                    <Answer />
-                </div>
+            <li className={questionClasses} key={key}>
+                {variants}
             </li>
         )
+
     }) : null;
 
-    const questionContent = !loading ? (
+    const questionContent = !test.loading ? (
         <div className="question-content">
-            <div className="question-title">{activeQuestion.index}. {activeQuestion.question}</div>
+            <div className="question-title">{activeQuestionIndex}. {test.value.questions[activeQuestionIndex].question}</div>
             <div className="variants-title">Варіанти відповідей:
                 <QuestionSign />
             </div>
             <div className="choose-one-message">Виберіть одну відповідь</div>
-            <ul className="variants">
-                {questionVariants}
+            <ul className="question-list">
+                {questions}
             </ul>
             <div className="quiz-buttons">
-                {activeQuestion.index === 12 ?
+                {activeQuestionIndex === 12 ?
                     <button className="end-quiz quiz-btn">Завершити</button> :
                     <button className="next-question quiz-btn">Наступне</button>
                 }
