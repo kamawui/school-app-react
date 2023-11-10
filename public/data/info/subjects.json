@@ -1,4 +1,50 @@
 {
+  "5": [
+    {"title": "Математика", "tag": "math"},
+    {"title": "Англійська мова", "tag": "english"},
+    {"title": "Українська мова", "tag": "ukrainian_language"},
+    {"title": "Українська література", "tag": "ukrainian_literature"},
+    {"title": "Історія України", "tag": "ukrainian_history"},
+    {"title": "Всесвітня історія", "tag": "world_history"},
+    {"title": "Інформатика", "tag": "informatics"}
+  ],
+  "6": [
+    {"title": "Математика", "tag": "math"},
+    {"title": "Англійська мова", "tag": "english"},
+    {"title": "Українська мова", "tag": "ukrainian_language"},
+    {"title": "Українська література", "tag": "ukrainian_literature"},
+    {"title": "Біологія", "tag": "biology"},
+    {"title": "Історія України", "tag": "ukrainian_history"},
+    {"title": "Всесвітня історія", "tag": "world_history"},
+    {"title": "Географія", "tag": "geography"},
+    {"title": "Інформатика", "tag": "informatics"}
+  ],
+  "7": [
+    {"title": "Математика", "tag": "math"},
+    {"title": "Англійська мова", "tag": "english"},
+    {"title": "Українська мова", "tag": "ukrainian_language"},
+    {"title": "Українська література", "tag": "ukrainian_literature"},
+    {"title": "Фізика", "tag": "physics"},
+    {"title": "Хімія", "tag": "chemistry"},
+    {"title": "Біологія", "tag": "biology"},
+    {"title": "Історія України", "tag": "ukrainian_history"},
+    {"title": "Всесвітня історія", "tag": "world_history"},
+    {"title": "Географія", "tag": "geography"},
+    {"title": "Інформатика", "tag": "informatics"}
+  ],
+  "8": [
+    {"title": "Математика", "tag": "math"},
+    {"title": "Англійська мова", "tag": "english"},
+    {"title": "Українська мова", "tag": "ukrainian_language"},
+    {"title": "Українська література", "tag": "ukrainian_literature"},
+    {"title": "Фізика", "tag": "physics"},
+    {"title": "Хімія", "tag": "chemistry"},
+    {"title": "Біологія", "tag": "biology"},
+    {"title": "Історія України", "tag": "ukrainian_history"},
+    {"title": "Всесвітня історія", "tag": "world_history"},
+    {"title": "Географія", "tag": "geography"},
+    {"title": "Інформатика", "tag": "informatics"}
+  ],
   "9": [
     {"title": "Математика", "tag": "math"},
     {"title": "Англійська мова", "tag": "english"},
@@ -21,10 +67,12 @@
     {"title": "Фізика", "tag": "physics"},
     {"title": "Хімія", "tag": "chemistry"},
     {"title": "Біологія", "tag": "biology"},
-    {"title": "Всесвітня історія та історія України", "tag": "world_ukraine_history"},
+    {"title": "Історія України", "tag": "ukrainian_history"},
+    {"title": "Всесвітня історія", "tag": "world_history"},
     {"title": "Географія", "tag": "geography"},
     {"title": "Інформатика", "tag": "informatics"},
-    {"title": "Громадянська освіта", "tag": "civic_education"}
+    {"title": "Громадянська освіта", "tag": "civic_education"},
+    {"title": "Правознавство", "tag": "law"}
   ],
   "11": [
     {"title": "Математика", "tag": "math"},
@@ -34,10 +82,13 @@
     {"title": "Фізика", "tag": "physics"},
     {"title": "Хімія", "tag": "chemistry"},
     {"title": "Біологія", "tag": "biology"},
-    {"title": "Всесвітня історія та історія України", "tag": "world_ukraine_history"},
+    {"title": "Історія України", "tag": "ukrainian_history"},
+    {"title": "Всесвітня історія", "tag": "world_history"},
     {"title": "Географія", "tag": "geography"},
     {"title": "Інформатика", "tag": "informatics"},
-    {"title": "Астрономія", "tag": "astronomy"}
+    {"title": "Астрономія", "tag": "astronomy"},
+    {"title": "Громадянська освіта", "tag": "civic_education"},
+    {"title": "Правознавство", "tag": "law"}
   ],
   "all": [
     {"title": "Математика", "tag": "math"},
@@ -49,7 +100,6 @@
     {"title": "Біологія", "tag": "biology"},
     {"title": "Історія України", "tag": "ukrainian_history"},
     {"title": "Всесвітня історія", "tag": "world_history"},
-    {"title": "Всесвітня історія та історія України", "tag": "world_ukraine_history"},
     {"title": "Географія", "tag": "geography"},
     {"title": "Інформатика", "tag": "informatics"},
     {"title": "Астрономія", "tag": "astronomy"},

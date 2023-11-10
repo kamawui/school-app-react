@@ -2,7 +2,10 @@ import React from "react";
 
 function NoPage() {
     return (
-        <div>Error 404: Not found</div>
+        <div className="error404">
+            <img src={"/error404.gif"} alt=""/>
+            {`Помилка 404 :<`}
+        </div>
     )
 }
 

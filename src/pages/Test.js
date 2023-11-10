@@ -1,10 +1,9 @@
 import React, {useEffect, useState} from "react";
-import QuestionsMenu from "../components/questions-menu/QuestionsMenu";
 import Question from "../components/question/Question";
-import Answer from "../svg/Answer";
-import Spinner from "../components/spinner/Spinner";
+import TestCompleting from "../components/test-completing/testCompleting";
+import NoPage from "./NoPage";
 
-function Test({test}) {
+function Test({test, setTestResult, setTestEnded, testEnded, setShowResults}) {
     const [activeQuestionIndex, setActiveQuestionIndex] = useState(1);
     const [answerList, setAnswerList] = useState({});
 
@@ -17,6 +16,7 @@ function Test({test}) {
 
         test?.value?.questions?.forEach((item) => {
             initialAnswers[item.index] = {
+                question: item.question,
                 correctAnswer: item.correctAnswer,
                 userAnswer: "",
             };
@@ -29,16 +29,57 @@ function Test({test}) {
         setActiveQuestionIndex(index);
 
         setAnswerList((prevAnswerList) => {
-            const updatedAnswerList = { ...prevAnswerList };
+            const updatedAnswerList = {...prevAnswerList};
             updatedAnswerList[index].userAnswer = answer;
             return updatedAnswerList;
         });
     }
 
+    const calculateResult = (answerList) => {
+        let score = 0;
+        let skipped = 0;
+        let wrong = 0;
+
+        for (let i = 1; i <= 12; i++) {
+            if (answerList[i].correctAnswer === answerList[i].userAnswer) {
+                score++;
+            } else if (answerList[i].userAnswer === "") {
+                skipped++;
+            } else {
+                wrong++;
+            }
+        }
+
+        return {score, skipped, wrong};
+    }
+
+    const endTest = () => {
+        setTestResult({
+            value: {
+                points: calculateResult(answerList).score,
+                skipped: calculateResult(answerList).skipped,
+                wrong: calculateResult(answerList).wrong,
+                answers: Object.values(answerList)
+            },
+            loading: false
+        });
+
+        setTestEnded(true);
+        setShowResults(true);
+    }
+
     return (
         <div className="test-wrapper">
-            <QuestionsMenu test={test} activeQuestionIndex={activeQuestionIndex} setActiveQuestion={setActiveQuestionIndex}/>
-            <Question test={test} answerList={answerList} setAnswer={setAnswer} activeQuestionIndex={activeQuestionIndex} setActiveQuestionIndex={setActiveQuestionIndex}/>
+            {
+                testEnded ? <NoPage/> :
+                    <>
+                        <TestCompleting test={test} activeQuestionIndex={activeQuestionIndex}
+                                        setActiveQuestion={setActiveQuestionIndex} endTest={endTest}/>
+                        <Question test={test} answerList={answerList} setAnswer={setAnswer} endTest={endTest}
+                                  activeQuestionIndex={activeQuestionIndex}
+                                  setActiveQuestionIndex={setActiveQuestionIndex}/>
+                    </>
+            }
         </div>
     )
 }

@@ -1,37 +1,31 @@
-import React, {useEffect, useMemo, useState} from "react";
-import Header from "../components/header/Header";
+import React from "react";
 import OptionsMenu from "../components/options-menu/OptionsMenu";
-import Intro from "../components/intro/Intro";
 import TestOptions from "../components/test-options/TestOptions";
-import {useLocation} from "react-router-dom";
 
-function Options({links, subjects, forms, subjectList, activeTab, setActiveTab,
+function Options({subjects, forms, subjectList, setTestEnded, clearForm, setFormsBySubjects, getFormsBySubject,
                      nameOption, setNameOption, surnameOption, setSurnameOption,
                      burgerActive, setBurgerActive, setFormOption, formOption,
                      subjectOption, setSubjectOption, fetchTest}) {
 
     const homeComponentsClasses = burgerActive ? "" : "full-width";
 
-    const location = useLocation();
-
-
     return (
         <div className="options-wrapper">
-            <Header links={links} activeTab={activeTab} setActiveTab={setActiveTab} location={location.pathname}/>
             <div className="home-components-group">
                 <OptionsMenu subjects={subjectList}
                              subjectOption={subjectOption}
                              setSubjectOption={setSubjectOption}
                              burgerActive={burgerActive}
-                             setBurgerActive={setBurgerActive}/>
+                             setBurgerActive={setBurgerActive}
+                             setFormsBySubjects={setFormsBySubjects} getFormsBySubject={getFormsBySubject}
+                />
                 <div className={`home-components ${homeComponentsClasses}`}>
-                    <Intro burgerActive={burgerActive}/>
-                    <TestOptions forms={forms} subjects={subjects}
+                    <TestOptions forms={forms} subjects={subjects} setTestEnded={setTestEnded}
                                  formOption={formOption} setFormOption={setFormOption}
                                  subjectOption={subjectOption} setSubjectOption={setSubjectOption}
                                  nameOption={nameOption} setNameOption={setNameOption}
                                  surnameOption={surnameOption} setSurnameOption={setSurnameOption}
-                                 fetchTest={fetchTest}
+                                 fetchTest={fetchTest} burgerActive={burgerActive} clearForm={clearForm}
                     />
                 </div>
             </div>

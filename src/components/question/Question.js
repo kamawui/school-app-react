@@ -3,8 +3,10 @@ import "./question.css";
 import Spinner from "../spinner/Spinner";
 import QuestionSign from "../../svg/QuestionSign";
 import Answer from "../../svg/Answer";
+import {Link} from "react-router-dom";
 
-const Question = ({test, activeQuestionIndex, setActiveQuestionIndex, setAnswer, answerList}) => {
+const Question = ({test, activeQuestionIndex, setActiveQuestionIndex, setAnswer, answerList, endTest}) => {
+
     const questions = !test.loading ? test.value.questions.map((item, key) => {
         const questionClasses = activeQuestionIndex === item.index ? "question-item active-question-item " : "question-item"
 
@@ -14,10 +16,10 @@ const Question = ({test, activeQuestionIndex, setActiveQuestionIndex, setAnswer,
             return (
                 <li className={variantsClasses} key={key}>
                     <div className="radio-btn" onClick={() => setAnswer(item.index, answer)}>
-                        <div> </div>
+                        <div></div>
                     </div>
                     <div className="variant-content"><span>{answer}</span>
-                        <Answer />
+                        <Answer/>
                     </div>
                 </li>
             )
@@ -33,9 +35,10 @@ const Question = ({test, activeQuestionIndex, setActiveQuestionIndex, setAnswer,
 
     const questionContent = !test.loading ? (
         <div className="question-content">
-            <div className="question-title">{activeQuestionIndex}. {test.value.questions[activeQuestionIndex].question}</div>
+            <div
+                className="question-title">{activeQuestionIndex}. {test.value.questions[activeQuestionIndex - 1].question}</div>
             <div className="variants-title">Варіанти відповідей:
-                <QuestionSign />
+                <QuestionSign/>
             </div>
             <div className="choose-one-message">Виберіть одну відповідь</div>
             <ul className="question-list">
@@ -43,13 +46,18 @@ const Question = ({test, activeQuestionIndex, setActiveQuestionIndex, setAnswer,
             </ul>
             <div className="quiz-buttons">
                 {activeQuestionIndex === 12 ?
-                    <button className="end-quiz quiz-btn">Завершити</button> :
-                    <button className="next-question quiz-btn">Наступне</button>
+                    <Link to="/result">
+                        <button className="call-to-action-btn" onClick={endTest}>Завершити</button>
+                    </Link>
+                     :
+                    <button className="action-btn" onClick={() => setActiveQuestionIndex((prevIndex) => prevIndex + 1)}>
+                        Наступне
+                    </button>
                 }
             </div>
 
         </div>
-    ) : <Spinner />
+    ) : <Spinner/>
 
     return (
         <div className="question-wrapper">

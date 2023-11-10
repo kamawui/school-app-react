@@ -1,7 +1,5 @@
 import React from "react";
 import "./information.css";
-import Gear from "../../svg/Gear";
-import {Link} from "react-router-dom";
 
 const Information = ({links}) => {
     const infoLinks = !links.loading ? links.value.map((item, id) => {
@@ -12,9 +10,11 @@ const Information = ({links}) => {
 
     return (
         <div className="information-wrapper">
-            <div className="info-intro">
-                <h2 className="information-header">Вітаємо Вас у <span>TestHub</span>!</h2>
-                <p className="info-paragraph">Навчальний проект, що включає в себе тести шкільної програми різних класів.</p>
+            <div className="intro-wrapper">
+                <div className="intro-info intro-full-width">
+                    <h2 className="intro-header">Вітаємо Вас у <span>TestHub</span>!</h2>
+                    <p className="intro-paragraph">Навчальний проект, що включає в себе тести шкільної програми різних класів.</p>
+                </div>
             </div>
             <div className="info-description">
                 <div className="info">Про проект</div>

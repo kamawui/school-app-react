@@ -3,7 +3,7 @@ import "./optionsMenu.css";
 import Arrow from "../../svg/Arrow";
 import {Link} from "react-router-dom";
 
-const OptionsMenu = ({subjects, burgerActive, setBurgerActive}) => {
+const OptionsMenu = ({subjects, burgerActive, setBurgerActive, setFormsBySubjects, getFormsBySubject}) => {
     const [burgerMenuClasses, setBurgerMenuClasses] = useState(burgerActive ? "" : "burger-hidden");
     const [burgerButtonClasses, setBurgerButtonClasses] = useState(burgerActive ? "active-burger" : "");
 
@@ -18,9 +18,26 @@ const OptionsMenu = ({subjects, burgerActive, setBurgerActive}) => {
 
     }
 
+    const setForms = (subjectOption) => {
+        try {
+            async function fetchData() {
+                return await getFormsBySubject(subjectOption);
+            }
+
+            fetchData()
+                .then(res => setFormsBySubjects({
+                    value: res,
+                    loading: false,
+                    error: false,
+                }));
+        } catch (err) {
+            throw "Forms by subjects list error occurred: " + err;
+        }
+    }
+
     const subjectsElements = !subjects.loading ? subjects.value.map((item, key) => {
         return (
-            <Link to="/forms" key={key}>
+            <Link to="/forms" key={key} onClick={() => setForms(item.tag)}>
                 <div className="option"><span>{item.title}</span></div>
             </Link>
 

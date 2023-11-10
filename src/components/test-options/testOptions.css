@@ -1,4 +1,4 @@
-.test-options-wrapper {
+.test-options {
     font-family: "Roboto Thin", sans-serif;
     padding: 40px 0;
     width: 60%;
@@ -159,15 +159,5 @@
     background-color: transparent;
     color: var(--neutral);
 }
-.start-test-btn {
-    border: none;
-    background-color: var(--second);
-    color: var(--main-medium);
-}
-.start-test-btn:hover {
-    background-color: var(--second-selected);
-}
-.clear-form-btn:hover {
-    background-color: var(--main-selected);
-}
+
 

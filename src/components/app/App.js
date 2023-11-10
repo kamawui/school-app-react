@@ -9,16 +9,42 @@ import About from "../../pages/About";
 import FormOptions from "../../pages/FormOptions";
 import "./app.css";
 import useTestService from "../../services/TestService";
+import Header from "../header/Header";
+import OptionsMenu from "../options-menu/OptionsMenu";
 
 const App = () => {
     const linkService = useLinkService();
-    const [links, setLinks] = useState({value: [], loading: linkService.loading, error: linkService.error});
+    const [links, setLinks] = useState({
+        value: [],
+        loading: linkService.loading,
+        error: linkService.error});
+
     const subjectService = useTestService();
-    const [optionSubjects, setOptionSubjects] = useState({value: [], loading: subjectService.loading, error: subjectService.error});
+    const [optionSubjects, setOptionSubjects] = useState({
+        value: [],
+        loading: subjectService.loading,
+        error: subjectService.error
+    });
+
     const formService = useTestService();
-    const [forms, setForms] = useState({value: [], loading: formService.loading, error: formService.error});
+    const [forms, setForms] = useState({
+        value: [],
+        loading: formService.loading,
+        error: formService.error});
+
     const subjectListService = useTestService();
-    const [subjectList, setSubjectList] = useState({value: [], loading: subjectListService.loading, error: subjectListService.error});
+    const [subjectList, setSubjectList] = useState({
+        value: [],
+        loading: subjectListService.loading,
+        error: subjectListService.error
+    });
+
+    const formsBySubjectService = useTestService();
+    const [formsBySubjects, setFormsBySubjects] = useState({
+        value: [],
+        loading: formsBySubjectService.loading,
+        error: formsBySubjectService.error
+    });
 
     const [subjectOption, setSubjectOption] = useState({})
     const [formOption, setFormOption] = useState("");
@@ -26,12 +52,15 @@ const App = () => {
     const [surnameOption, setSurnameOption] = useState("");
 
     const [burgerActive, setBurgerActive] = useState(true);
-    const [activeTab, setActiveTab] = useState(window.location.pathname);
+    const [testEnded, setTestEnded] = useState(true);
+    const [showResults, setShowResults] = useState(false);
 
     const testService = useTestService();
     const [test, setTest] = useState({value: {}, loading: testService.loading, error: testService.error});
 
-    useEffect( () => {
+    const [testResult, setTestResult] = useState({value: {points: null, skipped: null, wrong: null}, loading: true});
+
+    useEffect(() => {
         try {
             async function fetchData() {
                 return await linkService.getLinks();
@@ -42,7 +71,7 @@ const App = () => {
                 loading: false,
                 error: false,
             }));
-        } catch(err) {
+        } catch (err) {
             throw "Links list error occurred: " + err;
         }
 
@@ -99,12 +128,19 @@ const App = () => {
 
     }, [formOption]);
 
+    const clearForm = () => {
+        setNameOption("");
+        setSurnameOption("");
+        setFormOption("");
+        setSubjectOption({});
+    }
+
     const memoizedLinks = useMemo(() => links, [links]);
     const memoizedSubjectList = useMemo(() => subjectList, [subjectList]);
     const memoizedForms = useMemo(() => forms, [forms]);
     const memoizedSubjects = useMemo(() => optionSubjects, [optionSubjects]);
 
-    const fetchTest = async () => {
+    const fetchTest = async (formOption, subjectOption) => {
         setTest({
             value: [],
             loading: true,
@@ -122,49 +158,60 @@ const App = () => {
 
     const memoizedTest = useMemo(() => test, [test]);
 
-    return (
+    const HeaderComponent = () => {
+        const location = useLocation();
+        return location.pathname !== "/test" && <Header links={memoizedLinks} location={location.pathname}/>;
+    };
 
-        <div className="app-wrapper">
-            <BrowserRouter>
+    return (
+        <BrowserRouter>
+            <div className="app-wrapper">
+                <HeaderComponent/>
                 <Routes>
-                    <Route index path="/" element={
-                        <Options links={memoizedLinks}
-                                 subjectList={memoizedSubjectList}
+                    <Route exact path="/" element={
+                        <Options subjectList={memoizedSubjectList}
                                  subjects={memoizedSubjects}
                                  forms={memoizedForms}
+                                 setFormsBySubjects={setFormsBySubjects} getFormsBySubject={formsBySubjectService.getFormsBySubject}
                                  burgerActive={burgerActive} setBurgerActive={setBurgerActive}
                                  formOption={formOption} setFormOption={setFormOption}
                                  subjectOption={subjectOption} setSubjectOption={setSubjectOption}
-                                 activeTab={activeTab} setActiveTab={setActiveTab}
                                  nameOption={nameOption} setNameOption={setNameOption}
                                  surnameOption={surnameOption} setSurnameOption={setSurnameOption}
-                                 fetchTest={fetchTest}
+                                 fetchTest={fetchTest} setTestEnded={setTestEnded} clearForm={clearForm}
                         />
                     }/>
-                    <Route path="/test" element={
-                        <Test test={memoizedTest}/>
-                    }/>
-                    <Route path="/about" element={
-                        <About links={memoizedLinks}
-                               activeTab={activeTab}
-                               setActiveTab={setActiveTab}
+                    <Route exact path="/forms" element={
+                        <FormOptions subjectList={subjectList}
+                                     subjectOption={subjectOption}
+                                     setSubjectOption={setSubjectOption}
+                                     burgerActive={burgerActive}
+                                     setBurgerActive={setBurgerActive}
+                                     formsBySubjects={formsBySubjects} setFormsBySubjects={setFormsBySubjects}
+                                     getFormsBySubject={formsBySubjectService.getFormsBySubject}
                         />
                     }/>
-                    <Route path="/forms" element={
-                        <FormOptions links={memoizedLinks}
-                                     activeTab={activeTab}
-                                     setActiveTab={setActiveTab}
-                        />
+                    <Route exact path="/about" element={
+                        <About links={memoizedLinks}/>
                     }/>
-                    <Route path="/result" element={
-                        <Result />
+                    <Route exact path="/test" element={
+                        <Test test={memoizedTest} setTestResult={setTestResult}
+                              testEnded={testEnded} setTestEnded={setTestEnded} setShowResults={setShowResults}/>
                     }/>
-                    <Route path="/*" element={
-                        <NoPage />
+                    <Route exact path="/result" element={
+                        showResults ? <Result links={memoizedLinks} testResult={testResult}
+                                              formOption={formOption} subjectOption={subjectOption}
+                                              nameOption={nameOption} surnameOption={surnameOption}
+                                              fetchTest={fetchTest} setTestEnded={setTestEnded}
+                                              clearForm={clearForm}/> : <NoPage/>
+
+                    }/>
+                    <Route exact path="/*" element={
+                        <NoPage/>
                     }/>
                 </Routes>
-            </BrowserRouter>
-        </div>
+            </div>
+        </BrowserRouter>
 
     )
 }

@@ -1,8 +1,8 @@
-import React, {Component, useEffect, useMemo, useState} from "react";
+import React from "react";
 import "./header.css";
 import Gear from "../../svg/Gear";
-import useLinkService from "../../services/LinkService";
 import {Link} from "react-router-dom";
+import {useLocation} from "react-router";
 
 const Header = ({links, location}) => {
     const linkElements = !links.loading ? links.value.map((item, key) => {

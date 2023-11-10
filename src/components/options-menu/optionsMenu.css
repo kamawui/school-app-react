@@ -4,7 +4,6 @@
     position: fixed;
     top: 84px;
     left: 0;
-    font-family: "Roboto Light", sans-serif;
     color: var(--neutral);
     display: flex;
     justify-content: space-between;

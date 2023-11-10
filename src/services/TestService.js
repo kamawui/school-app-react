@@ -4,7 +4,7 @@ const useTestService = () => {
     const {loading, error, request, clearError} = useHttp();
 
     const getTest = async (testForm, testSubject) => {
-        const path = `/data/tests/form${testForm}/${testSubject.tag}.json`;
+        const path = `/data/tests/form${testForm}/${testSubject}.json`;
 
         const response = await request(path);
         const { questions } = response;
@@ -45,7 +45,13 @@ const useTestService = () => {
         return randomQuestions;
     }
 
-    return {loading, error, getTest, clearError, getForms, getSubjects};
+    const getFormsBySubject = async (subject) => {
+        const path = `/data/info/formsBySubject.json`;
+
+        return await request(path).then(res => res[subject]);
+    }
+
+    return {loading, error, getTest, clearError, getForms, getSubjects, getFormsBySubject};
 }
 
 export default useTestService;
