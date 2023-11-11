@@ -1,4 +1,4 @@
-import React, {useEffect, useMemo, useRef, useState} from "react";
+import React, {useEffect, useMemo, useState} from "react";
 import {BrowserRouter, Route, Routes, useLocation} from "react-router-dom";
 import useLinkService from "../../services/LinkService";
 import Options from "../../pages/Options";
@@ -8,16 +8,17 @@ import NoPage from "../../pages/NoPage";
 import About from "../../pages/About";
 import FormOptions from "../../pages/FormOptions";
 import "./app.css";
+import "../../styles/styles.css";
 import useTestService from "../../services/TestService";
 import Header from "../header/Header";
-import OptionsMenu from "../options-menu/OptionsMenu";
 
 const App = () => {
     const linkService = useLinkService();
     const [links, setLinks] = useState({
         value: [],
         loading: linkService.loading,
-        error: linkService.error});
+        error: linkService.error
+    });
 
     const subjectService = useTestService();
     const [optionSubjects, setOptionSubjects] = useState({
@@ -30,7 +31,8 @@ const App = () => {
     const [forms, setForms] = useState({
         value: [],
         loading: formService.loading,
-        error: formService.error});
+        error: formService.error
+    });
 
     const subjectListService = useTestService();
     const [subjectList, setSubjectList] = useState({
@@ -52,13 +54,15 @@ const App = () => {
     const [surnameOption, setSurnameOption] = useState("");
 
     const [burgerActive, setBurgerActive] = useState(true);
-    const [testEnded, setTestEnded] = useState(true);
-    const [showResults, setShowResults] = useState(false);
+    const [firstSession, setFirstSession] = useState(true);
 
     const testService = useTestService();
     const [test, setTest] = useState({value: {}, loading: testService.loading, error: testService.error});
 
-    const [testResult, setTestResult] = useState({value: {points: null, skipped: null, wrong: null}, loading: true});
+    const [testResult, setTestResult] = useState({
+        value: {points: null, skipped: null, wrong: null, name: null, surname: null, subject: null, form: null},
+        loading: true
+    });
 
     useEffect(() => {
         try {
@@ -154,6 +158,7 @@ const App = () => {
                 error: false,
             })
         });
+
     }
 
     const memoizedTest = useMemo(() => test, [test]);
@@ -172,23 +177,24 @@ const App = () => {
                         <Options subjectList={memoizedSubjectList}
                                  subjects={memoizedSubjects}
                                  forms={memoizedForms}
-                                 setFormsBySubjects={setFormsBySubjects} getFormsBySubject={formsBySubjectService.getFormsBySubject}
+                                 setFormsBySubjects={setFormsBySubjects}
+                                 getFormsBySubject={formsBySubjectService.getFormsBySubject}
                                  burgerActive={burgerActive} setBurgerActive={setBurgerActive}
                                  formOption={formOption} setFormOption={setFormOption}
                                  subjectOption={subjectOption} setSubjectOption={setSubjectOption}
                                  nameOption={nameOption} setNameOption={setNameOption}
                                  surnameOption={surnameOption} setSurnameOption={setSurnameOption}
-                                 fetchTest={fetchTest} setTestEnded={setTestEnded} clearForm={clearForm}
+                                 fetchTest={fetchTest} clearForm={clearForm}
                         />
                     }/>
                     <Route exact path="/forms" element={
-                        <FormOptions subjectList={subjectList}
-                                     subjectOption={subjectOption}
-                                     setSubjectOption={setSubjectOption}
-                                     burgerActive={burgerActive}
-                                     setBurgerActive={setBurgerActive}
+                        <FormOptions subjectList={memoizedSubjectList}
+                                     subjectOption={subjectOption} setSubjectOption={setSubjectOption}
+                                     burgerActive={burgerActive} setBurgerActive={setBurgerActive}
+                                     formOption={formOption} setFormOption={setFormOption}
                                      formsBySubjects={formsBySubjects} setFormsBySubjects={setFormsBySubjects}
                                      getFormsBySubject={formsBySubjectService.getFormsBySubject}
+                                     fetchTest={fetchTest}
                         />
                     }/>
                     <Route exact path="/about" element={
@@ -196,14 +202,17 @@ const App = () => {
                     }/>
                     <Route exact path="/test" element={
                         <Test test={memoizedTest} setTestResult={setTestResult}
-                              testEnded={testEnded} setTestEnded={setTestEnded} setShowResults={setShowResults}/>
+                              formOption={formOption} subjectOption={subjectOption}
+                              nameOption={nameOption} surnameOption={surnameOption}
+                              setFirstSession={setFirstSession}
+                        />
                     }/>
                     <Route exact path="/result" element={
-                        showResults ? <Result links={memoizedLinks} testResult={testResult}
-                                              formOption={formOption} subjectOption={subjectOption}
-                                              nameOption={nameOption} surnameOption={surnameOption}
-                                              fetchTest={fetchTest} setTestEnded={setTestEnded}
-                                              clearForm={clearForm}/> : <NoPage/>
+                        !firstSession ?
+                            <Result testResult={testResult}
+                                    formOption={formOption} subjectOption={subjectOption}
+                                    fetchTest={fetchTest}
+                            /> : <NoPage/>
 
                     }/>
                     <Route exact path="/*" element={

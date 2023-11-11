@@ -1,20 +1,23 @@
 import "./forms.css";
 import React from "react";
+import {Link} from "react-router-dom";
 
-const Forms = ({forms}) => {
-
-    console.log(forms);
+const Forms = ({forms, fetchTest, setFormOption, subjectOption}) => {
 
     const availableForms = forms.forms.map((item, key) => {
         return (
-            <button className="available-form action-btn" key={key}>{item}</button>
+            <Link to="/test" key={key} onClick={() => {
+                setFormOption(item);
+            }}>
+                <button className="available-form action-btn" onClick={() => fetchTest(item, subjectOption.tag)}>{item}</button>
+            </Link>
         )
     })
 
     return (
-        <div className="forms-wrapper">
-            <div className="forms-subject">{forms.title}</div>
-            <div className="available-forms-message">Оберіть клас: </div>
+        <div className="forms-wrapper white">
+            <div className="header right">{forms.title}</div>
+            <div className="available-forms-message border-bot gray">Оберіть клас:</div>
             <div className="available-forms">
                 {availableForms}
             </div>

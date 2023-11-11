@@ -3,16 +3,16 @@ import "./testOptions.css";
 import Form from "../../svg/Form";
 import Arrow from "../../svg/Arrow";
 import Ellipsis from "../../svg/Ellipsis";
-import useTestService from "../../services/TestService";
 import {Link} from "react-router-dom";
-import {useLoaderData, useLocation} from "react-router";
 
-const TestOptions = ({forms, subjects, nameOption, setNameOption, surnameOption, setSurnameOption, setTestEnded, clearForm,
+const TestOptions = ({forms, subjects, nameOption, setNameOption, surnameOption, setSurnameOption, clearForm,
                          setFormOption, formOption, subjectOption, setSubjectOption, fetchTest, burgerActive}) => {
     const [formDropdownClasses, setFormDropdownClasses] = useState("dropdown-hidden");
     const [subjectDropdownClasses, setSubjectDropdownClasses] = useState("dropdown-hidden");
 
     const introClasses = burgerActive ? "" : "intro-full-width";
+
+    useEffect(() => clearForm(), []);
 
     const toggleDropdown = (dropdownType) => {
         if (dropdownType === "form") {
@@ -40,18 +40,18 @@ const TestOptions = ({forms, subjects, nameOption, setNameOption, surnameOption,
 
     const formDropdownElements = !forms.loading ? forms.value.map((item, key) => {
         return (
-            <div className="dropdown-element" onClick={() => setActiveOption("form", item)} key={key}>{item}</div>
+            <div className="dropdown-element border-bot" onClick={() => setActiveOption("form", item)} key={key}>{item}</div>
         )
     }) : null;
 
     const subjectsDropdownElements = !subjects.loading ? subjects.value.map((item, key) => {
         return (
-            <div className="dropdown-element" onClick={() => setActiveOption("subject", item)} key={key}>{item.title}</div>
+            <div className="dropdown-element border-bot" onClick={() => setActiveOption("subject", item)} key={key}>{item.title}</div>
         )
     }) : null;
 
     return (
-        <div className="test-options-wrapper">
+        <div className="test-options-wrapper white">
             <div className="intro-wrapper">
                 <div className={`intro-info ${introClasses}`}>
                     <h2 className="intro-header">Вітаємо у TestHub</h2>
@@ -62,16 +62,16 @@ const TestOptions = ({forms, subjects, nameOption, setNameOption, surnameOption,
                 </div>
             </div>
             <div className="test-options">
-                <div className="settings-title">
+                <div className="header">
                     Щоб перейти до тесту, введіть ваше прізвище та ім'я, оберіть клас і предмет
                 </div>
                 <form className="settings-form">
-                    <div className="name-input-group">
+                    <div className="name-input-group border-bot">
                         <input type="text" className="name-input" value={nameOption}
                                placeholder="Введіть ім'я" onChange={(e) => setNameOption(e.target.value)}/>
                         <Form/>
                     </div>
-                    <div className="surname-input-group">
+                    <div className="surname-input-group border-bot">
                         <input type="text"  value={surnameOption}
                                placeholder="Введіть прізвище (не обов'язково)" onChange={(e) => setSurnameOption(e.target.value)}/>
                         <Form/>
@@ -85,7 +85,7 @@ const TestOptions = ({forms, subjects, nameOption, setNameOption, surnameOption,
                                 <Arrow angle={formDropdownClasses ? 180 : 0}/>
                             </button>
                             <div className="dropdown-area">
-                                <div className="dropdown-items-group">
+                                <div className="dropdown-items-group border-bot">
                                     <input type="text" placeholder="Клас" onClick={() => toggleDropdown("form")}
                                            value={formOption} readOnly/>
                                     <Ellipsis />
@@ -105,7 +105,7 @@ const TestOptions = ({forms, subjects, nameOption, setNameOption, surnameOption,
                                 <Arrow angle={subjectDropdownClasses ? 180 : 0}/>
                             </button>
                             <div className="dropdown-area">
-                                <div className="dropdown-items-group">
+                                <div className="dropdown-items-group border-bot">
                                     <input type="text" placeholder="Предмет"
                                            onClick={() => formOption ? toggleDropdown("subject")
                                                : alert("Перш ніж перейти до вибору предмета, оберіть клас")}
@@ -123,8 +123,10 @@ const TestOptions = ({forms, subjects, nameOption, setNameOption, surnameOption,
                 <div className="options-buttons">
                     <button className="action-btn" onClick={() => clearForm()}>Очистити</button>
                     {nameOption && formOption && subjectOption ? (
-                        <Link to="/test" onClick={() => setTestEnded(false)}>
-                            <button className="call-to-action-btn" onClick={() => fetchTest(formOption, subjectOption.tag)}>Розпочати</button>
+                        <Link to="/test" onClick={() => {
+                            fetchTest(formOption, subjectOption.tag)
+                        }}>
+                            <button className="call-to-action-btn">Розпочати</button>
                         </Link>
                     ) : (
                         <button className="call-to-action-btn" onClick={() => alert("Заповніть всі дані перед тим, як почати тест")}>

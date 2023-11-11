@@ -16,9 +16,11 @@ const Question = ({test, activeQuestionIndex, setActiveQuestionIndex, setAnswer,
             return (
                 <li className={variantsClasses} key={key}>
                     <div className="radio-btn" onClick={() => setAnswer(item.index, answer)}>
-                        <div></div>
+                        <div>
+
+                        </div>
                     </div>
-                    <div className="variant-content"><span>{answer}</span>
+                    <div className="variant-content border-bot"><span>{answer}</span>
                         <Answer/>
                     </div>
                 </li>
@@ -34,10 +36,10 @@ const Question = ({test, activeQuestionIndex, setActiveQuestionIndex, setAnswer,
     }) : null;
 
     const questionContent = !test.loading ? (
-        <div className="question-content">
+        <div className="question-content white">
             <div
-                className="question-title">{activeQuestionIndex}. {test.value.questions[activeQuestionIndex - 1].question}</div>
-            <div className="variants-title">Варіанти відповідей:
+                className="header">{activeQuestionIndex}. {test.value.questions[activeQuestionIndex - 1].question}</div>
+            <div className="variants-title border-bot gray">Варіанти відповідей:
                 <QuestionSign/>
             </div>
             <div className="choose-one-message">Виберіть одну відповідь</div>

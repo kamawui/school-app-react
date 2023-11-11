@@ -3,16 +3,6 @@
     padding: 40px 0;
     width: 60%;
     margin: 0 auto;
-    color: white;
-}
-.settings-title {
-    width: 100%;
-    display: block;
-    margin: 0 auto;
-    font-size: 31px;
-    border-bottom: 3px solid var(--second);
-    padding: 10px 0;
-    font-weight: bold;
 }
 .settings-form {
     width: 100%;
@@ -32,7 +22,6 @@
 .name-input-group, .surname-input-group {
     display: flex;
     align-items: center;
-    border-bottom: 2px solid var(--main-border);
     transition: 0.3s;
 }
 .name-input-group:hover {
@@ -70,7 +59,6 @@
 .dropdown-items-group {
     display: flex;
     align-items: center;
-    border-bottom: 2px solid var(--main-border);
     width: 100%;
     transition: 0.3s;
 }
@@ -133,7 +121,6 @@
     margin: 1px 0;
     background-color: var(--main-selected);
     opacity: 90%;
-    border-bottom: 1px solid var(--main-border);
 }
 .dropdown-element:hover {
     background-color: var(--main);
@@ -143,6 +130,9 @@
     display: flex;
     justify-content: end;
     padding: 20px 0;
+}
+.options-buttons button {
+    margin-left: 20px;
 }
 .clear-form-btn, .start-test-btn {
     outline: none;
@@ -157,7 +147,6 @@
 .clear-form-btn {
     border: 2px solid var(--neutral);
     background-color: transparent;
-    color: var(--neutral);
 }
 
 

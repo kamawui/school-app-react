@@ -2,7 +2,6 @@
     width: 100%;
     position: fixed;
     background-color: var(--main-dark);
-    color: var(--neutral);
     font-family: "Roboto Thin", sans-serif;
     z-index: 1000;
 }

@@ -2,7 +2,6 @@ import React from "react";
 import "./header.css";
 import Gear from "../../svg/Gear";
 import {Link} from "react-router-dom";
-import {useLocation} from "react-router";
 
 const Header = ({links, location}) => {
     const linkElements = !links.loading ? links.value.map((item, key) => {
@@ -12,7 +11,7 @@ const Header = ({links, location}) => {
     }) : null;
 
     return (
-        <div className="header-wrapper">
+        <div className="header-wrapper white">
             <div className="header-links">
                 {!links.error ? linkElements : null}
             </div>

@@ -1,25 +1,12 @@
 .forms-wrapper {
-    color: var(--neutral);
     width: 60%;
     margin: 0 auto;
     padding: 40px 0;
-}
-.forms-subject {
-    width: 100%;
-    display: flex;
-    justify-content: end;
-    margin: 0 auto;
-    font-size: 31px;
-    border-bottom: 3px solid var(--second);
-    padding: 10px 0;
-    font-weight: bold;
 }
 .available-forms-message {
     width: 100%;
     padding: 22px 0;
     font-size: 16px;
-    border-bottom: 2px solid var(--main-border);
-    color:var(--neutral-selected);
 }
 .available-forms {
     display: grid;
@@ -27,12 +14,14 @@
     gap: 10px;
     padding: 40px 0;
 }
-
-.available-forms .available-form:nth-child(n+5) {
+.available-forms a:nth-child(n+5) {
     grid-column: span 2;
 }
-.available-forms .available-form:nth-child(n+7) {
+.available-forms a:nth-child(n+7) {
     grid-column: span 4;
+}
+.available-form {
+    width: 100%;
 }
 
 

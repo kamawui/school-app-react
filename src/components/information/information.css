@@ -1,6 +1,5 @@
 .information-wrapper {
     width: 100%;
-    color: var(--neutral);
 }
 .info-intro {
     width: 60%;
@@ -31,24 +30,10 @@
 .info-contacts {
     padding: 20px 0;
 }
-.info, .contacts {
-    width: 100%;
-    display: block;
-    margin: 0 auto 20px;
-    font-size: 31px;
-    border-bottom: 3px solid var(--second);
-    padding: 10px 0;
-    font-weight: bold;
-}
-.contacts {
-    display: flex;
-    justify-content: end;
-}
 .info-item {
     width: 100%;
     padding: 22px 0;
     font-size: 16px;
-    border-bottom: 2px solid var(--main-border);
 }
 .info-item-right {
     display: flex;

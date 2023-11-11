@@ -10,7 +10,6 @@ const useTestService = () => {
         const { questions } = response;
 
         return {
-            title: testSubject.title,
             questions: getRandomQuestions(questions)
         };
     }

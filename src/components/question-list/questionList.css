@@ -5,17 +5,20 @@
     top: 0;
     left: 0;
     font-family: "Rubik", sans-serif;
-    color: var(--neutral);
     background-color: var(--main);
 }
-.test-timer {
+.question-list-menu {
     width: 90%;
     margin: 0 auto;
     padding: 20px 0;
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     align-items: center;
     font-size: 40px;
+}
+.question-list-menu a {
+    display: flex;
+    align-items: center;
 }
 .active-question {
     background-color: var(--main-medium);

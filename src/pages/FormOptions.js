@@ -4,7 +4,7 @@ import Forms from "../components/forms/Forms";
 import Spinner from "../components/spinner/Spinner";
 
 function FormOptions({subjectList, subjectOption, setSubjectOption, burgerActive, setBurgerActive, formsBySubjects,
-                         setFormsBySubjects, getFormsBySubject}) {
+                         setFormsBySubjects, getFormsBySubject, fetchTest, formOption, setFormOption}) {
 
     const homeComponentsClasses = burgerActive ? "" : "full-width";
     const introClasses = burgerActive ? "" : "intro-full-width";
@@ -12,12 +12,9 @@ function FormOptions({subjectList, subjectOption, setSubjectOption, burgerActive
     return (
         <div className="form-options-wrapper">
             <div className="home-components-group">
-                <OptionsMenu subjects={subjectList}
-                             subjectOption={subjectOption}
-                             setSubjectOption={setSubjectOption}
-                             burgerActive={burgerActive}
-                             setBurgerActive={setBurgerActive} setFormsBySubjects={setFormsBySubjects}
-                             getFormsBySubject={getFormsBySubject}
+                <OptionsMenu subjects={subjectList} setSubjectOption={setSubjectOption}
+                             burgerActive={burgerActive} setBurgerActive={setBurgerActive}
+                             setFormsBySubjects={setFormsBySubjects} getFormsBySubject={getFormsBySubject}
                 />
                 <div className={`home-components ${homeComponentsClasses}`}>
                     <div className="intro-wrapper">
@@ -30,7 +27,9 @@ function FormOptions({subjectList, subjectOption, setSubjectOption, burgerActive
                         </div>
                     </div>
 
-                    {formsBySubjects.loading ? <Spinner /> : <Forms forms={formsBySubjects.value}/>}
+                    {formsBySubjects.loading ? <Spinner /> : <Forms forms={formsBySubjects.value} subjectOption={subjectOption}
+                                                                    formOption={formOption} setFormOption={setFormOption}
+                                                                    fetchTest={fetchTest} />}
                 </div>
             </div>
         </div>

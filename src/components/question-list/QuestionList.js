@@ -1,11 +1,12 @@
 import React from "react";
-import "./testCompleting.css";
-import {Link} from "react-router-dom";
+import "./questionList.css";
 import Ellipsis from "../../svg/Ellipsis";
 import Spinner from "../spinner/Spinner";
 import Timer from "../timer/Timer";
+import {Link} from "react-router-dom";
 
-function TestCompleting({test, activeQuestionIndex, setActiveQuestion, endTest}) {
+function QuestionList({test, activeQuestionIndex, setActiveQuestion, endTest}) {
+    console.log(test);
     const questionsList = !test.loading ? test.value.questions.map((item, key) => {
         return (
             <div onClick={() => setActiveQuestion(item.index)} key={key}
@@ -21,7 +22,11 @@ function TestCompleting({test, activeQuestionIndex, setActiveQuestion, endTest})
 
     const menuContent = !test.loading ?
         <>
-            <div className="test-timer">
+            <div className="question-list-menu">
+                <Link to="/">
+                    <button className="action-btn">Назад</button>
+                </Link>
+
                 <Timer endTest={endTest}/>
             </div>
             <div className="questions-list">
@@ -30,10 +35,10 @@ function TestCompleting({test, activeQuestionIndex, setActiveQuestion, endTest})
         </> : <Spinner />;
 
     return (
-        <div className="questions-menu-wrapper">
+        <div className="questions-menu-wrapper white">
             {menuContent}
         </div>
     )
 }
 
-export default TestCompleting;
+export default QuestionList;

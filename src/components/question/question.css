@@ -1,6 +1,5 @@
 .question-wrapper {
     width: calc(100% - 400px);
-    color: var(--neutral);
     font-family: "Rubik", sans-serif;
 }
 .question-content {
@@ -8,21 +7,10 @@
     padding: 140px 0;
     margin: 0 auto;
 }
-.question-title {
-    width: 100%;
-    display: block;
-    margin: 0 auto;
-    font-size: 31px;
-    border-bottom: 3px solid var(--second);
-    padding: 10px 0;
-    font-weight: bold;
-}
 .variants-title {
     width: 100%;
     padding: 16px 0;
     font-size: 18px;
-    border-bottom: 2px solid var(--main-border);
-    color: var(--main-border);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -76,7 +64,6 @@
 }
 .variant-content {
     width: 60%;
-    border-bottom: 2px solid var(--main-border);
     padding: 15px 0;
     font-weight: 100;
     display: flex;

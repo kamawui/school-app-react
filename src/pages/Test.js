@@ -1,9 +1,10 @@
 import React, {useEffect, useState} from "react";
 import Question from "../components/question/Question";
-import TestCompleting from "../components/test-completing/testCompleting";
+import QuestionList from "../components/question-list/QuestionList";
 import NoPage from "./NoPage";
 
-function Test({test, setTestResult, setTestEnded, testEnded, setShowResults}) {
+function Test({test, setTestResult, setFirstSession,
+                  formOption, subjectOption, nameOption, surnameOption}) {
     const [activeQuestionIndex, setActiveQuestionIndex] = useState(1);
     const [answerList, setAnswerList] = useState({});
 
@@ -59,26 +60,30 @@ function Test({test, setTestResult, setTestEnded, testEnded, setShowResults}) {
                 points: calculateResult(answerList).score,
                 skipped: calculateResult(answerList).skipped,
                 wrong: calculateResult(answerList).wrong,
-                answers: Object.values(answerList)
+                answers: Object.values(answerList),
+                name: nameOption,
+                surname: surnameOption,
+                subject: subjectOption.title,
+                form: formOption
+
             },
             loading: false
         });
 
-        setTestEnded(true);
-        setShowResults(true);
+        setFirstSession(false);
     }
 
     return (
         <div className="test-wrapper">
             {
-                testEnded ? <NoPage/> :
+                subjectOption ?
                     <>
-                        <TestCompleting test={test} activeQuestionIndex={activeQuestionIndex}
-                                        setActiveQuestion={setActiveQuestionIndex} endTest={endTest}/>
+                        <QuestionList test={test} activeQuestionIndex={activeQuestionIndex}
+                                      setActiveQuestion={setActiveQuestionIndex} endTest={endTest}/>
                         <Question test={test} answerList={answerList} setAnswer={setAnswer} endTest={endTest}
                                   activeQuestionIndex={activeQuestionIndex}
                                   setActiveQuestionIndex={setActiveQuestionIndex}/>
-                    </>
+                    </> : <NoPage />
             }
         </div>
     )
