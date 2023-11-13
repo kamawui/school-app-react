@@ -1,12 +1,6 @@
 .information-wrapper {
     width: 100%;
 }
-.info-intro {
-    width: 60%;
-    margin: 0 auto;
-    padding: 20px 20%;
-    background-color: var(--main-light);
-}
 .information-header {
     margin: 0;
     padding: 10px 0;
@@ -68,5 +62,25 @@
     color: var(--second);
     text-decoration: none;
 }
-
+.media {
+    display: none;
+}
+@media (max-width: 820px) {
+    .info-description, .info-contacts {
+        width: 90%;
+    }
+    .contacts-links {
+        display: none;
+    }
+    .media {
+        display: block;
+    }
+    .info-link {
+        margin: 0;
+    }
+    .flex {
+        display: flex;
+        justify-content: space-between;
+    }
+}
 

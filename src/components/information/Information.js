@@ -8,6 +8,8 @@ const Information = ({links}) => {
         )
     }) : null;
 
+
+
     return (
         <div className="information-wrapper white">
             <div className="intro-wrapper">
@@ -35,6 +37,8 @@ const Information = ({links}) => {
                 <div className="header right">Інформація та посилання</div>
                 <div className="info-item right border-bot">Підготовлено учнем 11 класу Бурлаченком Даніїлом</div>
                 <div className="info-item border-bot"><span>Школа: </span>Вижницький опорний ліцей імені Юрія Федьковича</div>
+                <div className="info-item border-bot media">Створено для проекту <span>###</span></div>
+                <div className="info-item media flex">{!links.error ? infoLinks : null}</div>
                 <div className="contacts-links">
                     <div className="contacts-left">
                         <div className="info-project-title"><span>2023</span> TestHub</div>

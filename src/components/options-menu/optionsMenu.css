@@ -1,5 +1,4 @@
 .options-menu-wrapper {
-    width: 400px;
     height: calc(100vh - 84px);
     position: fixed;
     top: 84px;
@@ -18,6 +17,7 @@
     box-shadow: 0 -1px 5px #5c5c5c;
     transition: 0.2s;
 }
+
 .burger-button {
     position: fixed;
     left: 0;
@@ -42,6 +42,7 @@
 }
 .burger-hidden {
     width: 0;
+    pointer-events: none;
 }
 .fixed-options-menu-panel {
     display: flex;
@@ -95,6 +96,9 @@
 .option span {
     padding: 0 20px;
 }
+.burger-nav-group {
+    display: none;
+}
 @media (max-width: 820px) {
     .options-menu-wrapper {
         width: 250px;
@@ -103,5 +107,43 @@
     }
     .burger-button {
         display: none;
+    }
+    .wrapper-hidden {
+        pointer-events: none;
+    }
+    .dark-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 800;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+        pointer-events: auto;
+    }
+    .burger-nav-group {
+        padding-top: 20px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .burger-nav-point {
+        width: 100%;
+        color: var(--neutral);
+        font-size: 18px;
+        padding: 20px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.2s;
+    }
+    .burger-nav-point span{
+        width: 90%;
     }
 }

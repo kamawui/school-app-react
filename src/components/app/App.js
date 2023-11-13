@@ -199,7 +199,13 @@ const App = () => {
                         />
                     }/>
                     <Route exact path="/about" element={
-                        <About links={memoizedLinks}/>
+                        <About links={memoizedLinks}
+                               subjectList={memoizedSubjectList}
+                               setSubjectOption={setSubjectOption}
+                               burgerActive={burgerActive} setBurgerActive={setBurgerActive}
+                               setFormsBySubjects={setFormsBySubjects}
+                               getFormsBySubject={formsBySubjectService.getFormsBySubject}
+                        />
                     }/>
                     <Route exact path="/test" element={
                         <Test test={memoizedTest} setTestResult={setTestResult}

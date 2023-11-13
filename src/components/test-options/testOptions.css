@@ -54,7 +54,7 @@
 }
 .dropdown-area {
     width: 100%;
-    margin: 0 0 0 20px;
+    /*margin: 0 0 0 20px;*/
     position: relative;
 }
 .dropdown-items-group {
@@ -86,6 +86,7 @@
     justify-content: center;
     border-radius: 15px;
     transition: 0.3s;
+    margin: 0 25px;
 }
 .dropbtn:hover {
     background-color: var(--main-selected);
@@ -118,6 +119,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     padding: 5px 0;
     margin: 1px 0;
     background-color: var(--main-selected);
@@ -154,8 +156,12 @@
         width: 100%;
         padding: 40px 20px;
     }
-    .settings-form {
-        padding: 20px 0 0;
+    .options-buttons {
+        padding: 40px 0;
+        justify-content: space-between;
+    }
+    .options-buttons button {
+        margin: 0;
     }
 }
 
