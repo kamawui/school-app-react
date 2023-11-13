@@ -165,7 +165,8 @@ const App = () => {
 
     const HeaderComponent = () => {
         const location = useLocation();
-        return location.pathname !== "/test" && <Header links={memoizedLinks} location={location.pathname}/>;
+        return location.pathname !== "/test" && <Header links={memoizedLinks} location={location.pathname}
+                                                        burgerActive={burgerActive} setBurgerActive={setBurgerActive}/>;
     };
 
     return (

@@ -33,6 +33,7 @@ a {
 }
 .app-wrapper {
     margin: 0 auto;
+    box-sizing: border-box;
 }
 .test-wrapper {
     border-top: 1px solid var(--second);
@@ -58,5 +59,9 @@ a {
     .app-wrapper {
         width: 100%;
         margin: 0;
+    }
+    .home-components {
+        padding: 64px 0 0 0;
+        width: 100%;
     }
 }

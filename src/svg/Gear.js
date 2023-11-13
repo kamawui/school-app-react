@@ -3,7 +3,7 @@ import React from "react";
 function Gear() {
     return (
         <div>
-            <svg width="32px" height="32px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000000" data-darkreader-inline-fill="" style={{padding: "5px", marginLeft: "15px"}}>
+            <svg width="32px" height="32px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000000" data-darkreader-inline-fill="" >
                 <g>
                     <g fill="#ffffff" fillRule="evenodd" data-darkreader-inline-fill="" >
                         <path d="M13 0H3a3.009 3.009 0 0 0-3 3v13.99a3.009 3.009 0 0 0 3 3h10a3.009 3.009 0 0 0 3-3V3a3.009 3.009 0 0 0-3-3zm1 16.99a1.016 1.016 0 0 1-1 1H3a1.016 1.016 0 0 1-1-1V3a1.016 1.016 0 0 1 1-1h10c.549.009.991.451 1 1v13.99z"></path>

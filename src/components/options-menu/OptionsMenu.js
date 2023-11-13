@@ -4,20 +4,6 @@ import Arrow from "../../svg/Arrow";
 import {Link} from "react-router-dom";
 
 const OptionsMenu = ({subjects, burgerActive, setBurgerActive, setFormsBySubjects, getFormsBySubject, setSubjectOption}) => {
-    const [burgerMenuClasses, setBurgerMenuClasses] = useState(burgerActive ? "" : "burger-hidden");
-    const [burgerButtonClasses, setBurgerButtonClasses] = useState(burgerActive ? "active-burger" : "");
-
-    const toggleBurger = () => {
-        setBurgerActive(!burgerActive);
-        setBurgerMenuClasses(
-            burgerActive ? "burger-hidden" : ""
-        );
-        setBurgerButtonClasses(
-            burgerActive ? "" : "active-burger"
-        )
-
-    }
-
     const setForms = (subjectOption) => {
         try {
             async function fetchData() {
@@ -46,7 +32,7 @@ const OptionsMenu = ({subjects, burgerActive, setBurgerActive, setFormsBySubject
 
     return (
         <div className="options-menu-wrapper white">
-            <div className={`burger-menu ${burgerMenuClasses}`}>
+            <div className={`burger-menu ${burgerActive ? "" : "burger-hidden"}`}>
                 <div className="fixed-options-menu-panel">
                     <span className="options-menu-title">Всі тести з предметів</span>
                     <span className="options-menu-message">Оберіть предмет, щоб перейти до вибору класу</span>
@@ -55,9 +41,9 @@ const OptionsMenu = ({subjects, burgerActive, setBurgerActive, setFormsBySubject
                     {!subjects.error ? subjectsElements : null}
                 </div>
             </div>
-            <div className={`burger-button ${burgerButtonClasses}`}>
-                <button className="burgerbtn" onClick={() => toggleBurger()}>
-                    <Arrow angle={burgerMenuClasses ? 270 : 90}/>
+            <div className={`burger-button ${burgerActive ? "active-burger" : ""}`}>
+                <button className="burgerbtn" onClick={() => setBurgerActive(!burgerActive)}>
+                    <Arrow angle={!burgerActive ? 270 : 90}/>
                 </button>
             </div>
         </div>

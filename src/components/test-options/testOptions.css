@@ -3,6 +3,7 @@
     padding: 40px 0;
     width: 60%;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 .settings-form {
     width: 100%;
@@ -147,6 +148,15 @@
 .clear-form-btn {
     border: 2px solid var(--neutral);
     background-color: transparent;
+}
+@media (max-width: 820px) {
+    .test-options {
+        width: 100%;
+        padding: 40px 20px;
+    }
+    .settings-form {
+        padding: 20px 0 0;
+    }
 }
 
 

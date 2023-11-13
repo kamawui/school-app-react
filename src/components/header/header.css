@@ -5,6 +5,22 @@
     font-family: "Roboto Thin", sans-serif;
     z-index: 1000;
 }
+.burger-menu-icon {
+    margin: 0 15px;
+    display: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.burger-menu-icon.open-burger {
+    transform: rotate(90deg);
+}
+.burger-menu-icon:hover {
+    background-color: var(--main-selected);
+}
 .header-links {
     height: 20px;
     width: 70%;
@@ -66,11 +82,25 @@
     background-color: var(--main-selected);
 }
 .link {
+    margin: 0 15px;
     text-decoration: none;
     color: var(--neutral);
 }
 .active-nav {
     background-color: var(--main-selected);
+}
+@media (max-width: 820px) {
+    .header-links {
+        display: none;
+    }
+    .nav-group {
+        display: none;
+    }
+    .burger-menu-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 
