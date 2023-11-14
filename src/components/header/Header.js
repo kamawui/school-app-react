@@ -27,7 +27,7 @@ const Header = ({links, location, burgerActive, setBurgerActive}) => {
                     </div>
                 </Link>
                 <div className="nav-group">
-                    <Link to="/">
+                    <Link to="/" onClick={() => setBurgerActive(true)}>
                         <span className={`nav-point ${location !== "/about" ? "active-nav" : ""}`}>Головна</span>
                     </Link>
                     <Link to="/about">
