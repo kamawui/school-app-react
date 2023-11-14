@@ -1,12 +1,15 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import Question from "../components/question/Question";
 import QuestionList from "../components/question-list/QuestionList";
 import NoPage from "./NoPage";
 
 function Test({test, setTestResult, setFirstSession,
                   formOption, subjectOption, nameOption, surnameOption}) {
+
     const [activeQuestionIndex, setActiveQuestionIndex] = useState(1);
     const [answerList, setAnswerList] = useState({});
+    const timeInMinutes = useRef(0);
+    const timeInSeconds = useRef(0);
 
     useEffect(() => {
         setAnswerList(initializeAnswerList());
@@ -61,6 +64,8 @@ function Test({test, setTestResult, setFirstSession,
                 skipped: calculateResult(answerList).skipped,
                 wrong: calculateResult(answerList).wrong,
                 answers: Object.values(answerList),
+                minutes: timeInMinutes.current,
+                seconds: timeInSeconds.current,
                 name: nameOption,
                 surname: surnameOption,
                 subject: subjectOption.title,
@@ -78,7 +83,8 @@ function Test({test, setTestResult, setFirstSession,
             {
                 subjectOption ?
                     <>
-                        <QuestionList test={test} activeQuestionIndex={activeQuestionIndex}
+                        <QuestionList test={test} activeQuestionIndex={activeQuestionIndex} answerList={answerList}
+                                      timeInSeconds={timeInSeconds} timeInMinutes={timeInMinutes}
                                       setActiveQuestion={setActiveQuestionIndex} endTest={endTest}/>
                         <Question test={test} answerList={answerList} setAnswer={setAnswer} endTest={endTest}
                                   activeQuestionIndex={activeQuestionIndex}

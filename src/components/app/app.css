@@ -75,4 +75,7 @@ a {
     .hidden-burger {
         display: block;
     }
+    .test-wrapper {
+        display: block;
+    }
 }

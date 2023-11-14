@@ -25,8 +25,12 @@ const OptionsMenu = ({subjects, burgerActive, setBurgerActive, setFormsBySubject
 
     const subjectsElements = !subjects.loading ? subjects.value.map((item, key) => {
         return (
-            <Link to="/forms" key={key} onClick={() => setForms(item.tag)}>
-                <div className="option" onClick={() => setSubjectOption(item)}><span>{item.title}</span></div>
+            <Link to="/forms" key={key} onClick={() => {
+                setForms(item.tag);
+                setBurgerActive(false);
+                setSubjectOption(item);
+            }}>
+                <div className="option"><span>{item.title}</span></div>
             </Link>
 
         )

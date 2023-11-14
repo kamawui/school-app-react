@@ -60,7 +60,7 @@ const App = () => {
     const [test, setTest] = useState({value: {}, loading: testService.loading, error: testService.error});
 
     const [testResult, setTestResult] = useState({
-        value: {points: null, skipped: null, wrong: null, name: null, surname: null, subject: null, form: null},
+        value: {points: null, skipped: null, wrong: null, minutes: null, seconds: null, name: null, surname: null, subject: null, form: null},
         loading: true
     });
 

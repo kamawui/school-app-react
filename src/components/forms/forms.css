@@ -23,5 +23,20 @@
 .available-form {
     width: 100%;
 }
+@media (max-width: 820px) {
+    .forms-wrapper {
+        width: 70%;
+    }
+    .available-forms {
+        display: flex;
+        flex-direction: column;
+    }
+    .available-forms a {
+        display: flex;
+        justify-content: center;
+    }
+
+
+}
 
 

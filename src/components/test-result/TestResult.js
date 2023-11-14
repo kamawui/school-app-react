@@ -51,6 +51,10 @@ const TestResult = ({testResult, formOption, subjectOption, fetchTest}) => {
                         <span>Точність</span>
                         <span className="accuracy">{calculateAccuracy(testResult.value.points, 12)}%</span>
                     </div>
+                    <div className="marks-group-item border-bot">
+                        <span>Час</span>
+                        <span className="accuracy">{testResult.value.minutes}:{testResult.value.seconds}</span>
+                    </div>
                 </div>
                 <div className="extra-info border-bot">
                     <div className="extra-info-item"><span className="correct-answer">{testResult.value.points}</span> правильних</div>
@@ -64,7 +68,9 @@ const TestResult = ({testResult, formOption, subjectOption, fetchTest}) => {
                             </button>
                         </Link> : null
                     }
-
+                    {/*{formOption && subjectOption ?*/}
+                    {/*    <span className="or">АБО</span> : null*/}
+                    {/*}*/}
                     <Link to="/">
                         <button className="call-to-action-btn">На головну</button>
                     </Link>
