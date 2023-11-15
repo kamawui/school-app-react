@@ -1,0 +1,236 @@
+{
+  "subject": "Англійська мова",
+  "questions": [
+    {
+      "question": "Translate: 'Штани' - _______.",
+      "answers": ["Pants", "Shirt", "Shoes", "Dress"],
+      "correctAnswer": "Pants"
+    },
+    {
+      "question": "Choose the correct option: 'I like _____ dress. It's very elegant.'",
+      "answers": ["these", "those", "this", "that"],
+      "correctAnswer": "this"
+    },
+    {
+      "question": "Complete the sentence: '______ shoes are too big for me.'",
+      "answers": ["These", "Those", "This", "That"],
+      "correctAnswer": "Those"
+    },
+    {
+      "question": "Fill in the blanks with the correct interrogative pronoun: '______ is your favorite color?'",
+      "answers": ["Who", "Whose", "What", "Which"],
+      "correctAnswer": "What"
+    },
+    {
+      "question": "Use the correct demonstrative pronoun: 'I don't like this shirt. I prefer ______ one over there.'",
+      "answers": ["these", "those", "this", "that"],
+      "correctAnswer": "that"
+    },
+    {
+      "question": "What is the plural form of 'hat'?",
+      "answers": ["Hats", "Haties", "Hatses", "Hat"],
+      "correctAnswer": "Hats"
+    },
+    {
+      "question": "Write a sentence using the present simple tense with the verb 'to wear.'",
+      "answers": ["I wear a hat every day.", "I am wearing a hat now.", "I will wear a hat tomorrow.", "I have worn a hat before."],
+      "correctAnswer": "I wear a hat every day."
+    },
+    {
+      "question": "Choose the correct option: '______ jacket is this? It's so stylish!'",
+      "answers": ["What", "Whose", "Which", "Whom"],
+      "correctAnswer": "Whose"
+    },
+    {
+      "question": "Translate: 'Фрукти' - _______.",
+      "answers": ["Vegetables", "Fruits", "Meat", "Dairy"],
+      "correctAnswer": "Fruits"
+    },
+    {
+      "question": "Use the correct indefinite pronoun: 'I don't have ______ apples. Can I have some of yours?'",
+      "answers": ["some", "any", "no", "a lot of"],
+      "correctAnswer": "any"
+    },
+    {
+      "question": "Fill in the blank: 'There is ______ sugar in my coffee.'",
+      "answers": ["some", "any", "no", "a lot of"],
+      "correctAnswer": "some"
+    },
+    {
+      "question": "Choose the correct option: 'I have ______ friends in this city.'",
+      "answers": ["many", "much", "a lot of", "a few"],
+      "correctAnswer": "a lot of"
+    },
+    {
+      "question": "Write a sentence using the word 'lots of.'",
+      "answers": ["I have lots of friends.", "I don't have lots of time.", "I eat lots of apples.", "I like lots of movies."],
+      "correctAnswer": "I have lots of friends."
+    },
+    {
+      "question": "What is the difference between 'some' and 'any'?",
+      "answers": ["'Some' is used in positive statements, and 'any' is used in negative and interrogative statements.", "'Some' is used in negative and interrogative statements, and 'any' is used in positive statements.", "'Some' is used only in positive statements, and 'any' is used only in negative statements.", "'Some' and 'any' can be used interchangeably in any sentence."],
+      "correctAnswer": "'Some' is used in positive statements, and 'any' is used in negative and interrogative statements."
+    },
+    {
+      "question": "Use the correct pronoun: 'She likes pizza, but she doesn't like _______ with mushrooms.'",
+      "answers": ["some", "any", "no", "a lot of"],
+      "correctAnswer": "any"
+    },
+    {
+      "question": "Translate: 'Модальне дієслово 'must' - _______.'",
+      "answers": ["Must", "Have to", "Should", "Can"],
+      "correctAnswer": "Must"
+    },
+    {
+      "question": "Write a sentence in the past simple tense about your last vacation.",
+      "answers": ["Last summer, I visited Paris.", "I will visit Paris next summer.", "I am visiting Paris now.", "I visit Paris every summer."],
+      "correctAnswer": "Last summer, I visited Paris."
+    },
+    {
+      "question": "Choose the correct option: '______ you ever been to London?'",
+      "answers": ["Did", "Were", "Have", "Are"],
+      "correctAnswer": "Have"
+    },
+    {
+      "question": "Use the modal verb 'should' in a sentence.",
+      "answers": ["You should eat more vegetables.", "You ate too much.", "You will eat later.", "You eat too fast."],
+      "correctAnswer": "You should eat more vegetables."
+    },
+    {
+      "question": "What are the modal verbs used for?",
+      "answers": ["Expressing possibility, necessity, ability, and permission.", "Expressing past actions.", "Expressing present actions.", "Expressing future actions."],
+      "correctAnswer": "Expressing possibility, necessity, ability, and permission."
+    },
+    {
+      "question": "Use the modal verb 'mustn’t' in a sentence.",
+      "answers": ["You mustn’t smoke in this area.", "You must smoke in this area.", "You mustn’t smoke anywhere.", "You must smoke everywhere."],
+      "correctAnswer": "You mustn’t smoke in this area."
+    },
+    {
+      "question": "Write a sentence using the modal verb 'may.'",
+      "answers": ["May I borrow your book?", "You may borrow my book.", "May you borrow my book?", "You mayn’t borrow my book."],
+      "correctAnswer": "May I borrow your book?"
+    },
+    {
+      "question": "Choose the correct option: 'She ______ go to the dentist yesterday.'",
+      "answers": ["must", "have to", "should", "mustn’t"],
+      "correctAnswer": "must"
+    },
+    {
+      "question": "Translate: 'Прийменники місця 'in/at' - _______.'",
+      "answers": ["In", "At", "On", "By"],
+      "correctAnswer": "In/At"
+    },
+    {
+      "question": "Write a sentence using the preposition 'at.'",
+      "answers": ["I live at 123 Main Street.", "I live in 123 Main Street.", "I live on 123 Main Street.", "I live by 123 Main Street."],
+      "correctAnswer": "I live at 123 Main Street."
+    },
+    {
+      "question": "Choose the correct option: 'We visited the museum ______ Saturday.'",
+      "answers": ["in", "at", "on", "by"],
+      "correctAnswer": "on"
+    },
+    {
+      "question": "Use the adverb of time 'yesterday' in a sentence.",
+      "answers": ["I will do it yesterday.", "I am doing it yesterday.", "I did it yesterday.", "I do it yesterday."],
+      "correctAnswer": "I did it yesterday."
+    },
+    {
+      "question": "What is the meaning of the adverb 'ago'?",
+      "answers": ["In the past", "In the future", "Right now", "Never"],
+      "correctAnswer": "In the past"
+    },
+    {
+      "question": "Write a sentence using the adverb 'last.'",
+      "answers": ["I will see you last Monday.", "I see you last Monday.", "I am seeing you last Monday.", "I saw you last Monday."],
+      "correctAnswer": "I saw you last Monday."
+    },
+    {
+      "question": "Choose the correct option: 'The school is ______ the park.'",
+      "answers": ["in", "at", "on", "by"],
+      "correctAnswer": "near"
+    },
+    {
+      "question": "Fill in the blank: 'I have lived here ______ three years.'",
+      "answers": ["in", "at", "for", "since"],
+      "correctAnswer": "for"
+    },
+    {
+      "question": "Translate: 'Present Perfect + yet/already' - _______.",
+      "answers": ["Теперішній індикатор", "Present Perfect з 'ще/вже'", "Завершений час", "Майбутній час"],
+      "correctAnswer": "Present Perfect з 'ще/вже'"
+    },
+    {
+      "question": "Write a sentence using 'already.'",
+      "answers": ["I already finished my homework.", "I am already doing my homework.", "I will already do my homework.", "I do already my homework."],
+      "correctAnswer": "I already finished my homework."
+    },
+    {
+      "question": "Choose the correct option: 'We ______ seen that movie.'",
+      "answers": ["have", "has", "is", "am"],
+      "correctAnswer": "have"
+    },
+    {
+      "question": "Use the word 'yet' in a sentence.",
+      "answers": ["I haven't seen it yet.", "I have seen it yet.", "I will see it yet.", "I see it yet."],
+      "correctAnswer": "I haven't seen it yet."
+    },
+    {
+      "question": "What does 'already' indicate in a sentence?",
+      "answers": ["Something happened before the expected time.", "Something is happening now.", "Something will happen in the future.", "Something never happened."],
+      "correctAnswer": "Something happened before the expected time."
+    },
+    {
+      "question": "Write a sentence using the word 'recently.'",
+      "answers": ["I recently visited my grandparents.", "I will recently visit my grandparents.", "I am recently visiting my grandparents.", "I visit my grandparents recently."],
+      "correctAnswer": "I recently visited my grandparents."
+    },
+    {
+      "question": "Choose the correct option: 'I haven't met her ______.'",
+      "answers": ["yet", "already", "now", "never"],
+      "correctAnswer": "yet"
+    },
+    {
+      "question": "Fill in the blank: 'They ______ finished the project.'",
+      "answers": ["hasn't", "haven't", "isn't", "aren't"],
+      "correctAnswer": "haven't"
+    },
+    {
+      "question": "Translate: 'Порівняння Past Simple та Present Perfect' - _______.",
+      "answers": ["Теперішній час", "Порівняльна граматика", "Правила порівнянь", "Помилки в часах"],
+      "correctAnswer": "Порівняння Past Simple та Present Perfect"
+    },
+    {
+      "question": "Write a sentence using the past simple tense.",
+      "answers": ["I finished my book yesterday.", "I finish my book yesterday.", "I am finishing my book yesterday.", "I will finish my book yesterday."],
+      "correctAnswer": "I finished my book yesterday."
+    },
+    {
+      "question": "Choose the correct option: 'He ______ already ______ his lunch when I called.'",
+      "answers": ["have / eat", "has / eaten", "had / eaten", "will / eat"],
+      "correctAnswer": "had / eaten"
+    },
+    {
+      "question": "Use the word 'before' in a sentence.",
+      "answers": ["I finish my homework before dinner.", "I am finishing my homework before dinner.", "I will finish my homework before dinner.", "I finished my homework before dinner."],
+      "correctAnswer": "I finish my homework before dinner."
+    },
+    {
+      "question": "What is the main difference between Past Simple and Present Perfect?",
+      "answers": ["Past Simple is used for completed actions in the past, and Present Perfect is used for actions that happened at an unspecified time before now.", "Present Perfect is used for completed actions in the past, and Past Simple is used for actions that happened at an unspecified time before now.", "Past Simple is used only for actions that happened today.", "Present Perfect is used only for actions that happened today."],
+      "correctAnswer": "Past Simple is used for completed actions in the past, and Present Perfect is used for actions that happened at an unspecified time before now."
+    },
+    {
+      "question": "Write a sentence using the word 'already.'",
+      "answers": ["I already finished my homework.", "I am already doing my homework.", "I will already do my homework.", "I do already my homework."],
+      "correctAnswer": "I already finished my homework."
+    },
+    {
+      "question": "Fill in the blank: 'He ______ lived here since 2010.'",
+      "answers": ["has", "have", "is", "am"],
+      "correctAnswer": "has"
+    }
+
+  ]
+}

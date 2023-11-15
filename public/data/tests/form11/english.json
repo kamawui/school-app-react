@@ -1,0 +1,216 @@
+{
+  "subject": "Англійська мова",
+  "questions": [
+    {
+      "question": "What does the term 'national park' include?",
+      "answers": [
+        "Only large bodies of water and forests.",
+        "A territory where any economic use is prohibited.",
+        "A natural complex with unique landscapes, fauna, and flora, preserved for scientific and recreational purposes.",
+        "Only mountain ranges and human settlements."
+      ],
+      "correctAnswer": "A natural complex with unique landscapes, fauna, and flora, preserved for scientific and recreational purposes."
+    },
+    {
+      "question": "What types of protection exist in national parks?",
+      "answers": [
+        "Only reactive protection.",
+        "Only nature conservation work.",
+        "Scientific, nature conservation, and educational work.",
+        "Only special zones for tourists."
+      ],
+      "correctAnswer": "Scientific, nature conservation, and educational work."
+    },
+    {
+      "question": "What defines the concept of 'eco-tourism'?",
+      "answers": [
+        "Only tourism in mountainous areas.",
+        "Active recreation on water bodies.",
+        "Travel that does not harm nature and contributes to its preservation.",
+        "Only excursions to reserves."
+      ],
+      "correctAnswer": "Travel that does not harm nature and contributes to its preservation."
+    },
+    {
+      "question": "What are the characteristics of relative clauses?",
+      "answers": [
+        "They start with the conjunctions 'and also'.",
+        "They define a noun with an inserted additional phrase.",
+        "They end with a punctuation mark.",
+        "They start with an article and a noun."
+      ],
+      "correctAnswer": "They define a noun with an inserted additional phrase."
+    },
+    {
+      "question": "What is the role of relative clauses in narratives about nature?",
+      "answers": [
+        "Emphasizing important details of natural phenomena.",
+        "Only introducing new terms.",
+        "Dividing more information.",
+        "Explaining the syntactic structure of sentences."
+      ],
+      "correctAnswer": "Emphasizing important details of natural phenomena."
+    },
+    {
+      "question": "What is the main task of reserves?",
+      "answers": [
+        "Only protecting nature from tourists.",
+        "Preserving and studying nature for scientific purposes.",
+        "Only conducting excursions for schoolchildren.",
+        "Creating recreational areas for the population."
+      ],
+      "correctAnswer": "Preserving and studying nature for scientific purposes."
+    },
+    {
+      "question": "Choose the correct option to complete the sentence: 'National parks play a crucial role in ____ and preserving biodiversity.'",
+      "answers": [
+        "consuming",
+        "damaging",
+        "protecting",
+        "ignoring"
+      ],
+      "correctAnswer": "protecting"
+    },
+    {
+      "question": "Translate the following sentence to English: 'Еко-туризм сприяє збереженню природи та надає можливість насолоджуватися її красою.'",
+      "answers": [
+        "'Eco-tourism contributes to nature preservation and allows enjoying its beauty.'",
+        "'Eco-tourism harms nature but provides opportunities for enjoyment.'",
+        "'Eco-tourism has no impact on nature preservation.'",
+        "'Eco-tourism prevents people from enjoying the beauty of nature.'"
+      ],
+      "correctAnswer": "'Eco-tourism contributes to nature preservation and allows enjoying its beauty.'"
+    },
+    {
+      "question": "Identify the grammatical mistake in the sentence: 'Reserves main goal is protecting and study nature for scientific purposes.'",
+      "answers": [
+        "No mistake.",
+        "The use of 'main' instead of 'mainly.'",
+        "The absence of the definite article before 'scientific purposes.'",
+        "The use of 'study' instead of 'studying.'"
+      ],
+      "correctAnswer": "The absence of the definite article before 'scientific purposes.'"
+    },
+    {
+      "question": "Choose the correct form of the verb to complete the sentence: 'Youth culture continues ____ rapidly in the modern world.'",
+      "answers": [
+        "to develop",
+        "developing",
+        "develop",
+        "developed"
+      ],
+      "correctAnswer": "to develop"
+    },
+    {
+      "question": "Translate the following sentence to English: 'Україна має представництва за кордоном для представлення своїх інтересів.'",
+      "answers": [
+        "'Ukraine has representatives abroad to present its interests.'",
+        "'Ukraine lacks representatives abroad to represent its interests.'",
+        "'Ukraine's interests are not represented by its ambassadors.'",
+        "'Ukraine does not care about its interests abroad.'"
+      ],
+      "correctAnswer": "'Ukraine has representatives abroad to present its interests.'"
+    },
+    {
+      "question": "Choose the correct option to complete the sentence: 'Impersonal verb forms are used ____ convey information objectively.'",
+      "answers": [
+        "by",
+        "with",
+        "to",
+        "for"
+      ],
+      "correctAnswer": "to"
+    },
+    {
+      "question": "Identify the grammatical mistake in the sentence: 'Science and technological progress influences many aspects of people life.'",
+      "answers": [
+        "No mistake.",
+        "The use of 'influences' instead of 'influencing.'",
+        "The absence of the article before 'many aspects.'",
+        "The use of 'people life' instead of 'people's lives.'"
+      ],
+      "correctAnswer": "The use of 'influences' instead of 'influencing.'"
+    },
+    {
+      "question": "Choose the correct participle form to complete the sentence: 'The experiment, ____ by a team of scientists, proved successful.'",
+      "answers": [
+        "led",
+        "leaded",
+        "leading",
+        "leads"
+      ],
+      "correctAnswer": "led"
+    },
+    {
+      "question": "Translate the following sentence to English: 'Інфінітив використовується для опису подій, які можуть трапитися в майбутньому.'",
+      "answers": [
+        "'The infinitive is used to describe events that may happen in the future.'",
+        "'The infinitive is only used to describe past events.'",
+        "'The infinitive has no relevance to future events.'",
+        "'The infinitive is used exclusively for present events.'"
+      ],
+      "correctAnswer": "'The infinitive is used to describe events that may happen in the future.'"
+    },
+    {
+      "question": "Choose the correct option to complete the sentence: 'The guide provided us with ____ information about the historical sites.'",
+      "answers": [
+        "a few",
+        "much",
+        "a lot of",
+        "few"
+      ],
+      "correctAnswer": "a lot of"
+    },
+    {
+      "question": "Translate the following sentence to English: 'Зацікавленість наукою та технікою може привести до інновацій у різних сферах життя.'",
+      "answers": [
+        "'Interest in science and technology can lead to innovations in various areas of life.'",
+        "'Interest in science and technology has no impact on innovations.'",
+        "'Interest in science and technology hinders innovations.'",
+        "'Interest in science and technology only impacts one area of life.'"
+      ],
+      "correctAnswer": "'Interest in science and technology can lead to innovations in various areas of life.'"
+    },
+    {
+      "question": "Identify the grammatical mistake in the sentence: 'We planned to visit the museum, hiking in the mountains, and exploring the city.'",
+      "answers": [
+        "No mistake.",
+        "The use of 'hiking' instead of 'hike.'",
+        "The use of 'and' before 'exploring.'",
+        "The absence of commas between 'museum,' 'hiking,' and 'exploring.'"
+      ],
+      "correctAnswer": "The use of 'hiking' instead of 'hike.'"
+    },
+    {
+      "question": "Choose the correct form of the verb to complete the sentence: 'Many tourists enjoy ____ the cultural heritage of different countries.'",
+      "answers": [
+        "to explore",
+        "explore",
+        "exploring",
+        "explores"
+      ],
+      "correctAnswer": "exploring"
+    },
+    {
+      "question": "Translate the following sentence to English: 'Офіційні представництва в інших країнах розробляють стратегії співпраці з міжнародними організаціями.'",
+      "answers": [
+        "'Official representations in other countries develop strategies for cooperation with international organizations.'",
+        "'Official representations in other countries have no impact on international organizations.'",
+        "'Official representations in other countries hinder cooperation with international organizations.'",
+        "'Official representations in other countries are unaware of international organizations.'"
+      ],
+      "correctAnswer": "'Official representations in other countries develop strategies for cooperation with international organizations.'"
+    },
+    {
+      "question": "Identify the grammatical mistake in the sentence: 'It's important to care about environment and be responsible for our action.'",
+      "answers": [
+        "No mistake.",
+        "The use of 'about' after 'care.'",
+        "The use of 'and' instead of 'but.'",
+        "The use of 'action' instead of 'actions.'"
+      ],
+      "correctAnswer": "The use of 'action' instead of 'actions.'"
+    }
+
+  ]
+}

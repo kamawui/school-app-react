@@ -11,6 +11,7 @@ import "./app.css";
 import "../../styles/styles.css";
 import useTestService from "../../services/TestService";
 import Header from "../header/Header";
+import useTester from "../../services/Tester";
 
 const App = () => {
     const linkService = useLinkService();
@@ -168,6 +169,13 @@ const App = () => {
         return location.pathname !== "/test" && <Header links={memoizedLinks} location={location.pathname}
                                                         burgerActive={burgerActive} setBurgerActive={setBurgerActive}/>;
     };
+
+    const tester = useTester();
+
+    useEffect(() => {
+        tester.getTest(11, "english").then(tester.checkForDuplicates);
+    }, [])
+
 
     return (
         <BrowserRouter>

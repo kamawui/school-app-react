@@ -42,7 +42,7 @@
   "world_history": {
     "title": "Всесвітня історія",
     "tag": "world_history",
-    "forms": ["5", "6", "7", "8", "9", "10", "11"]
+    "forms": ["6", "7", "8", "9", "10", "11"]
   },
   "geography": {
     "title": "Географія",
@@ -68,5 +68,10 @@
     "title": "Правознавство",
     "tag": "law",
     "forms": ["9", "10", "11"]
+  },
+  "natural_science": {
+    "title": "Природознавство",
+    "tag": "natural_science",
+    "forms": ["5", "6"]
   }
 }

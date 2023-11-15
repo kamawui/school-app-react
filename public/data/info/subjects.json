@@ -5,8 +5,8 @@
     {"title": "Українська мова", "tag": "ukrainian_language"},
     {"title": "Українська література", "tag": "ukrainian_literature"},
     {"title": "Історія України", "tag": "ukrainian_history"},
-    {"title": "Всесвітня історія", "tag": "world_history"},
-    {"title": "Інформатика", "tag": "informatics"}
+    {"title": "Інформатика", "tag": "informatics"},
+    {"title": "Природознавство", "tag": "natural_science"}
   ],
   "6": [
     {"title": "Математика", "tag": "math"},
@@ -17,7 +17,8 @@
     {"title": "Історія України", "tag": "ukrainian_history"},
     {"title": "Всесвітня історія", "tag": "world_history"},
     {"title": "Географія", "tag": "geography"},
-    {"title": "Інформатика", "tag": "informatics"}
+    {"title": "Інформатика", "tag": "informatics"},
+    {"title": "Природознавство", "tag": "natural_science"}
   ],
   "7": [
     {"title": "Математика", "tag": "math"},
@@ -104,6 +105,7 @@
     {"title": "Інформатика", "tag": "informatics"},
     {"title": "Астрономія", "tag": "astronomy"},
     {"title": "Громадянська освіта", "tag": "civic_education"},
-    {"title": "Правознавство", "tag": "law"}
+    {"title": "Правознавство", "tag": "law"},
+    {"title": "Природознавство", "tag": "natural_science"}
   ]
 }
