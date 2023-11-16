@@ -1,0 +1,485 @@
+{
+  "subject": "Англійська мова",
+  "questions": [
+    {
+      "question": "Choose the correct modal verb: 'You ______ go to the party if you don't want to.'",
+      "answers": [
+        "may",
+        "must",
+        "can",
+        "would"
+      ],
+      "correctAnswer": "may"
+    },
+    {
+      "question": "Complete the sentence with the correct form of the verb: 'Yesterday, I _______ (play) football with my friends.'",
+      "answers": [
+        "play",
+        "played",
+        "plays",
+        "playing"
+      ],
+      "correctAnswer": "played"
+    },
+    {
+      "question": "What is the meaning of the modal verb 'must'?",
+      "answers": [
+        "Ability",
+        "Possibility",
+        "Obligation",
+        "Permission"
+      ],
+      "correctAnswer": "Obligation"
+    },
+    {
+      "question": "Choose the correct form of the past continuous tense: 'While I ______ (watch) TV, the phone rang.'",
+      "answers": [
+        "watched",
+        "was watching",
+        "watches",
+        "watch"
+      ],
+      "correctAnswer": "was watching"
+    },
+    {
+      "question": "Fill in the blank with the correct word: 'She has to finish her homework, ______ she won't get a good grade.'",
+      "answers": [
+        "so",
+        "but",
+        "and",
+        "or"
+      ],
+      "correctAnswer": "or"
+    },
+    {
+      "question": "Translate the sentence to English: 'Мені потрібно зробити це завдання.'",
+      "answers": [
+        "I need to do this task.",
+        "I will do this task.",
+        "I did this task.",
+        "I am doing this task."
+      ],
+      "correctAnswer": "I need to do this task."
+    },
+    {
+      "question": "Which preposition is correct: 'We are going on a trip ______ car.'",
+      "answers": [
+        "for",
+        "with",
+        "by",
+        "on"
+      ],
+      "correctAnswer": "by"
+    },
+    {
+      "question": "Choose the correct form of the verb: 'She ______ swimming every Saturday.'",
+      "answers": [
+        "go",
+        "goes",
+        "going",
+        "gone"
+      ],
+      "correctAnswer": "goes"
+    },
+    {
+      "question": "Choose the correct form of the verb: 'I ______ (read) a book when the phone rang.'",
+      "answers": [
+        "read",
+        "was reading",
+        "reads",
+        "reading"
+      ],
+      "correctAnswer": "was reading"
+    },
+    {
+      "question": "Complete the sentence with the correct form of the verb: 'He _______ (not/go) to the party last night.'",
+      "answers": [
+        "not go",
+        "not goes",
+        "didn't go",
+        "doesn't go"
+      ],
+      "correctAnswer": "didn't go"
+    },
+    {
+      "question": "What is the opposite of the word 'traditions'?",
+      "answers": [
+        "Customs",
+        "Habits",
+        "Innovations",
+        "Routines"
+      ],
+      "correctAnswer": "Innovations"
+    },
+    {
+      "question": "Choose the correct form of the conjunction: 'She is tired, ______ she will finish the work.'",
+      "answers": [
+        "so",
+        "but",
+        "and",
+        "or"
+      ],
+      "correctAnswer": "but"
+    },
+    {
+      "question": "Translate the sentence to English: 'Вони вчора грали в футбол.'",
+      "answers": [
+        "They play football yesterday.",
+        "They played football yesterday.",
+        "They will play football yesterday.",
+        "They are playing football yesterday."
+      ],
+      "correctAnswer": "They played football yesterday."
+    },
+    {
+      "question": "Which preposition is correct: 'We bought this gift ______ our mom.'",
+      "answers": [
+        "for",
+        "with",
+        "by",
+        "to"
+      ],
+      "correctAnswer": "for"
+    },
+    {
+      "question": "What does the modal verb 'can' express?",
+      "answers": [
+        "Ability",
+        "Possibility",
+        "Obligation",
+        "Permission"
+      ],
+      "correctAnswer": "Ability"
+    },
+    {
+      "question": "Fill in the blank with the correct word: 'She had to study, ______ she went to the party.'",
+      "answers": [
+        "but",
+        "so",
+        "and",
+        "or"
+      ],
+      "correctAnswer": "so"
+    },
+    {
+      "question": "Choose the correct form of the verb: 'We ______ (visit) the museum last weekend.'",
+      "answers": [
+        "visit",
+        "visiting",
+        "visited",
+        "visits"
+      ],
+      "correctAnswer": "visited"
+    },
+    {
+      "question": "Complete the sentence with the correct form of the verb: 'She _______ (not/eat) sushi before.'",
+      "answers": [
+        "not eat",
+        "not eats",
+        "didn't eat",
+        "doesn't eat"
+      ],
+      "correctAnswer": "hadn't eaten"
+    },
+    {
+      "question": "What is the synonym of the word 'purchase'?",
+      "answers": [
+        "Sale",
+        "Buy",
+        "Trade",
+        "Barter"
+      ],
+      "correctAnswer": "Buy"
+    },
+    {
+      "question": "Choose the correct form of the conjunction: 'I wanted to go, ______ it was raining.'",
+      "answers": [
+        "so",
+        "but",
+        "and",
+        "or"
+      ],
+      "correctAnswer": "but"
+    },
+    {
+      "question": "Translate the sentence to English: 'Вони завжди роблять свої домашні завдання.'",
+      "answers": [
+        "They always do their homework.",
+        "They will always do their homework.",
+        "They always did their homework.",
+        "They are always doing their homework."
+      ],
+      "correctAnswer": "They always do their homework."
+    },
+    {
+      "question": "Which preposition is correct: 'She thanked me ______ the beautiful gift.'",
+      "answers": [
+        "for",
+        "with",
+        "by",
+        "to"
+      ],
+      "correctAnswer": "for"
+    },
+    {
+      "question": "What does the modal verb 'must' express?",
+      "answers": [
+        "Ability",
+        "Possibility",
+        "Obligation",
+        "Permission"
+      ],
+      "correctAnswer": "Obligation"
+    },
+    {
+      "question": "Fill in the blank with the correct word: 'He was sick, ______ he still went to work.'",
+      "answers": [
+        "but",
+        "so",
+        "and",
+        "or"
+      ],
+      "correctAnswer": "so"
+    },
+    {
+      "question": "Choose the correct form of the verb: 'They ______ (play) tennis yesterday.'",
+      "answers": [
+        "play",
+        "played",
+        "plays",
+        "playing"
+      ],
+      "correctAnswer": "played"
+    },
+    {
+      "question": "Complete the sentence with the correct form of the verb: 'We _______ (not/sleep) well last night.'",
+      "answers": [
+        "not sleep",
+        "not sleeps",
+        "didn't sleep",
+        "doesn't sleep"
+      ],
+      "correctAnswer": "didn't sleep"
+    },
+    {
+      "question": "What is the meaning of the word 'groceries'?",
+      "answers": [
+        "Clothes",
+        "Books",
+        "Food and other items",
+        "Electronics"
+      ],
+      "correctAnswer": "Food and other items"
+    },
+    {
+      "question": "Choose the correct form of the conjunction: 'She likes coffee ______ she doesn't drink it often.'",
+      "answers": [
+        "so",
+        "but",
+        "and",
+        "or"
+      ],
+      "correctAnswer": "but"
+    },
+    {
+      "question": "Translate the sentence to English: 'Вони завжди купують свіжі овочі.'",
+      "answers": [
+        "They always buy fresh vegetables.",
+        "They will always buy fresh vegetables.",
+        "They always bought fresh vegetables.",
+        "They are always buying fresh vegetables."
+      ],
+      "correctAnswer": "They always buy fresh vegetables."
+    },
+    {
+      "question": "Which preposition is correct: 'She is good ______ playing the piano.'",
+      "answers": [
+        "for",
+        "with",
+        "by",
+        "at"
+      ],
+      "correctAnswer": "at"
+    },
+    {
+      "question": "What does the modal verb 'can' express?",
+      "answers": [
+        "Ability",
+        "Possibility",
+        "Obligation",
+        "Permission"
+      ],
+      "correctAnswer": "Ability"
+    },
+    {
+      "question": "Fill in the blank with the correct word: 'He forgot his umbrella, ______ he got wet.'",
+      "answers": [
+        "but",
+        "so",
+        "and",
+        "or"
+      ],
+      "correctAnswer": "so"
+    },
+    {
+      "question": "Choose the correct form of the verb: 'She ______ (read) a book every evening.'",
+      "answers": [
+        "read",
+        "reading",
+        "reads",
+        "readed"
+      ],
+      "correctAnswer": "reads"
+    },
+    {
+      "question": "Complete the sentence with the correct form of the verb: 'He _______ (not/drive) a car before.'",
+      "answers": [
+        "not drive",
+        "not drives",
+        "didn't drive",
+        "doesn't drive"
+      ],
+      "correctAnswer": "hadn't driven"
+    },
+    {
+      "question": "What is the opposite of the word 'ancient'?",
+      "answers": [
+        "Old",
+        "Modern",
+        "Traditional",
+        "Historical"
+      ],
+      "correctAnswer": "Modern"
+    },
+    {
+      "question": "Choose the correct form of the conjunction: 'I wanted to go, ______ it started raining.'",
+      "answers": [
+        "so",
+        "but",
+        "and",
+        "or"
+      ],
+      "correctAnswer": "but"
+    },
+    {
+      "question": "Translate the sentence to English: 'Ми завжди готуємо смачну їжу.'",
+      "answers": [
+        "We always cook tasty food.",
+        "We will always cook tasty food.",
+        "We always cooked tasty food.",
+        "We are always cooking tasty food."
+      ],
+      "correctAnswer": "We always cook tasty food."
+    },
+    {
+      "question": "Which preposition is correct: 'She is interested ______ art.'",
+      "answers": [
+        "for",
+        "with",
+        "by",
+        "in"
+      ],
+      "correctAnswer": "in"
+    },
+    {
+      "question": "What does the modal verb 'may' express?",
+      "answers": [
+        "Ability",
+        "Possibility",
+        "Obligation",
+        "Permission"
+      ],
+      "correctAnswer": "Possibility"
+    },
+    {
+      "question": "Fill in the blank with the correct word: 'She was tired, ______ she continued working.'",
+      "answers": [
+        "but",
+        "so",
+        "and",
+        "or"
+      ],
+      "correctAnswer": "so"
+    },
+    {
+      "question": "Translate the word 'Health' into Ukrainian.",
+      "answers": [
+        "Здоров'я",
+        "Спорт",
+        "Лікарня",
+        "Харчування"
+      ],
+      "correctAnswer": "Здоров'я"
+    },
+    {
+      "question": "Translate the word 'Environment' into Ukrainian.",
+      "answers": [
+        "Спадщина",
+        "Довкілля",
+        "Енергія",
+        "Технологія"
+      ],
+      "correctAnswer": "Довкілля"
+    },
+    {
+      "question": "Translate the sentence to English: 'Вона завжди слухає музику ввечері.'",
+      "answers": [
+        "She always listens to music in the evening.",
+        "She will always listen to music in the evening.",
+        "She always listened to music in the evening.",
+        "She is always listening to music in the evening."
+      ],
+      "correctAnswer": "She always listens to music in the evening."
+    },
+    {
+      "question": "Translate the sentence to English: 'Ми відпочиваємо на природі кожного літа.'",
+      "answers": [
+        "We rest in nature every summer.",
+        "We will rest in nature every summer.",
+        "We rested in nature every summer.",
+        "We are resting in nature every summer."
+      ],
+      "correctAnswer": "We rest in nature every summer."
+    },
+    {
+      "question": "Translate the word 'Hobby' into Ukrainian.",
+      "answers": [
+        "Професія",
+        "Відпочинок",
+        "Хобі",
+        "Навчання"
+      ],
+      "correctAnswer": "Хобі"
+    },
+    {
+      "question": "Translate the word 'Adventure' into Ukrainian.",
+      "answers": [
+        "Пригода",
+        "Подорож",
+        "Зустріч",
+        "Відпочинок"
+      ],
+      "correctAnswer": "Пригода"
+    },
+    {
+      "question": "Translate the sentence to English: 'Ми завжди робимо канікули разом.'",
+      "answers": [
+        "We always have holidays together.",
+        "We will always have holidays together.",
+        "We always had holidays together.",
+        "We are always having holidays together."
+      ],
+      "correctAnswer": "We always have holidays together."
+    },
+    {
+      "question": "Translate the sentence to English: 'Ми любимо грати в настільні ігри у вихідні.'",
+      "answers": [
+        "We like to play board games on weekends.",
+        "We will like to play board games on weekends.",
+        "We liked to play board games on weekends.",
+        "We are liking to play board games on weekends."
+      ],
+      "correctAnswer": "We like to play board games on weekends."
+    }
+  ]
+}

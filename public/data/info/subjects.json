@@ -13,12 +13,10 @@
     {"title": "Англійська мова", "tag": "english"},
     {"title": "Українська мова", "tag": "ukrainian_language"},
     {"title": "Українська література", "tag": "ukrainian_literature"},
-    {"title": "Біологія", "tag": "biology"},
-    {"title": "Історія України", "tag": "ukrainian_history"},
     {"title": "Всесвітня історія", "tag": "world_history"},
-    {"title": "Географія", "tag": "geography"},
     {"title": "Інформатика", "tag": "informatics"},
-    {"title": "Природознавство", "tag": "natural_science"}
+    {"title": "Географія", "tag": "geography"},
+    {"title": "Біологія", "tag": "biology"}
   ],
   "7": [
     {"title": "Математика", "tag": "math"},
