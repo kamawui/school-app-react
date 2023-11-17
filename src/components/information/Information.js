@@ -35,7 +35,8 @@ const Information = ({links}) => {
             </div>
             <div className="info-contacts">
                 <div className="header right">Інформація та посилання</div>
-                <div className="info-item right border-bot">Підготовлено учнем 11 класу Бурлаченком Даніїлом</div>
+                <div className="info-item border-bot"><span>Підготував: </span>Бурлаченко Даніїл</div>
+                <div className="info-item border-bot"><span>Клас: </span>11</div>
                 <div className="info-item border-bot"><span>Школа: </span>Вижницький опорний ліцей імені Юрія Федьковича</div>
                 <div className="info-item border-bot media">Створено для проекту <span>###</span></div>
                 <div className="info-item media flex">{!links.error ? infoLinks : null}</div>

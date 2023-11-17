@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import OptionsMenu from "../components/options-menu/OptionsMenu";
 import TestOptions from "../components/test-options/TestOptions";
 
@@ -8,6 +8,10 @@ function Options({subjects, forms, subjectList, clearForm, setFormsBySubjects, g
                      subjectOption, setSubjectOption, fetchTest}) {
 
     const homeComponentsClasses = burgerActive ? "" : "full-width";
+
+    useEffect(() => {
+        setBurgerActive(true);
+    }, [])
 
     return (
         <div className="options-wrapper">

@@ -1,0 +1,180 @@
+{
+  "subject": "Англійська мова",
+  "questions": [
+    {
+      "question": "Вставте пропущене слово: I need to __ the dishes after dinner.",
+      "answers": ["cook", "wash", "clean", "eat"],
+      "correctAnswer": "wash"
+    },
+    {
+      "question": "Яке слово вживається для опису обов'язків в сім'ї? (Family responsibilities)",
+      "answers": ["Hobbies", "Chores", "Games", "Activities"],
+      "correctAnswer": "Chores"
+    },
+    {
+      "question": "Оберіть правильний переклад слова 'побутові прилади' на англійську.",
+      "answers": ["Household appliances", "Furniture", "Tools", "Electronics"],
+      "correctAnswer": "Household appliances"
+    },
+    {
+      "question": "Як виразити 'щойно закінчив' англійською мовою?",
+      "answers": ["Now", "Still", "Just", "Already"],
+      "correctAnswer": "Just"
+    },
+    {
+      "question": "Оберіть правильний сполучник для виразу 'Я прийшов, __ ми поїхали'.",
+      "answers": ["so", "and", "but", "then"],
+      "correctAnswer": "then"
+    },
+    {
+      "question": "Використайте слово 'ever' у реченні: Have you __ visited Paris?",
+      "answers": ["never", "always", "sometimes", "now"],
+      "correctAnswer": "ever"
+    },
+    {
+      "question": "Виберіть правильний переклад сполучника 'so' на українську.",
+      "answers": ["Також", "Отже", "Але", "І"],
+      "correctAnswer": "Отже"
+    },
+    {
+      "question": "Яке слово вживається для опису способів обробки продуктів харчування? (Food processing)",
+      "answers": ["Cooking", "Shopping", "Eating", "Traveling"],
+      "correctAnswer": "Cooking"
+    },
+    {
+      "question": "Як правильно перекласти 'Сервірування столу'?",
+      "answers": ["Serving the table", "Cleaning the table", "Setting the table", "Eating at the table"],
+      "correctAnswer": "Setting the table"
+    },
+    {
+      "question": "Оберіть вірний варіант: 'I have __ sugar in my coffee.'",
+      "answers": ["a little", "much", "many", "a little"],
+      "correctAnswer": "a little"
+    },
+    {
+      "question": "Виберіть правильний переклад 'прилади для приготування їжі' на англійську.",
+      "answers": ["Cooking devices", "Eating tools", "Kitchen appliances", "Food utensils"],
+      "correctAnswer": "Kitchen appliances"
+    },
+    {
+      "question": "Заповніть пропуск: 'Я люблю їсти __ вечері.'",
+      "answers": ["at", "on", "in", "with"],
+      "correctAnswer": "for"
+    },
+    {
+      "question": "Оберіть вірний варіант: 'I like pizza __ much as I like pasta.'",
+      "answers": ["so", "too", "very", "also"],
+      "correctAnswer": "as"
+    },
+    {
+      "question": "Використайте 'much' у реченні: 'There isn't __ time left.'",
+      "answers": ["much", "many", "a lot of", "some"],
+      "correctAnswer": "much"
+    },
+    {
+      "question": "Оберіть вірний варіант: 'I have been to __ last summer.'",
+      "answers": ["Ukraine", "the Ukraine", "a Ukraine", "an Ukraine"],
+      "correctAnswer": "Ukraine"
+    },
+    {
+      "question": "Яке слово вживається для опису основних пам'яток історії та культури? (Famous places)",
+      "answers": ["Landmarks", "Buildings", "Parks", "Museums"],
+      "correctAnswer": "Landmarks"
+    },
+    {
+      "question": "Виберіть правильний переклад 'Лондон' на англійську.",
+      "answers": ["Kyiv", "London", "New York", "Paris"],
+      "correctAnswer": "London"
+    },
+    {
+      "question": "Як виразити 'повторення часових форм дієслова' англійською мовою?",
+      "answers": ["Time verb forms", "Verb tense review", "Repeating verb times", "Past and future verbs"],
+      "correctAnswer": "Verb tense review"
+    },
+    {
+      "question": "Заповніть пропуск: 'The history of Ukraine is very __.'",
+      "answers": ["interest", "interesting", "interested", "interests"],
+      "correctAnswer": "interesting"
+    },
+    {
+      "question": "Оберіть правильний варіант: 'We study English, __ it is interesting.'",
+      "answers": ["so", "because", "and", "then"],
+      "correctAnswer": "because"
+    },
+    {
+      "question": "Використайте 'before' у реченні: 'We arrived __ the concert started.'",
+      "answers": ["before", "after", "during", "while"],
+      "correctAnswer": "before"
+    },
+    {
+      "question": "Оберіть правильний варіант: 'Football and basketball are popular __ in many countries.'",
+      "answers": ["hobbies", "games", "sports", "activities"],
+      "correctAnswer": "sports"
+    },
+    {
+      "question": "Яке слово вживається для опису відомих спортсменів та їх досягнень? (Famous athletes)",
+      "answers": ["Musicians", "Actors", "Athletes", "Artists"],
+      "correctAnswer": "Athletes"
+    },
+    {
+      "question": "Виберіть правильний переклад 'спортивні змагання' на англійську.",
+      "answers": ["Events", "Games", "Competitions", "Matches"],
+      "correctAnswer": "Competitions"
+    },
+    {
+      "question": "Як виразити 'зворотні займенники' англійською мовою?",
+      "answers": ["Opposite pronouns", "Reversed pronouns", "Reflexive pronouns", "Contrastive pronouns"],
+      "correctAnswer": "Reflexive pronouns"
+    },
+    {
+      "question": "Заповніть пропуск: 'They won the game, __?'",
+      "answers": ["aren't they", "don't they", "did they", "won't they"],
+      "correctAnswer": "didn't they"
+    },
+    {
+      "question": "Оберіть правильний варіант: 'She likes to play tennis as well as __.'",
+      "answers": ["me", "I", "myself", "mine"],
+      "correctAnswer": "I"
+    },
+    {
+      "question": "Заповніть пропуск: 'He has been playing golf __ he was a child.'",
+      "answers": ["since", "for", "from", "ago"],
+      "correctAnswer": "since"
+    },
+    {
+      "question": "Яке слово вживається для опису відвідування лікаря та медичних закладів? (Medical care)",
+      "answers": ["Shopping", "Traveling", "Healthcare", "Entertainment"],
+      "correctAnswer": "Healthcare"
+    },
+    {
+      "question": "Як правильно перекласти 'лікарські засоби' на англійську?",
+      "answers": ["Medicine tools", "Pharmacy", "Medical supplies", "Health equipment"],
+      "correctAnswer": "Medical supplies"
+    },
+    {
+      "question": "Оберіть правильний варіант: 'I have a __ in my throat.'",
+      "answers": ["cold", "hot", "ill", "healthy"],
+      "correctAnswer": "cold"
+    },
+    {
+      "question": "Як виразити 'повторення часових форм дієслова' англійською мовою?",
+      "answers": ["Time verb forms", "Verb tense review", "Repeating verb times", "Past and future verbs"],
+      "correctAnswer": "Verb tense review"
+    },
+    {
+      "question": "Заповніть пропуск: 'I stayed at home because of bad __.'",
+      "answers": ["health", "weather", "mood", "job"],
+      "correctAnswer": "health"
+    },
+    {
+      "question": "Оберіть правильний варіант: 'A medical examination can help identify __.'",
+      "answers": ["illnesses", "hobbies", "games", "activities"],
+      "correctAnswer": "illnesses"
+    },
+    {
+      "question": "Використайте 'Past Perfect' у реченні: 'By the time they arrived, we __ already __ dinner.'",
+      "answers": ["had, eaten", "have, ate", "were, eating", "are, eat"],
+      "correctAnswer": "had, eaten"
+    }
+  ]
+}

@@ -14,8 +14,8 @@ const Question = ({test, activeQuestionIndex, setActiveQuestionIndex, setAnswer,
             const variantsClasses = answerList[item.index]?.userAnswer === answer ? "variant active-variant" : "variant"
 
             return (
-                <li className={variantsClasses} key={key}>
-                    <div className="radio-btn" onClick={() => setAnswer(item.index, answer)}>
+                <li className={variantsClasses} key={key} onClick={() => setAnswer(item.index, answer)}>
+                    <div className="radio-btn">
                         <div>
 
                         </div>
