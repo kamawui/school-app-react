@@ -2,12 +2,12 @@ import React from "react";
 import Information from "../components/information/Information";
 import OptionsMenu from "../components/options-menu/OptionsMenu";
 
-function About({links, subjectList, setFormsBySubjects, getFormsBySubject, burgerActive, setBurgerActive, setSubjectOption}) {
+function About({links, subjectList, setFormsBySubjects, getFormsBySubject, burgerActive, setBurgerActive, setSubjectOption, formsBySubjects}) {
     return (
         <div className="about-wrapper">
             <div className="hidden-burger">
                 <OptionsMenu subjects={subjectList} setSubjectOption={setSubjectOption}
-                             burgerActive={burgerActive} setBurgerActive={setBurgerActive}
+                             burgerActive={burgerActive} setBurgerActive={setBurgerActive} formsBySubjects={formsBySubjects}
                              setFormsBySubjects={setFormsBySubjects} getFormsBySubject={getFormsBySubject}/>
             </div>
             <div className="about-components">

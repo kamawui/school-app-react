@@ -7,7 +7,7 @@
       "correctAnswer": "wash"
     },
     {
-      "question": "Яке слово вживається для опису обов'язків в сім'ї? (Family responsibilities)",
+      "question": "Яке слово вживається для опису обов'язків в сім'ї? ",
       "answers": ["Hobbies", "Chores", "Games", "Activities"],
       "correctAnswer": "Chores"
     },
@@ -22,7 +22,7 @@
       "correctAnswer": "Just"
     },
     {
-      "question": "Оберіть правильний сполучник для виразу 'Я прийшов, __ ми поїхали'.",
+      "question": "Оберіть правильний сполучник для виразу 'I came, __ we went'.",
       "answers": ["so", "and", "but", "then"],
       "correctAnswer": "then"
     },
@@ -37,7 +37,7 @@
       "correctAnswer": "Отже"
     },
     {
-      "question": "Яке слово вживається для опису способів обробки продуктів харчування? (Food processing)",
+      "question": "Яке слово вживається для опису способів обробки продуктів харчування?",
       "answers": ["Cooking", "Shopping", "Eating", "Traveling"],
       "correctAnswer": "Cooking"
     },
@@ -57,9 +57,9 @@
       "correctAnswer": "Kitchen appliances"
     },
     {
-      "question": "Заповніть пропуск: 'Я люблю їсти __ вечері.'",
+      "question": "Заповніть пропуск: 'I like to eat __ evenings.'",
       "answers": ["at", "on", "in", "with"],
-      "correctAnswer": "for"
+      "correctAnswer": "in"
     },
     {
       "question": "Оберіть вірний варіант: 'I like pizza __ much as I like pasta.'",
@@ -77,7 +77,7 @@
       "correctAnswer": "Ukraine"
     },
     {
-      "question": "Яке слово вживається для опису основних пам'яток історії та культури? (Famous places)",
+      "question": "Яке слово вживається для опису основних пам'яток історії та культури?",
       "answers": ["Landmarks", "Buildings", "Parks", "Museums"],
       "correctAnswer": "Landmarks"
     },
@@ -112,7 +112,7 @@
       "correctAnswer": "sports"
     },
     {
-      "question": "Яке слово вживається для опису відомих спортсменів та їх досягнень? (Famous athletes)",
+      "question": "Яке слово вживається для опису відомих спортсменів та їх досягнень?",
       "answers": ["Musicians", "Actors", "Athletes", "Artists"],
       "correctAnswer": "Athletes"
     },

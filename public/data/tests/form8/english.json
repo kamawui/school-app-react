@@ -1,0 +1,175 @@
+{
+  "subject": "Англійська мова",
+  "questions": [
+    {
+      "question": "What is the meaning of the term 'musical genre'?",
+      "answers": [
+        "Instrument used to perform music.",
+        "Style of musical performance.",
+        "Composition of a musical piece.",
+        "Method of recording music."
+      ],
+      "correctAnswer": "Style of musical performance"
+    },
+    {
+      "question": "What does 'active state of a verb' mean in grammar?",
+      "answers": [
+        "Action happening now.",
+        "Action happened in the past.",
+        "Action will happen in the future.",
+        "Action is a result of another action."
+      ],
+      "correctAnswer": "Action happening now"
+    },
+    {
+      "question": "How do you understand the expression 'attending a concert'?",
+      "answers": [
+        "Performing at a concert.",
+        "Visiting another city.",
+        "Being present at a concert as an audience.",
+        "Recording a concert on audio."
+      ],
+      "correctAnswer": "Being present at a concert as an audience"
+    },
+    {
+      "question": "Translate the word 'composer' into Ukrainian.",
+      "answers": ["Композитор", "Музикант", "Диригент", "Аранжувальник"],
+      "correctAnswer": "Композитор"
+    },
+    {
+      "question": "Choose the correct modal verb: 'You ______ try playing the piano.'",
+      "answers": ["will", "might", "should", "can"],
+      "correctAnswer": "might"
+    },
+    {
+      "question": "Identify the passive form in the sentence: 'The song was written by a famous artist.'",
+      "answers": [
+        "was written",
+        "famous artist",
+        "The song",
+        "by a famous artist"
+      ],
+      "correctAnswer": "was written"
+    },
+    {
+      "question": "What instrument is known for its strings and is often used in classical music?",
+      "answers": ["Piano", "Drums", "Violin", "Trumpet"],
+      "correctAnswer": "Violin"
+    },
+    {
+      "question": "Complete the sentence: 'I ______ my favorite subject is mathematics.'",
+      "answers": ["am", "think", "love", "be"],
+      "correctAnswer": "think"
+    },
+    {
+      "question": "Choose the correct modal verb: 'Students ______ wear a uniform to school.'",
+      "answers": ["must", "can", "will", "should"],
+      "correctAnswer": "must"
+    },
+    {
+      "question": "Translate the word 'домашнє завдання' into English.",
+      "answers": ["Homework", "Schoolwork", "Lesson", "Assignment"],
+      "correctAnswer": "Homework"
+    },
+    {
+      "question": "What is the meaning of the phrase 'викладач англійської мови'?",
+      "answers": ["English student", "English teacher", "English speaker", "English learner"],
+      "correctAnswer": "English teacher"
+    },
+    {
+      "question": "Identify the word with a similar meaning to 'учень':",
+      "answers": ["Teacher", "Parent", "Student", "Principal"],
+      "correctAnswer": "Student"
+    },
+    {
+      "question": "What does the abbreviation 'PE' stand for in school?",
+      "answers": ["Physical Education", "Personal Experience", "Public Examination", "Private Education"],
+      "correctAnswer": "Physical Education"
+    },
+    {
+      "question": "Translate the word 'столиця' into English.",
+      "answers": ["Capital", "Country", "City", "Town"],
+      "correctAnswer": "Capital"
+    },
+    {
+      "question": "Choose the correct modal verb: 'People ______ speak Ukrainian in Western Ukraine.'",
+      "answers": ["can", "must", "will", "should"],
+      "correctAnswer": "can"
+    },
+    {
+      "question": "What is the meaning of the term 'географічне положення'?",
+      "answers": [
+        "Geographical position",
+        "Climate conditions",
+        "Population density",
+        "Economic development"
+      ],
+      "correctAnswer": "Geographical position"
+    },
+    {
+      "question": "What is the population of Ukraine?",
+      "answers": ["Approximately 20 million", "Approximately 40 million", "Approximately 60 million", "Approximately 80 million"],
+      "correctAnswer": "Approximately 40 million"
+    },
+    {
+      "question": "Translate the word 'письменник' into English.",
+      "answers": ["Writer", "Reader", "Author", "Speaker"],
+      "correctAnswer": "Writer"
+    },
+    {
+      "question": "What does the phrase 'літературний герой' mean?",
+      "answers": [
+        "Literary genre",
+        "Literary style",
+        "Literary figure",
+        "Literary criticism"
+      ],
+      "correctAnswer": "Literary figure"
+    },
+    {
+      "question": "Translate the phrase 'вибір книг для читання' into English.",
+      "answers": ["Choosing books to read", "Reading choices", "Book selection", "Choosing reading material"],
+      "correctAnswer": "Choosing books to read"
+    },
+    {
+      "question": "Identify the word with a similar meaning to 'відвідування бібліотеки':",
+      "answers": ["Visiting a bookstore", "Browsing the internet", "Attending a concert", "Library visitation"],
+      "correctAnswer": "Library visitation"
+    },
+    {
+      "question": "What is the purpose of literary criticism?",
+      "answers": [
+        "To analyze and evaluate literary works",
+        "To promote new books",
+        "To sell books",
+        "To teach reading skills"
+      ],
+      "correctAnswer": "To analyze and evaluate literary works"
+    },
+    {
+      "question": "What is the meaning of the term 'правила поведінки'?",
+      "answers": [
+        "Rules of conduct",
+        "Lesson plans",
+        "Study materials",
+        "School schedule"
+      ],
+      "correctAnswer": "Rules of conduct"
+    },
+    {
+      "question": "Complete the sentence: 'In the classroom, students sit at their ______.'",
+      "answers": ["Desks", "Chairs", "Tables", "Podiums"],
+      "correctAnswer": "Desks"
+    },
+    {
+      "question": "Translate the phrase 'типи шкіл' into English.",
+      "answers": ["School types", "Types of education", "Educational systems", "School categories"],
+      "correctAnswer": "School types"
+    },
+    {
+      "question": "Identify the word with a similar meaning to 'навчальні кімнати':",
+      "answers": ["Classrooms", "Playrooms", "Bedrooms", "Living rooms"],
+      "correctAnswer": "Classrooms"
+    }
+  ]
+}

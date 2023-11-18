@@ -22,7 +22,6 @@ const TestResult = ({testResult, formOption, subjectOption, fetchTest}) => {
             </div>
         )
     })
-
     return (
         <div className="test-result-wrapper white">
             <div className="intro-wrapper">
@@ -53,7 +52,10 @@ const TestResult = ({testResult, formOption, subjectOption, fetchTest}) => {
                     </div>
                     <div className="marks-group-item border-bot">
                         <span>Час</span>
-                        <span className="accuracy">{testResult.value.minutes}:{testResult.value.seconds}</span>
+                        <span className="accuracy">
+                            {testResult.value.minutes}:
+                            {testResult.value.seconds.toString().length === 1 ? `0${testResult.value.seconds}` : testResult.value.seconds}
+                        </span>
                     </div>
                 </div>
                 <div className="extra-info border-bot">

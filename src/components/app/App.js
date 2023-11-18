@@ -186,7 +186,7 @@ const App = () => {
                         <Options subjectList={memoizedSubjectList}
                                  subjects={memoizedSubjects}
                                  forms={memoizedForms}
-                                 setFormsBySubjects={setFormsBySubjects}
+                                 setFormsBySubjects={setFormsBySubjects} formsBySubjects={formsBySubjects}
                                  getFormsBySubject={formsBySubjectService.getFormsBySubject}
                                  burgerActive={burgerActive} setBurgerActive={setBurgerActive}
                                  formOption={formOption} setFormOption={setFormOption}
@@ -211,7 +211,7 @@ const App = () => {
                                subjectList={memoizedSubjectList}
                                setSubjectOption={setSubjectOption}
                                burgerActive={burgerActive} setBurgerActive={setBurgerActive}
-                               setFormsBySubjects={setFormsBySubjects}
+                               setFormsBySubjects={setFormsBySubjects} formsBySubjects={formsBySubjects}
                                getFormsBySubject={formsBySubjectService.getFormsBySubject}
                         />
                     }/>

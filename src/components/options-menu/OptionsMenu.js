@@ -3,9 +3,11 @@ import "./optionsMenu.css";
 import Arrow from "../../svg/Arrow";
 import {Link, useLocation} from "react-router-dom";
 
-const OptionsMenu = ({subjects, burgerActive, setBurgerActive, setFormsBySubjects, getFormsBySubject, setSubjectOption}) => {
+const OptionsMenu = ({subjects, burgerActive, setBurgerActive, setFormsBySubjects, getFormsBySubject, setSubjectOption, formsBySubjects}) => {
     const setForms = (subjectOption) => {
         try {
+            formsBySubjects.loading = true;
+
             async function fetchData() {
                 return await getFormsBySubject(subjectOption);
             }

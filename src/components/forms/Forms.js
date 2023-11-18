@@ -2,7 +2,7 @@ import "./forms.css";
 import React from "react";
 import {Link} from "react-router-dom";
 
-const Forms = ({forms, fetchTest, setFormOption, subjectOption}) => {
+const Forms = ({forms, fetchTest, setFormOption, subjectOption, loading}) => {
 
     const availableForms = forms.forms.map((item, key) => {
         return (

@@ -13,7 +13,7 @@ function FormOptions({subjectList, subjectOption, setSubjectOption, burgerActive
         <div className="form-options-wrapper">
             <div className="home-components-group">
                 <OptionsMenu subjects={subjectList} setSubjectOption={setSubjectOption}
-                             burgerActive={burgerActive} setBurgerActive={setBurgerActive}
+                             burgerActive={burgerActive} setBurgerActive={setBurgerActive} formsBySubjects={formsBySubjects}
                              setFormsBySubjects={setFormsBySubjects} getFormsBySubject={getFormsBySubject}
                 />
                 <div className={`home-components ${homeComponentsClasses}`}>
@@ -27,7 +27,7 @@ function FormOptions({subjectList, subjectOption, setSubjectOption, burgerActive
                         </div>
                     </div>
 
-                    {formsBySubjects.loading ? <Spinner /> : <Forms forms={formsBySubjects.value} subjectOption={subjectOption}
+                    {formsBySubjects.loading ? <Spinner /> : <Forms forms={formsBySubjects.value} loading={formsBySubjects.loading} subjectOption={subjectOption}
                                                                     formOption={formOption} setFormOption={setFormOption}
                                                                     fetchTest={fetchTest} />}
                 </div>

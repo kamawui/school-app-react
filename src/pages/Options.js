@@ -3,7 +3,7 @@ import OptionsMenu from "../components/options-menu/OptionsMenu";
 import TestOptions from "../components/test-options/TestOptions";
 
 function Options({subjects, forms, subjectList, clearForm, setFormsBySubjects, getFormsBySubject,
-                     nameOption, setNameOption, surnameOption, setSurnameOption,
+                     nameOption, setNameOption, surnameOption, setSurnameOption, formsBySubjects,
                      burgerActive, setBurgerActive, setFormOption, formOption,
                      subjectOption, setSubjectOption, fetchTest}) {
 
@@ -17,7 +17,7 @@ function Options({subjects, forms, subjectList, clearForm, setFormsBySubjects, g
         <div className="options-wrapper">
             <div className="home-components-group">
                 <OptionsMenu subjects={subjectList} setSubjectOption={setSubjectOption}
-                             burgerActive={burgerActive} setBurgerActive={setBurgerActive}
+                             burgerActive={burgerActive} setBurgerActive={setBurgerActive} formsBySubjects={formsBySubjects}
                              setFormsBySubjects={setFormsBySubjects} getFormsBySubject={getFormsBySubject}
                 />
                 <div className={`home-components ${homeComponentsClasses}`}>
