@@ -25,7 +25,7 @@ const OptionsMenu = ({subjects, burgerActive, setBurgerActive, setFormsBySubject
 
     const location = useLocation();
 
-    const subjectsElements = !subjects.loading ? subjects.value.map((item, key) => {
+    const subjectsElements = !subjects.loading ? subjects?.value?.map((item, key) => {
         return (
             <Link to="/forms" key={key} onClick={() => {
                 setForms(item.tag);

@@ -172,9 +172,9 @@ const App = () => {
 
     const tester = useTester();
 
-    useEffect(() => {
-        tester.getTest(11, "english").then(tester.checkForDuplicates);
-    }, [])
+    // useEffect(() => {
+    //     tester.getTest(11, "english").then(tester.checkForDuplicates);
+    // }, [])
 
 
     return (

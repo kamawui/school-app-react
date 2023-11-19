@@ -4,6 +4,7 @@ import Form from "../../svg/Form";
 import Arrow from "../../svg/Arrow";
 import Ellipsis from "../../svg/Ellipsis";
 import {Link} from "react-router-dom";
+import PreTestModal from "../modals/PreTestModal";
 
 const TestOptions = ({forms, subjects, nameOption, setNameOption, surnameOption, setSurnameOption, clearForm,
                          setFormOption, formOption, subjectOption, setSubjectOption, fetchTest, burgerActive}) => {
@@ -49,6 +50,8 @@ const TestOptions = ({forms, subjects, nameOption, setNameOption, surnameOption,
             <div className="dropdown-element border-bot" onClick={() => setActiveOption("subject", item)} key={key}>{item.title}</div>
         )
     }) : null;
+
+    const [preTestModalActive, setPreTestModalActive] = useState(false);
 
     return (
         <div className="test-options-wrapper white">
@@ -123,11 +126,7 @@ const TestOptions = ({forms, subjects, nameOption, setNameOption, surnameOption,
                 <div className="options-buttons">
                     <button className="action-btn" onClick={() => clearForm()}>Очистити</button>
                     {nameOption && formOption && subjectOption ? (
-                        <Link to="/test" onClick={() => {
-                            fetchTest(formOption, subjectOption.tag)
-                        }}>
-                            <button className="call-to-action-btn">Розпочати</button>
-                        </Link>
+                        <button className="call-to-action-btn" onClick={() => setPreTestModalActive(true)}>Розпочати</button>
                     ) : (
                         <button className="call-to-action-btn" onClick={() => alert("Заповніть всі дані перед тим, як почати тест")}>
                             Розпочати
@@ -135,6 +134,8 @@ const TestOptions = ({forms, subjects, nameOption, setNameOption, surnameOption,
                     )}
                 </div>
             </div>
+            <PreTestModal active={preTestModalActive} setActive={setPreTestModalActive}
+                          form={formOption} subject={subjectOption} fetchTest={fetchTest}/>
         </div>
     )
 }
