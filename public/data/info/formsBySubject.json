@@ -64,11 +64,6 @@
     "tag": "civic_education",
     "forms": ["10", "11"]
   },
-  "law": {
-    "title": "Правознавство",
-    "tag": "law",
-    "forms": ["9", "10", "11"]
-  },
   "natural_science": {
     "title": "Природознавство",
     "tag": "natural_science",
