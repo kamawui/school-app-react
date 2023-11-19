@@ -3,11 +3,9 @@ import "./questionList.css";
 import Ellipsis from "../../svg/Ellipsis";
 import Spinner from "../spinner/Spinner";
 import Timer from "../timer/Timer";
-import {Link} from "react-router-dom";
+import QuitTestModal from "../modals/QuitTestModal";
 
-function QuestionList({test, activeQuestionIndex, setActiveQuestion, endTest, timeInSeconds, timeInMinutes, answerList}) {
-    console.log(answerList);
-
+function QuestionList({test, activeQuestionIndex, setActiveQuestion, endTest, timeInSeconds, timeInMinutes, answerList, clearForm}) {
     const questionsList = !test.loading ? test.value.questions.map((item, key) => {
         return (
             <div onClick={() => setActiveQuestion(item.index)} key={key}
@@ -26,14 +24,14 @@ function QuestionList({test, activeQuestionIndex, setActiveQuestion, endTest, ti
             <div className={`question-icon ${answerList[key + 1]?.userAnswer ? "question-chosen" : ""}`}
                  onClick={() => setActiveQuestion(item.index)} key={key}>{key + 1}</div>
         )
-    }) : null
+    }) : null;
+
+    const [quitTestModalActive, setQuitTestModalActive] = useState(false);
 
     const menuContent = !test.loading ?
         <>
             <div className="question-list-menu">
-                <Link to="/">
-                    <button className="action-btn">На головну</button>
-                </Link>
+                <button className="action-btn" onClick={() => setQuitTestModalActive(true)}>На головну</button>
                 <Timer endTest={endTest} timeInSeconds={timeInSeconds} timeInMinutes={timeInMinutes}/>
             </div>
             <div className="questions-list">
@@ -49,6 +47,7 @@ function QuestionList({test, activeQuestionIndex, setActiveQuestion, endTest, ti
             <div className="questions-panel">
                 {questionsPanel}
             </div>
+            <QuitTestModal active={quitTestModalActive} setActive={setQuitTestModalActive}/>
         </>
 
     )

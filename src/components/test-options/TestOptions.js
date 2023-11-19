@@ -5,6 +5,7 @@ import Arrow from "../../svg/Arrow";
 import Ellipsis from "../../svg/Ellipsis";
 import {Link} from "react-router-dom";
 import PreTestModal from "../modals/PreTestModal";
+import DataNotFulfilled from "../modals/DataNotFulfilled";
 
 const TestOptions = ({forms, subjects, nameOption, setNameOption, surnameOption, setSurnameOption, clearForm,
                          setFormOption, formOption, subjectOption, setSubjectOption, fetchTest, burgerActive}) => {
@@ -52,6 +53,7 @@ const TestOptions = ({forms, subjects, nameOption, setNameOption, surnameOption,
     }) : null;
 
     const [preTestModalActive, setPreTestModalActive] = useState(false);
+    const [dataNotFulfilledModalActive, setDataNotFulfilledModalActive] = useState(false);
 
     return (
         <div className="test-options-wrapper white">
@@ -128,7 +130,7 @@ const TestOptions = ({forms, subjects, nameOption, setNameOption, surnameOption,
                     {nameOption && formOption && subjectOption ? (
                         <button className="call-to-action-btn" onClick={() => setPreTestModalActive(true)}>Розпочати</button>
                     ) : (
-                        <button className="call-to-action-btn" onClick={() => alert("Заповніть всі дані перед тим, як почати тест")}>
+                        <button className="call-to-action-btn" onClick={() => setDataNotFulfilledModalActive(true)}>
                             Розпочати
                         </button>
                     )}
@@ -136,6 +138,7 @@ const TestOptions = ({forms, subjects, nameOption, setNameOption, surnameOption,
             </div>
             <PreTestModal active={preTestModalActive} setActive={setPreTestModalActive}
                           form={formOption} subject={subjectOption} fetchTest={fetchTest}/>
+            <DataNotFulfilled active={dataNotFulfilledModalActive} setActive={setDataNotFulfilledModalActive}/>
         </div>
     )
 }

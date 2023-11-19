@@ -4,7 +4,7 @@ import QuestionList from "../components/question-list/QuestionList";
 import NoPage from "./NoPage";
 
 function Test({test, setTestResult, setFirstSession,
-                  formOption, subjectOption, nameOption, surnameOption}) {
+                  formOption, subjectOption, nameOption, surnameOption, clearForm}) {
 
     const [activeQuestionIndex, setActiveQuestionIndex] = useState(1);
     const [answerList, setAnswerList] = useState({});
@@ -13,6 +13,7 @@ function Test({test, setTestResult, setFirstSession,
 
     useEffect(() => {
         setAnswerList(initializeAnswerList());
+        clearForm();
     }, [test]);
 
     const initializeAnswerList = () => {
@@ -84,7 +85,7 @@ function Test({test, setTestResult, setFirstSession,
                 subjectOption ?
                     <>
                         <QuestionList test={test} activeQuestionIndex={activeQuestionIndex} answerList={answerList}
-                                      timeInSeconds={timeInSeconds} timeInMinutes={timeInMinutes}
+                                      timeInSeconds={timeInSeconds} timeInMinutes={timeInMinutes} clearForm={clearForm}
                                       setActiveQuestion={setActiveQuestionIndex} endTest={endTest}/>
                         <Question test={test} answerList={answerList} setAnswer={setAnswer} endTest={endTest}
                                   activeQuestionIndex={activeQuestionIndex}

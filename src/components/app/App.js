@@ -219,7 +219,7 @@ const App = () => {
                         <Test test={memoizedTest} setTestResult={setTestResult}
                               formOption={formOption} subjectOption={subjectOption}
                               nameOption={nameOption} surnameOption={surnameOption}
-                              setFirstSession={setFirstSession}
+                              setFirstSession={setFirstSession} clearForm={clearForm}
                         />
                     }/>
                     <Route exact path="/result" element={
