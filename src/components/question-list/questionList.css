@@ -115,5 +115,8 @@
         border: none;
         color: var(--main);
     }
+    .question-chosen:hover {
+        background-color: var(--second-selected);
+    }
 
 }

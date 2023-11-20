@@ -17,8 +17,19 @@ const TestResult = ({testResult, formOption, subjectOption, fetchTest}) => {
         return (
             <div className="answer-info" key={key}>
                 <div className="test-question border-bot">{key + 1}. {item.question} <QuestionSign /></div>
-                <div className={`user-answer ${userAnswerClasses}`}><span>Ваша відповідь:</span> {item.userAnswer}</div>
-                <div className="correct-answer"><span>Правильна відповідь:</span> {item.correctAnswer}</div>
+                {userAnswerClasses !== "gray" ?
+                    <>
+                        <div className={`user-answer ${userAnswerClasses}`}><span>Ваша відповідь:</span> {item.userAnswer}</div>
+                        <div className="correct-answer"><span>Правильна відповідь:</span> {item.correctAnswer}</div>
+                    </>
+                     :
+                    <>
+                        <div className={`user-answer ${userAnswerClasses}`}><span>Ваша відповідь:</span></div>
+                        <div className="correct-answer gray"><span>Правильна відповідь:</span></div>
+
+                    </>
+                }
+
             </div>
         )
     })

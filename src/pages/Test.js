@@ -13,7 +13,6 @@ function Test({test, setTestResult, setFirstSession,
 
     useEffect(() => {
         setAnswerList(initializeAnswerList());
-        // clearForm();
     }, [test]);
 
     const initializeAnswerList = () => {
