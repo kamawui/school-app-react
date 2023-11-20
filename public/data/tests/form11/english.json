@@ -210,7 +210,106 @@
         "The use of 'action' instead of 'actions.'"
       ],
       "correctAnswer": "The use of 'action' instead of 'actions.'"
+    },
+    {
+      "question": "The person _____ you met yesterday is my sister.",
+      "answers": [
+        "whom",
+        "which",
+        "whose",
+        "what"
+      ],
+      "correctAnswer": "whom"
+    },
+    {
+      "question": "I hope ______ to visit the museum soon.",
+      "answers": [
+        "going",
+        "to go",
+        "go",
+        "to going"
+      ],
+      "correctAnswer": "to go"
+    },
+    {
+      "question": "It is essential ________ regular exercise for a healthy lifestyle.",
+      "answers": [
+        "doing",
+        "to do",
+        "does",
+        "to doing"
+      ],
+      "correctAnswer": "to do"
+    },
+    {
+      "question": "The book, ______ cover is torn, belongs to me.",
+      "answers": [
+        "its",
+        "whose",
+        "it's",
+        "that"
+      ],
+      "correctAnswer": "whose"
+    },
+    {
+      "question": "Having finished his work, Tom went home. In this sentence, 'Having finished' is an example of:",
+      "answers": [
+        "Participle 1",
+        "Participle 2",
+        "Perfect Participle",
+        "Infinitive"
+      ],
+      "correctAnswer": "Participle 1"
+    },
+    {
+      "question": "She was impressed by the movie ________ last night.",
+      "answers": [
+        "watch",
+        "to watch",
+        "watched",
+        "watching"
+      ],
+      "correctAnswer": "watched"
+    },
+    {
+      "question": "The teacher, ________ is very knowledgeable, is giving a lecture now.",
+      "answers": [
+        "which",
+        "whose",
+        "what",
+        "who"
+      ],
+      "correctAnswer": "who"
+    },
+    {
+      "question": "He promised ________ the report by tomorrow.",
+      "answers": [
+        "finishes",
+        "to finish",
+        "finish",
+        "finished"
+      ],
+      "correctAnswer": "to finish"
+    },
+    {
+      "question": "The film, ________ plot is intriguing, won an award.",
+      "answers": [
+        "which",
+        "whose",
+        "what",
+        "who"
+      ],
+      "correctAnswer": "whose"
+    },
+    {
+      "question": "After ________ all day, she was too tired to go out.",
+      "answers": [
+        "working",
+        "work",
+        "to work",
+        "worked"
+      ],
+      "correctAnswer": "working"
     }
-
   ]
 }
