@@ -13,7 +13,7 @@ function Test({test, setTestResult, setFirstSession,
 
     useEffect(() => {
         setAnswerList(initializeAnswerList());
-        clearForm();
+        // clearForm();
     }, [test]);
 
     const initializeAnswerList = () => {

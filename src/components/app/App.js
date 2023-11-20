@@ -172,9 +172,72 @@ const App = () => {
 
     const tester = useTester();
 
-    // useEffect(() => {
-    //     tester.getTest(11, "english").then(tester.checkForDuplicates);
-    // }, [])
+    useEffect(() => {
+        tester.getTest(10, "math").then(r => {
+            console.log("math");
+            tester.checkForDuplicates(r);
+        });
+    }, []);
+    useEffect(() => {
+        tester.getTest(10, "english").then(r => {
+            console.log("english");
+            tester.checkForDuplicates(r);
+        });
+    }, []);
+    useEffect(() => {
+        tester.getTest(10, "ukrainian_language").then(r => {
+            console.log("ukrainian_language");
+            tester.checkForDuplicates(r);
+        });
+    }, []);
+    useEffect(() => {
+        tester.getTest(10, "physics").then(r => {
+            console.log("physics");
+            tester.checkForDuplicates(r);
+        });
+    }, []);
+    useEffect(() => {
+        tester.getTest(10, "ukrainian_literature").then(r => {
+            console.log("ukrainian_literature");
+            tester.checkForDuplicates(r);
+        });
+    }, []);
+    useEffect(() => {
+        tester.getTest(10, "chemistry").then(r => {
+            console.log("chemistry");
+            tester.checkForDuplicates(r);
+        });
+    }, []);
+    useEffect(() => {
+        tester.getTest(10, "biology").then(r => {
+            console.log("biology");
+            tester.checkForDuplicates(r);
+        });
+    }, []);
+    useEffect(() => {
+        tester.getTest(10, "ukrainian_history").then(r => {
+            console.log("ukrainian_history");
+            tester.checkForDuplicates(r);
+        });
+    }, []);
+    useEffect(() => {
+        tester.getTest(10, "geography").then(r => {
+            console.log("geography");
+            tester.checkForDuplicates(r);
+        });
+    }, []);
+    useEffect(() => {
+        tester.getTest(10, "informatics").then(r => {
+            console.log("informatics");
+            tester.checkForDuplicates(r);
+        });
+    }, []);
+    useEffect(() => {
+        tester.getTest(10, "world_history").then(r => {
+            console.log("world_history");
+            tester.checkForDuplicates(r);
+        });
+    }, []);
 
 
     return (

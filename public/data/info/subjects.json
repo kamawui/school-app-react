@@ -68,8 +68,7 @@
     {"title": "Історія України", "tag": "ukrainian_history"},
     {"title": "Всесвітня історія", "tag": "world_history"},
     {"title": "Географія", "tag": "geography"},
-    {"title": "Інформатика", "tag": "informatics"},
-    {"title": "Громадянська освіта", "tag": "civic_education"}
+    {"title": "Інформатика", "tag": "informatics"}
   ],
   "11": [
     {"title": "Математика", "tag": "math"},
@@ -83,8 +82,7 @@
     {"title": "Всесвітня історія", "tag": "world_history"},
     {"title": "Географія", "tag": "geography"},
     {"title": "Інформатика", "tag": "informatics"},
-    {"title": "Астрономія", "tag": "astronomy"},
-    {"title": "Громадянська освіта", "tag": "civic_education"}
+    {"title": "Астрономія", "tag": "astronomy"}
   ],
   "all": [
     {"title": "Математика", "tag": "math"},
@@ -99,7 +97,6 @@
     {"title": "Географія", "tag": "geography"},
     {"title": "Інформатика", "tag": "informatics"},
     {"title": "Астрономія", "tag": "astronomy"},
-    {"title": "Громадянська освіта", "tag": "civic_education"},
     {"title": "Природознавство", "tag": "natural_science"}
   ]
 }

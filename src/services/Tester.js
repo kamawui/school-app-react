@@ -31,6 +31,7 @@ const useTester = () => {
             console.log("clear");
         }
         console.log("Total count: " + count);
+        console.log("--------------------------------------------------------");
     }
 
     return {loading, error, clearError, getTest, checkForDuplicates};

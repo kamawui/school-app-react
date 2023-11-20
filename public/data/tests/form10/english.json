@@ -1,0 +1,210 @@
+{
+  "subject": "Англійська мова",
+  "questions": [
+    {
+      "question": "What is the focus of lexical material related to computer equipment and technologies?",
+      "answers": ["Nature and Weather", "Science and Progress", "Painting", "Work and Professions"],
+      "correctAnswer": "Science and Progress"
+    },
+    {
+      "question": "In the topic 'Conditional sentences,' what type of grammatical constructions is emphasized?",
+      "answers": ["Present Simple", "Grammatical constructions", "Conditional sentences", "Past Perfect Continuous"],
+      "correctAnswer": "Conditional sentences"
+    },
+    {
+      "question": "What administrative and political structures are covered in the vocabulary for countries?",
+      "answers": ["Modern professions", "Natural resources", "Administrative structures", "Genres of painting"],
+      "correctAnswer": "Administrative structures"
+    },
+    {
+      "question": "What tense is used to describe events happening at the moment of speaking?",
+      "answers": ["Present Simple", "Present Continuous", "Present Perfect", "Past Simple"],
+      "correctAnswer": "Present Continuous"
+    },
+    {
+      "question": "Which verb form is used to talk about events that happened before a specific point in the past?",
+      "answers": ["Present Simple", "Present Continuous", "Present Perfect", "Past Simple"],
+      "correctAnswer": "Past Simple"
+    },
+    {
+      "question": "Which of the following is an example of a first conditional sentence?",
+      "answers": ["If it rains tomorrow, we will stay at home.", "If it is raining, we stay at home.", "If it rained yesterday, we stayed at home.", "If it will rain, we stayed at home."],
+      "correctAnswer": "If it rains tomorrow, we will stay at home."
+    },
+    {
+      "question": "Which verb is modal?",
+      "answers": ["Run", "Have", "Can", "Go"],
+      "correctAnswer": "Can"
+    },
+    {
+      "question": "Which verb form is used to describe events that happened before a specific point in the past but have a connection to the present?",
+      "answers": ["Present Simple", "Present Continuous", "Present Perfect", "Past Simple"],
+      "correctAnswer": "Present Perfect"
+    },
+    {
+      "question": "Which verb form is used to talk about events that will happen in the future?",
+      "answers": ["Present Simple", "Present Continuous", "Present Perfect", "Will for future"],
+      "correctAnswer": "Will for future"
+    },
+    {
+      "question": "Which verb form is used to describe events that were happening for a duration in the past?",
+      "answers": ["Present Simple", "Present Continuous", "Past Simple", "Past Continuous"],
+      "correctAnswer": "Past Continuous"
+    },
+    {
+      "question": "What are the passive forms of verbs used for?",
+      "answers": ["To emphasize the action", "To express a future action", "To show continuous action", "To indicate a past action"],
+      "correctAnswer": "To emphasize the action"
+    },
+    {
+      "question": "What is the function of modal verbs?",
+      "answers": ["To express necessity, possibility, or permission", "To describe past actions", "To indicate continuous actions", "To show completed actions"],
+      "correctAnswer": "To express necessity, possibility, or permission"
+    },
+    {
+      "question": "In the sentence 'The letter was written by Mary,' who is the doer of the action?",
+      "answers": ["The letter", "Mary", "Was written", "By"],
+      "correctAnswer": "Mary"
+    },
+    {
+      "question": "What is the first conditional used for?",
+      "answers": ["To talk about general truths", "To express regrets about the past", "To talk about unreal or hypothetical situations in the present or future", "To indicate a past action"],
+      "correctAnswer": "To talk about unreal or hypothetical situations in the present or future"
+    },
+    {
+      "question": "Which pronoun is used to refer back to the subject of the sentence?",
+      "answers": ["Reflexive pronoun", "Indefinite pronoun", "Relative pronoun", "Personal pronoun"],
+      "correctAnswer": "Reflexive pronoun"
+    },
+    {
+      "question": "What is the function of relative clauses?",
+      "answers": ["To express necessity", "To give more information about a noun", "To indicate a future action", "To describe a past event"],
+      "correctAnswer": "To give more information about a noun"
+    },
+    {
+      "question": "Which lexical topic includes discussions about one's family, household chores, and family traditions?",
+      "answers": ["My country", "Work and profession", "Literature", "Me, my family, and friends"],
+      "correctAnswer": "Me, my family, and friends"
+    },
+    {
+      "question": "What do we discuss when talking about literature?",
+      "answers": ["Travel and tourism", "Favorite movies", "Favorite books and authors", "Healthcare"],
+      "correctAnswer": "Favorite books and authors"
+    },
+    {
+      "question": "What is discussed under the topic 'Healthcare'?",
+      "answers": ["Music", "Visiting theaters and cinemas", "Medical institutions, illnesses, symptoms, and medications", "Food and shopping"],
+      "correctAnswer": "Medical institutions, illnesses, symptoms, and medications"
+    },
+    {
+      "question": "In the topic 'Cinema and Theater,' what do we talk about?",
+      "answers": ["Movies and actors", "Food and shopping", "Literature", "Music and concerts"],
+      "correctAnswer": "Movies and actors"
+    },
+    {
+      "question": "What is discussed when talking about music?",
+      "answers": ["Travel and tourism", "Favorite books and authors", "Favorite music styles, genres, instruments, musicians, composers, and attending concerts", "Healthcare"],
+      "correctAnswer": "Favorite music styles, genres, instruments, musicians, composers, and attending concerts"
+    },
+    {
+      "question": "What falls under the topic 'Youth Culture'?",
+      "answers": ["Discussion of classical music", "Youth organizations and clubs, hobbies, and interests", "Movies and actors", "Culinary preferences"],
+      "correctAnswer": "Youth organizations and clubs, hobbies, and interests"
+    },
+    {
+      "question": "What is discussed under the topic 'Food and Shopping'?",
+      "answers": ["Sports and fitness", "Favorite movies", "Culinary preferences, types of food, and shopping habits", "Youth organizations and clubs"],
+      "correctAnswer": "Culinary preferences, types of food, and shopping habits"
+    },
+    {
+      "question": "When discussing English-speaking countries, what aspects are covered?",
+      "answers": ["Politics and economics", "Geographical location, climate, population, and nationalities", "Healthcare", "Culinary preferences"],
+      "correctAnswer": "Geographical location, climate, population, and nationalities"
+    },
+    {
+      "question": "What do we talk about when discussing the media?",
+      "answers": ["Culinary preferences", "Internet, television, and radio; communication on the Internet; favorite radio and TV shows", "Healthcare", "Youth organizations and clubs"],
+      "correctAnswer": "Internet, television, and radio; communication on the Internet; favorite radio and TV shows"
+    },
+    {
+      "question": "What is the purpose of reflexive pronouns?",
+      "answers": ["To express necessity", "To show possession", "To emphasize the action performed by the subject on itself", "To describe past actions"],
+      "correctAnswer": "To emphasize the action performed by the subject on itself"
+    },
+    {
+      "question": "In the first conditional, what does the main clause express?",
+      "answers": ["An action that happened before another action", "A general truth", "An unreal or hypothetical situation in the present or future", "A past action"],
+      "correctAnswer": "An unreal or hypothetical situation in the present or future"
+    },
+    {
+      "question": "What is the function of indefinite compound pronouns (e.g., someone, something, somewhere)?",
+      "answers": ["To refer to a specific person, thing, or place", "To express uncertainty", "To show possession", "To indicate a past action"],
+      "correctAnswer": "To refer to a specific person, thing, or place"
+    },
+    {
+      "question": "When do we use 'who,' 'which,' and 'that' in relative clauses?",
+      "answers": ["To express necessity", "To give more information about a noun", "To indicate a future action", "To describe a past event"],
+      "correctAnswer": "To give more information about a noun"
+    },
+    {
+      "question": "What is the topic 'Media' focused on?",
+      "answers": ["Culinary preferences", "Youth organizations and clubs", "Internet, television, and radio; communication on the Internet; favorite radio and TV shows", "Healthcare"],
+      "correctAnswer": "Internet, television, and radio; communication on the Internet; favorite radio and TV shows"
+    },
+    {
+      "question": "What do we discuss when talking about 'Healthcare'?",
+      "answers": ["Sports and fitness", "Medical institutions, illnesses, symptoms, and medications", "Travel and tourism", "Food and shopping"],
+      "correctAnswer": "Medical institutions, illnesses, symptoms, and medications"
+    },
+    {
+      "question": "The weather is unpredictable, so it's always a good idea to ____________ an umbrella.",
+      "answers": ["bring", "brings", "brought", "bringing"],
+      "correctAnswer": "bring"
+    },
+    {
+      "question": "She ____________ a book every month as part of her New Year's resolution.",
+      "answers": ["reads", "reading", "read", "will read"],
+      "correctAnswer": "reads"
+    },
+    {
+      "question": "I can't believe he ____________ to the party last night.",
+      "answers": ["did not come", "will not come", "has not come", "is not coming"],
+      "correctAnswer": "did not come"
+    },
+    {
+      "question": "If you study hard, you ____________ good grades.",
+      "answers": ["will get", "gets", "getting", "got"],
+      "correctAnswer": "will get"
+    },
+    {
+      "question": "The movie ____________ at 7:00 PM, so we should hurry.",
+      "answers": ["starts", "start", "started", "will start"],
+      "correctAnswer": "starts"
+    },
+    {
+      "question": "She ____________ her homework when the phone rang.",
+      "answers": ["is doing", "does", "did", "will do"],
+      "correctAnswer": "was doing"
+    },
+    {
+      "question": "By the time I arrived, they ____________ dinner.",
+      "answers": ["already had", "have already", "will already have", "is already having"],
+      "correctAnswer": "already had"
+    },
+    {
+      "question": "If I ____________ you, I would take the job offer.",
+      "answers": ["am", "be", "was", "were"],
+      "correctAnswer": "were"
+    },
+    {
+      "question": "I'm sorry, but I ____________ able to attend the meeting tomorrow.",
+      "answers": ["was not", "were not", "am not", "is not"],
+      "correctAnswer": "will not be"
+    },
+    {
+      "question": "The concert ____________ by the time we arrived at the venue.",
+      "answers": ["has finished", "will finish", "had finished", "finishes"],
+      "correctAnswer": "had finished"
+    }
+  ]
+}
