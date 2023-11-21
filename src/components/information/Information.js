@@ -30,7 +30,7 @@ const Information = ({links}) => {
                     Предмети у кожного класу можуть відрізнятися.
                 </div>
                 <div className="info-item border-bot"><span>Технології: </span>
-                    HTML/CSS, JavaScript, React, React Router.
+                    HTML/CSS, JavaScript, React, React Router, Axios.
                 </div>
             </div>
             <div className="info-contacts">
