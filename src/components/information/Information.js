@@ -38,7 +38,6 @@ const Information = ({links}) => {
                 <div className="info-item border-bot"><span>Підготував: </span>Бурлаченко Даніїл</div>
                 <div className="info-item border-bot"><span>Клас: </span>11</div>
                 <div className="info-item border-bot"><span>Школа: </span>Вижницький опорний ліцей імені Юрія Федьковича</div>
-                <div className="info-item border-bot media">Створено для проекту <span>###</span></div>
                 <div className="info-item media flex">{!links.error ? infoLinks : null}</div>
                 <div className="contacts-links">
                     <div className="contacts-left">
