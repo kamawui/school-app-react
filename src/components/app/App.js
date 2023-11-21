@@ -232,6 +232,5 @@ const App = () => {
 
     )
 }
-// git push -u origin main
 
 export default App;
