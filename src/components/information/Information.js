@@ -19,7 +19,7 @@ const Information = ({links}) => {
                 </div>
             </div>
             <div className="info-description">
-                <div className="header">Про проект</div>
+                <h1 className="header">Про проект</h1>
                 <div className="info-item border-bot"><span>Мета проекту: </span>
                     створення додатку, який може пропонувати тести шкільної програми.
                     Оцінити, наскільки добре учні знають програму певного класу.
@@ -34,7 +34,7 @@ const Information = ({links}) => {
                 </div>
             </div>
             <div className="info-contacts">
-                <div className="header right">Інформація та посилання</div>
+                <h2 className="header right">Інформація та посилання</h2>
                 <div className="info-item border-bot"><span>Підготував: </span>Бурлаченко Даніїл</div>
                 <div className="info-item border-bot"><span>Клас: </span>11</div>
                 <div className="info-item border-bot"><span>Школа: </span>Вижницький опорний ліцей імені Юрія Федьковича</div>

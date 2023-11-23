@@ -37,8 +37,8 @@ const Question = ({test, activeQuestionIndex, setActiveQuestionIndex, setAnswer,
 
     const questionContent = !test.loading ? (
         <div className="question-content white">
-            <div
-                className="header">{activeQuestionIndex}. {test.value.questions[activeQuestionIndex - 1].question}</div>
+            <h2
+                className="header">{activeQuestionIndex}. {test.value.questions[activeQuestionIndex - 1].question}</h2>
             <div className="variants-title border-bot gray">Варіанти відповідей:
                 <QuestionSign/>
             </div>

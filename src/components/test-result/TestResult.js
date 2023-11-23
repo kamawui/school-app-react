@@ -13,7 +13,6 @@ const TestResult = ({testResult, formOption, subjectOption, fetchTest}) => {
     const correctAnswers = testResult.value.answers.map((item, key) => {
         const userAnswerClasses = item.userAnswer === item.correctAnswer ? "correct-answer" :
                                     item.userAnswer === "" ? "gray" : "wrong-answer"
-
         return (
             <div className="answer-info" key={key}>
                 <div className="test-question border-bot">{key + 1}. {item.question} <QuestionSign /></div>
@@ -33,6 +32,7 @@ const TestResult = ({testResult, formOption, subjectOption, fetchTest}) => {
             </div>
         )
     })
+
     return (
         <div className="test-result-wrapper white">
             <div className="intro-wrapper">
@@ -44,7 +44,7 @@ const TestResult = ({testResult, formOption, subjectOption, fetchTest}) => {
                 </div>
             </div>
             <div className="test-result">
-                <div className="header right">{testResult.value.subject}. {testResult.value.form} клас.</div>
+                <h2 className="header right">{testResult.value.subject}. {testResult.value.form} клас.</h2>
                 <div className="user-info border-bot">
                     {testResult.value.name ?
                         <span>Виконав(-ла) {testResult.value.name} {testResult.value.surname}</span> :
@@ -81,9 +81,6 @@ const TestResult = ({testResult, formOption, subjectOption, fetchTest}) => {
                             </button>
                         </Link> : null
                     }
-                    {/*{formOption && subjectOption ?*/}
-                    {/*    <span className="or">АБО</span> : null*/}
-                    {/*}*/}
                     <Link to="/">
                         <button className="call-to-action-btn">На головну</button>
                     </Link>

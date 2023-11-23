@@ -1,7 +1,6 @@
 
 .header {
     width: 100%;
-    display: flex;
     margin: 0 auto;
     font-size: 31px;
     border-bottom: 3px solid var(--second);

@@ -16,7 +16,7 @@ const Forms = ({forms, fetchTest, setFormOption, subjectOption, loading}) => {
 
     return (
         <div className="forms-wrapper white">
-            <div className="header right">{forms.title}</div>
+            <h2 className="header right">{forms.title}</h2>
             <div className="available-forms-message border-bot gray">Оберіть клас:</div>
             <div className="available-forms">
                 {availableForms}

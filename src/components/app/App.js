@@ -176,9 +176,7 @@ const App = () => {
                 <HeaderComponent/>
                 <Routes>
                     <Route exact path="/" element={
-                        <Options subjectList={memoizedSubjectList}
-                                 subjects={memoizedSubjects}
-                                 forms={memoizedForms}
+                        <Options subjectList={memoizedSubjectList} subjects={memoizedSubjects} forms={memoizedForms}
                                  setFormsBySubjects={setFormsBySubjects} formsBySubjects={formsBySubjects}
                                  getFormsBySubject={formsBySubjectService.getFormsBySubject}
                                  burgerActive={burgerActive} setBurgerActive={setBurgerActive}

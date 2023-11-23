@@ -3,7 +3,6 @@ import "./testOptions.css";
 import Form from "../../svg/Form";
 import Arrow from "../../svg/Arrow";
 import Ellipsis from "../../svg/Ellipsis";
-import {Link} from "react-router-dom";
 import PreTestModal from "../modals/PreTestModal";
 import DataNotFulfilled from "../modals/DataNotFulfilled";
 
@@ -67,9 +66,9 @@ const TestOptions = ({forms, subjects, nameOption, setNameOption, surnameOption,
                 </div>
             </div>
             <div className="test-options">
-                <div className="header">
+                <h2 className="header">
                     Щоб перейти до тесту, введіть ваше прізвище та ім'я, оберіть клас і предмет
-                </div>
+                </h2>
                 <form className="settings-form">
                     <div className="name-input-group border-bot">
                         <input type="text" className="name-input" value={nameOption}

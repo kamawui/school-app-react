@@ -5,7 +5,8 @@ import Spinner from "../spinner/Spinner";
 import Timer from "../timer/Timer";
 import QuitTestModal from "../modals/QuitTestModal";
 
-function QuestionList({test, activeQuestionIndex, setActiveQuestion, endTest, timeInSeconds, timeInMinutes, answerList, clearForm}) {
+function QuestionList({test, activeQuestionIndex, setActiveQuestion, endTest, timeInSeconds, timeInMinutes, answerList}) {
+
     const questionsList = !test.loading ? test.value.questions.map((item, key) => {
         return (
             <div onClick={() => setActiveQuestion(item.index)} key={key}
